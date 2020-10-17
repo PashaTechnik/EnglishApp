@@ -22,8 +22,6 @@ class ViewController: UIViewController {
         PasswordTextField.addDoneButtonOnKeyboard()
     }
     
-
-
 }
 
 extension UITextField{
