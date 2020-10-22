@@ -14,11 +14,61 @@ class ViewController: UIViewController {
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
 
-    @IBAction func LoginBtn(_ sender: Any) {
-        let user = User(email: EmailTextField.text ?? "empty", password: PasswordTextField.text ?? "empty")
-
-        addUser(user)
+    @IBOutlet weak var ConfPasswordTextFieldReg: UITextField!
+    @IBOutlet weak var PasswordTextFieldReg: UITextField!
+    @IBOutlet weak var EmailTextFieldReg: UITextField!
+    
+    
+    @IBAction func RegisterBtn(_ sender: Any) {
+        let password = PasswordTextFieldReg.text
+        let email = EmailTextFieldReg.text
+        let confPassword = ConfPasswordTextFieldReg.text
         
+        let user = User(email: email ?? "empty", password: password ?? "empty")
+        
+        if password == confPassword {
+            addUser(user)
+        }
+
+        print("Registration Error")
+    }
+    @IBAction func LoginBtn(_ sender: Any) {
+
+        let password = PasswordTextField.text
+        let email = EmailTextField.text
+        
+        var enter = false
+        
+        for user in users {
+            
+            print(user.email)
+            print(user.password)
+            print(email!)
+            print(password!)
+        
+            
+            if user.password == password! && user.email == email! {
+                enter = true
+            }
+        }
+        if enter {
+            let alert = UIAlertController(title: "Success", message: "Registration is successful!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
+        else {
+            let alert = UIAlertController(title: "Error", message: "Registration is not successful!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                self.dismiss(animated: true, completion: nil)
+            }
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+            return
+        }
     }
     
     override func viewDidLoad() {
@@ -28,7 +78,7 @@ class ViewController: UIViewController {
         fetchData()
     }
     func fetchData(){
-        guard let url = URL(string: "http://localhost:8080/galaxies") else { return }
+        guard let url = URL(string: "http://localhost:8080/users") else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
             
             guard let data = data else {

@@ -131,7 +131,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxr-L9-660">
                                 <rect key="frame" x="23" y="244" width="115" height="32"/>
@@ -145,7 +145,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuB-Tk-TlA">
                                 <rect key="frame" x="138" y="436" width="93" height="44"/>
@@ -155,6 +155,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="RegisterBtn:" destination="Dve-V5-jcc" eventType="touchUpInside" id="tHA-KO-cqz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an3-19-yqn">
                                 <rect key="frame" x="117" y="58" width="140" height="59"/>
@@ -192,6 +195,11 @@
                             <constraint firstItem="an3-19-yqn" firstAttribute="top" secondItem="ODH-XY-bZw" secondAttribute="top" constant="56" id="odl-kU-0Sx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ConfPasswordTextFieldReg" destination="mPQ-W0-VKK" id="w7c-44-hHF"/>
+                        <outlet property="EmailTextFieldReg" destination="AFg-pp-QIn" id="Ujx-0c-3I9"/>
+                        <outlet property="PasswordTextFieldReg" destination="900-E0-VNf" id="Kr4-G3-QfX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgu-bI-kbd" sceneMemberID="firstResponder"/>
             </objects>
