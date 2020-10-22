@@ -60,6 +60,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="LoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5M5-dF-AFs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqb-jd-eC1">
                                 <rect key="frame" x="138" y="467" width="93" height="44"/>
@@ -70,7 +73,7 @@
                                     <color key="titleColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Dve-V5-jcc" kind="presentation" identifier="registerView" id="f1W-ez-bfL"/>
+                                    <segue destination="Dve-V5-jcc" kind="presentation" id="Ya4-LW-3O2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heQ-LU-55S">
@@ -86,7 +89,6 @@
                     </view>
                     <connections>
                         <outlet property="EmailTextField" destination="vpC-dk-VTc" id="ltZ-zg-kZO"/>
-                        <outlet property="LoginBtn" destination="dtH-vg-XCe" id="UQG-Z8-NcO"/>
                         <outlet property="PasswordTextField" destination="D9M-WK-6dW" id="CnP-a5-PaY"/>
                     </connections>
                 </viewController>
