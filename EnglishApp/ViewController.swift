@@ -9,20 +9,74 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var users = [User]()
 
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
-    @IBOutlet weak var LoginBtn: UIButton!
-    
+
+    @IBAction func LoginBtn(_ sender: Any) {
+        let user = User(email: EmailTextField.text ?? "empty", password: PasswordTextField.text ?? "empty")
+
+        addUser(user)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        EmailTextField.addDoneButtonOnKeyboard()
-        PasswordTextField.addDoneButtonOnKeyboard()
+
+        fetchData()
+    }
+    func fetchData(){
+        guard let url = URL(string: "http://localhost:8080/galaxies") else { return }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard let data = data else {
+                print(error?.localizedDescription ?? "Unknown error")
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            
+            if let users = try? decoder.decode([User].self, from: data) {
+                DispatchQueue.main.async {
+                    
+                    self.users = users
+                    print("Loaded \(users.count) users.")
+                }
+                } else {
+                    print("Unable to parse JSON response.")
+                }
+        }.resume()
     }
     
+    func addUser(_ user: User){
+        let nUser = User(email: user.email, password: user.password)
+        let url = URL(string: "http://localhost:8080/users")!
+
+        let encoder = JSONEncoder()
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? encoder.encode(nUser)
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                let decoder = JSONDecoder()
+
+                if let item = try? decoder.decode(User.self, from: data) {
+                    print(item.email)
+                } else {
+                    print("Bad JSON received back.")
+                }
+            }
+        }.resume()
+    }
+
 }
+
+
 
 extension UITextField{
     
