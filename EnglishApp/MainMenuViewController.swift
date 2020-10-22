@@ -9,11 +9,11 @@ class MainMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        EngLevelView.layer.cornerRadius = 15;
-        EngLevelView.layer.masksToBounds = true;
-        
-        RefreshButtonView.layer.cornerRadius = 15;
-        RefreshButtonView.layer.masksToBounds = true;
+//        EngLevelView.layer.cornerRadius = 15;
+//        EngLevelView.layer.masksToBounds = true;
+//
+//        RefreshButtonView.layer.cornerRadius = 15;
+//        RefreshButtonView.layer.masksToBounds = true;
         
         //self.view.backgroundColor = UIColor(
         
