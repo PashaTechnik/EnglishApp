@@ -10,12 +10,24 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    @IBAction func LogOutBtn(_ sender: Any) {
+        
+        UserDefaults.standard.setValue(false, forKey: "isUserLoggedIn")
+        UserDefaults.standard.synchronize()
+        self.performSegue(withIdentifier: "LoginView", sender: self)
+    }
     override func viewDidLoad() {
+        print(UserDefaults.standard.bool(forKey: "isUserLoggedIn"))
         super.viewDidLoad()
+        
 
     }
     override func viewDidAppear(_ animated: Bool) {
-        self.performSegue(withIdentifier: "LoginView", sender: self)
+        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+        if !isUserLoggedIn {
+            self.performSegue(withIdentifier: "LoginView", sender: self)
+        }
+    
     }
     
 

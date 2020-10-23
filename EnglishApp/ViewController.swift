@@ -25,14 +25,11 @@ class ViewController: UIViewController {
         var enter = false
         
         for user in users {
-            
-            print(user.email)
-            print(user.password)
-            print(email!)
-            print(password!)
         
             
             if user.password == password! && user.email == email! {
+                UserDefaults.standard.setValue(true, forKey: "isUserLoggedIn")
+                UserDefaults.standard.synchronize()
                 enter = true
             }
         }
@@ -63,7 +60,8 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        
+        EmailTextField.addDoneButtonOnKeyboard()
+        PasswordTextField.addDoneButtonOnKeyboard()
         super.viewDidLoad()
         
 
@@ -98,7 +96,6 @@ class ViewController: UIViewController {
 
 
 extension UITextField{
-    
     @IBInspectable var doneAccessory: Bool{
         get{
             return self.doneAccessory
@@ -109,7 +106,6 @@ extension UITextField{
             }
         }
     }
-    
     func addDoneButtonOnKeyboard()
     {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))

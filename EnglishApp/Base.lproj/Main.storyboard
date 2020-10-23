@@ -111,6 +111,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2q-do-GFQ">
+                                <rect key="frame" x="134" y="285" width="107" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="LogOutBtn:" destination="lJl-Ka-5X1" eventType="touchUpInside" id="uAm-DO-dEK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4cF-9W-hBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
