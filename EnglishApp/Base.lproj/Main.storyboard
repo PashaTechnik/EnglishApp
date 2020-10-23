@@ -134,6 +134,232 @@
             </objects>
             <point key="canvasLocation" x="196" y="31.934032983508249"/>
         </scene>
+        <!--Тренировка-->
+        <scene sceneID="KsX-Ki-05D">
+            <objects>
+                <viewController id="7W2-Uf-yMp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xo0-at-HAq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Vru-D5-RjS"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Тренировка" id="XGy-cK-SL0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZZ-w0-AkP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-822" y="1989"/>
+        </scene>
+        <!--Test_ViewController-->
+        <scene sceneID="txw-d8-sib">
+            <objects>
+                <viewController id="AOq-95-2to" userLabel="Test_ViewController" customClass="TestingViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VmS-ei-MF0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbN-qx-aKI" userLabel="vocab_task_Label">
+                                <rect key="frame" x="30" y="171" width="315" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3m-ED-UWz" userLabel="choice1_test_button">
+                                <rect key="frame" x="57" y="391" width="260" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButtonTapped:" destination="AOq-95-2to" eventType="touchUpInside" id="xiO-B7-0KB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAb-1H-u7f" userLabel="choice2_test_button">
+                                <rect key="frame" x="57" y="444" width="260" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButtonTapped:" destination="AOq-95-2to" eventType="touchUpInside" id="X4o-1s-3ES"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gy-8n-T3r" userLabel="choice3_test_button">
+                                <rect key="frame" x="57" y="497" width="260" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButtonTapped:" destination="AOq-95-2to" eventType="touchUpInside" id="zI3-Sk-G3U"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZq-n7-Gzg" userLabel="grammar_task_Label">
+                                <rect key="frame" x="16" y="86" width="343" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="что вы услышали?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jkR-5J-hio" userLabel="answer_textField">
+                                <rect key="frame" x="68" y="336.5" width="243" height="34"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <connections>
+                                    <action selector="ReturnKeyPressed:" destination="AOq-95-2to" eventType="primaryActionTriggered" id="Mqd-7H-Ps6"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qci-BV-HFh" userLabel="choice4_test_button">
+                                <rect key="frame" x="57" y="550" width="260" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButtonTapped:" destination="AOq-95-2to" eventType="touchUpInside" id="Ftr-JI-MWp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tm-83-cfK" userLabel="listening_status_label">
+                                <rect key="frame" x="40" y="285" width="295" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ILB-cX-F46"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHo-Ol-En2" userLabel="listening_Button">
+                                <rect key="frame" x="152.5" y="198.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Mlj-OD-O1K"/>
+                                    <constraint firstAttribute="height" constant="70" id="hqu-7M-X5b"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="listening_icon"/>
+                                <connections>
+                                    <action selector="soundBtn:" destination="AOq-95-2to" eventType="touchUpInside" id="vDs-Dr-QUk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zHf-qe-Caz"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zHf-qe-Caz" firstAttribute="trailing" secondItem="jkR-5J-hio" secondAttribute="trailing" constant="64" id="07l-Ij-uzd"/>
+                            <constraint firstItem="uHo-Ol-En2" firstAttribute="centerX" secondItem="VmS-ei-MF0" secondAttribute="centerX" id="5yV-kU-Eu7"/>
+                            <constraint firstItem="XbN-qx-aKI" firstAttribute="leading" secondItem="zHf-qe-Caz" secondAttribute="leading" constant="30" id="CDW-gi-L54"/>
+                            <constraint firstItem="zHf-qe-Caz" firstAttribute="trailing" secondItem="XbN-qx-aKI" secondAttribute="trailing" constant="30" id="G33-rr-Nec"/>
+                            <constraint firstItem="jkR-5J-hio" firstAttribute="centerY" secondItem="VmS-ei-MF0" secondAttribute="centerY" constant="20" id="IFD-1T-MGa"/>
+                            <constraint firstItem="8Tm-83-cfK" firstAttribute="centerX" secondItem="VmS-ei-MF0" secondAttribute="centerX" id="eDO-kX-26k"/>
+                            <constraint firstItem="zHf-qe-Caz" firstAttribute="trailing" secondItem="8Tm-83-cfK" secondAttribute="trailing" constant="40" id="ejx-uf-Iqs"/>
+                            <constraint firstItem="8Tm-83-cfK" firstAttribute="leading" secondItem="zHf-qe-Caz" secondAttribute="leading" constant="40" id="gZW-OQ-afF"/>
+                            <constraint firstItem="XbN-qx-aKI" firstAttribute="centerY" secondItem="VmS-ei-MF0" secondAttribute="centerY" constant="-150" id="jfa-gw-10q"/>
+                            <constraint firstItem="uHo-Ol-En2" firstAttribute="centerY" secondItem="VmS-ei-MF0" secondAttribute="centerY" constant="-100" id="tGG-xe-gte"/>
+                            <constraint firstItem="8Tm-83-cfK" firstAttribute="top" secondItem="uHo-Ol-En2" secondAttribute="bottom" constant="16.5" id="yjV-fc-FRp"/>
+                            <constraint firstItem="jkR-5J-hio" firstAttribute="leading" secondItem="zHf-qe-Caz" secondAttribute="leading" constant="68" id="yvF-bk-iwo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Тест" id="dbe-gQ-R76"/>
+                    <connections>
+                        <outlet property="answer_textField" destination="jkR-5J-hio" id="Xxs-yZ-G6A"/>
+                        <outlet property="choice1_test_button" destination="k3m-ED-UWz" id="3qy-2W-4Qo"/>
+                        <outlet property="choice2_test_button" destination="CAb-1H-u7f" id="yGr-xP-HGx"/>
+                        <outlet property="choice3_test_button" destination="9gy-8n-T3r" id="l5o-av-QK4"/>
+                        <outlet property="choice4_test_button" destination="qci-BV-HFh" id="4wb-qY-aD9"/>
+                        <outlet property="grammar_task_Label" destination="sZq-n7-Gzg" id="gJT-k2-Id9"/>
+                        <outlet property="listening_Button" destination="uHo-Ol-En2" id="V0Z-8M-gha"/>
+                        <outlet property="listening_status_label" destination="8Tm-83-cfK" id="CBt-Wl-hR2"/>
+                        <outlet property="vocab_task_Label" destination="XbN-qx-aKI" id="YXg-sU-J7X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQ7-q5-eA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.80000000000001" y="1987.5562218890557"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="qIr-s1-9T4">
+            <objects>
+                <viewController id="INk-UH-4MZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kUh-ie-8DH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Uve-ua-bpu"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" largeContentSizeImage="profile_Item" id="RTx-62-pZy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2A-Vg-aws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1726" y="1988"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zSK-Or-FDk">
+            <objects>
+                <tabBarController id="HG3-3o-8tZ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cbe-sD-921">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="INk-UH-4MZ" kind="relationship" relationship="viewControllers" id="ulD-3g-j8O"/>
+                        <segue destination="7W2-Uf-yMp" kind="relationship" relationship="viewControllers" id="JS7-Rp-ooA"/>
+                        <segue destination="AOq-95-2to" kind="relationship" relationship="viewControllers" id="dGT-2y-5qk"/>
+                        <segue destination="aU0-Nh-1BX" kind="relationship" relationship="viewControllers" id="5R3-vA-1et"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bda-ms-whe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-478" y="1054"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DG8-5Y-q3l">
+            <objects>
+                <viewController id="a0b-Hi-BFa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5dF-Bq-KPR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAL-Zd-G8q">
+                                <rect key="frame" x="164" y="315" width="55" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.95294117649999999" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5VL-EY-zeY" kind="show" id="GgY-Tj-nW0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L4O-pZ-LsP"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Ei-Dp-Ymn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZ0-Iy-djd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1325.5999999999999" y="1053.8230884557722"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Khy-sz-mAs">
+            <objects>
+                <viewController id="5VL-EY-zeY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jTD-th-9xU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Cak-1b-nb5"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pwc-WX-lgU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="irw-GD-zKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2122" y="1054"/>
+        </scene>
         <!--Registration View Controller-->
         <scene sceneID="qCI-ia-APL">
             <objects>
@@ -182,8 +408,8 @@
                                     <action selector="RegisterBtn:" destination="Dve-V5-jcc" eventType="touchUpInside" id="tHA-KO-cqz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an3-19-yqn">
-                                <rect key="frame" x="117" y="58" width="140" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an3-19-yqn">
+                                <rect key="frame" x="143" y="56" width="89" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -246,8 +472,29 @@
             </objects>
             <point key="canvasLocation" x="-743.20000000000005" y="31.934032983508249"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="V8x-5p-0DQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aU0-Nh-1BX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="KOD-LR-gkK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F3x-rr-Q7B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="a0b-Hi-BFa" kind="relationship" relationship="rootViewController" id="cqh-m9-mOm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGO-1R-oxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384.80000000000001" y="1053.8230884557722"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="listening_icon" width="48" height="48"/>
+        <image name="profile_Item" width="48" height="48"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

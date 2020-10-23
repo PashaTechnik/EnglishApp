@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18E10F48254353F70022D009 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E10F47254353F70022D009 /* TestingViewController.swift */; };
+		18E10F4D254367520022D009 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E10F4C254367520022D009 /* AVFoundation.framework */; };
+		18E10F5025436C5D0022D009 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 18E10F4F25436C5D0022D009 /* Sounds */; };
 		84982EF72530F10C009C6A4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84982EF62530F10C009C6A4A /* AppDelegate.swift */; };
 		84982EF92530F10C009C6A4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84982EF82530F10C009C6A4A /* SceneDelegate.swift */; };
 		84982EFB2530F10C009C6A4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84982EFA2530F10C009C6A4A /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18E10F47254353F70022D009 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
+		18E10F4C254367520022D009 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		18E10F4F25436C5D0022D009 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		84982EF32530F10C009C6A4A /* EnglishApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84982EF62530F10C009C6A4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84982EF82530F10C009C6A4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,17 +43,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E10F4D254367520022D009 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18E10F4B254367520022D009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18E10F4C254367520022D009 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84982EEA2530F10C009C6A4A = {
 			isa = PBXGroup;
 			children = (
 				84982EF52530F10C009C6A4A /* EnglishApp */,
 				84982EF42530F10C009C6A4A /* Products */,
+				18E10F4B254367520022D009 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,12 +78,14 @@
 		84982EF52530F10C009C6A4A /* EnglishApp */ = {
 			isa = PBXGroup;
 			children = (
+				18E10F4F25436C5D0022D009 /* Sounds */,
 				84982EF62530F10C009C6A4A /* AppDelegate.swift */,
 				84982EF82530F10C009C6A4A /* SceneDelegate.swift */,
 				84982EFA2530F10C009C6A4A /* ViewController.swift */,
 				84E619642542223A0075AEBA /* StartViewController.swift */,
 				84E6196825422C920075AEBA /* RegistrationViewController.swift */,
 				84982EFC2530F10C009C6A4A /* Main.storyboard */,
+				18E10F47254353F70022D009 /* TestingViewController.swift */,
 				84982EFF2530F10F009C6A4A /* Assets.xcassets */,
 				84982F012530F10F009C6A4A /* LaunchScreen.storyboard */,
 				84982F042530F10F009C6A4A /* Info.plist */,
@@ -136,6 +154,7 @@
 			files = (
 				84982F032530F10F009C6A4A /* LaunchScreen.storyboard in Resources */,
 				84982F002530F10F009C6A4A /* Assets.xcassets in Resources */,
+				18E10F5025436C5D0022D009 /* Sounds in Resources */,
 				84982EFE2530F10C009C6A4A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E10F48254353F70022D009 /* TestingViewController.swift in Sources */,
 				84E6196925422C920075AEBA /* RegistrationViewController.swift in Sources */,
 				84AFF79A253E2E03009FB86B /* User.swift in Sources */,
 				84982EFB2530F10C009C6A4A /* ViewController.swift in Sources */,
@@ -228,7 +248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -282,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -296,17 +316,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99U8W5YTFV;
+				DEVELOPMENT_TEAM = 56LH8HRLUR;
 				INFOPLIST_FILE = EnglishApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-.EnglishApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "pash-.EnglishApp2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,17 +337,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99U8W5YTFV;
+				DEVELOPMENT_TEAM = 56LH8HRLUR;
 				INFOPLIST_FILE = EnglishApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-.EnglishApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "pash-.EnglishApp2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
