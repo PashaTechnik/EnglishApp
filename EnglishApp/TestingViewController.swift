@@ -22,6 +22,20 @@ var segment:Int = 1
 
 var isLast:Bool = false
 
+func levelShow() -> String
+{
+    if score > 12 {
+        return "Advanced"
+    }
+    else if (score > 9 && score <= 12)
+    {
+        return "Intermediate"
+    }
+    else {
+        return "Kindergarden"
+    }
+}
+
 class TestingViewController: UIViewController, UITextFieldDelegate {
     var audioPlayer : AVAudioPlayer!
 
@@ -34,6 +48,9 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var answer_textField: UITextField!
     @IBOutlet weak var listening_Button: UIButton!
     @IBOutlet weak var listening_status_label: UILabel!
+    @IBOutlet weak var progress_bar: UIProgressView!
+    
+    let progress = Progress(totalUnitCount: 14)
     
     @IBAction func soundBtn(_ sender: UIButton) { // sound button tapped
         audioPlayer!.play()
@@ -66,6 +83,11 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         if !isLast
         {
             count += 1
+            
+            self.progress.completedUnitCount += 1
+            let progressFloat = Float(self.progress.fractionCompleted)
+            self.progress_bar.setProgress(progressFloat, animated: true)
+            
             audio(i: count)
             audioPlayer!.play()
         }
@@ -104,6 +126,11 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
             if !isLast
             {
                 count += 1
+                
+                self.progress.completedUnitCount += 1
+                let progressFloat = Float(self.progress.fractionCompleted)
+                self.progress_bar.setProgress(progressFloat, animated: true)
+                
                 newTransl(i: count)
                 
             }
@@ -111,7 +138,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
             {
                 isLast = false
                 view5()
-                score = 0
+                //score = 0
                 count = 0
             }
         }
@@ -126,6 +153,11 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
             print(score)
         }
         count += 1
+        
+            self.progress.completedUnitCount += 1
+            let progressFloat = Float(self.progress.fractionCompleted)
+            self.progress_bar.setProgress(progressFloat, animated: true)
+            
         if (count == 3)
         {
             isLast = true
@@ -149,6 +181,11 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
                 print(score)
             }
             count += 1
+            
+            self.progress.completedUnitCount += 1
+            let progressFloat = Float(self.progress.fractionCompleted)
+            self.progress_bar.setProgress(progressFloat, animated: true)
+            
             if (count == 4)
             {
                 isLast = true
@@ -174,6 +211,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.progress_bar.progress = 0
     }
     
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
@@ -182,8 +220,16 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) { // new test every time when appeared
+        score = 0
         view1()
         newQues(i: 0)
+        self.progress_bar.progress = 0
+        progress_bar.isHidden = false;
+        
+        self.progress.completedUnitCount = 0
+        let progressFloat = Float(self.progress.fractionCompleted)
+        self.progress_bar.setProgress(progressFloat, animated: true)
+        
     }
     
     func audio(i: Int)
@@ -280,5 +326,8 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         listening_status_label.isHidden = true;
         
         vocab_task_Label.text = string;
+        progress_bar.isHidden = true;
+        
     }
+    
 }

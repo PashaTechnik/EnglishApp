@@ -134,21 +134,87 @@
             </objects>
             <point key="canvasLocation" x="196" y="31.934032983508249"/>
         </scene>
-        <!--Тренировка-->
+        <!--Training View Controller-->
         <scene sceneID="KsX-Ki-05D">
             <objects>
-                <viewController id="7W2-Uf-yMp" sceneMemberID="viewController">
+                <viewController id="7W2-Uf-yMp" userLabel="Training View Controller" customClass="TrainingViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xo0-at-HAq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="27h-28-XZ3" userLabel="WordTraining Scroll View">
+                                <rect key="frame" x="0.0" y="79" width="375" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AIA-BM-cZC">
+                                        <rect key="frame" x="10" y="0.0" width="355" height="150"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AIA-BM-cZC" firstAttribute="centerX" secondItem="27h-28-XZ3" secondAttribute="centerX" placeholder="YES" id="9So-Ke-hUv"/>
+                                    <constraint firstItem="AIA-BM-cZC" firstAttribute="height" secondItem="27h-28-XZ3" secondAttribute="height" id="FWp-86-vi9"/>
+                                    <constraint firstAttribute="bottom" secondItem="AIA-BM-cZC" secondAttribute="bottom" id="GNw-y7-mua"/>
+                                    <constraint firstAttribute="trailing" secondItem="AIA-BM-cZC" secondAttribute="trailing" constant="10" id="SM3-gW-ls7"/>
+                                    <constraint firstAttribute="height" constant="150" id="TWP-XV-4iX"/>
+                                    <constraint firstItem="AIA-BM-cZC" firstAttribute="leading" secondItem="27h-28-XZ3" secondAttribute="leading" constant="10" id="suy-KZ-2ZD"/>
+                                    <constraint firstItem="AIA-BM-cZC" firstAttribute="top" secondItem="27h-28-XZ3" secondAttribute="top" id="ug3-Io-OyF"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="qjE-E4-9Qd"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="v3r-rP-UWo"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Словарная" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHj-Se-IgS">
+                                <rect key="frame" x="16" y="39" width="150" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Грамматическая" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFt-d6-Qns">
+                                <rect key="frame" x="16" y="250" width="228" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJb-SW-s7q" userLabel="Grammar Training Scroll View">
+                                <rect key="frame" x="0.0" y="299" width="375" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nAl-6B-hb8" userLabel="Grammar Training Stack View">
+                                        <rect key="frame" x="10" y="0.0" width="355" height="150"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="nAl-6B-hb8" secondAttribute="bottom" id="7SQ-d4-GPa"/>
+                                    <constraint firstItem="nAl-6B-hb8" firstAttribute="leading" secondItem="rJb-SW-s7q" secondAttribute="leading" constant="10" id="DgY-uy-G39"/>
+                                    <constraint firstItem="nAl-6B-hb8" firstAttribute="top" secondItem="rJb-SW-s7q" secondAttribute="top" id="M4T-qy-uOV"/>
+                                    <constraint firstAttribute="height" constant="150" id="NeQ-bX-DpK"/>
+                                    <constraint firstItem="nAl-6B-hb8" firstAttribute="height" secondItem="rJb-SW-s7q" secondAttribute="height" id="d8s-rs-UHu"/>
+                                    <constraint firstItem="nAl-6B-hb8" firstAttribute="centerX" secondItem="rJb-SW-s7q" secondAttribute="centerX" placeholder="YES" id="jfg-NN-0zQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="nAl-6B-hb8" secondAttribute="trailing" constant="10" id="oKa-in-gAm"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="GcF-ss-GJ4"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="BzS-DW-Fas"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Vru-D5-RjS"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rJb-SW-s7q" firstAttribute="trailing" secondItem="Vru-D5-RjS" secondAttribute="trailing" id="3iL-KZ-4VP"/>
+                            <constraint firstItem="27h-28-XZ3" firstAttribute="centerY" secondItem="Xo0-at-HAq" secondAttribute="centerY" constant="-180" id="6Zc-Pn-XFo"/>
+                            <constraint firstItem="rJb-SW-s7q" firstAttribute="centerY" secondItem="Xo0-at-HAq" secondAttribute="centerY" constant="40" id="XTp-vb-jpI"/>
+                            <constraint firstItem="27h-28-XZ3" firstAttribute="leading" secondItem="Vru-D5-RjS" secondAttribute="leading" id="XY7-JE-jxM"/>
+                            <constraint firstItem="rJb-SW-s7q" firstAttribute="leading" secondItem="Vru-D5-RjS" secondAttribute="leading" id="b0S-gi-SYK"/>
+                            <constraint firstAttribute="trailing" secondItem="27h-28-XZ3" secondAttribute="trailing" id="pUi-PR-bLe"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Тренировка" id="XGy-cK-SL0"/>
+                    <connections>
+                        <outlet property="grammarTraining_stackView" destination="nAl-6B-hb8" id="Xko-bF-OZg"/>
+                        <outlet property="wordTraining_stackView" destination="AIA-BM-cZC" id="DLX-C7-6UY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZZ-w0-AkP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-822" y="1989"/>
+            <point key="canvasLocation" x="-823.20000000000005" y="1988.4557721139431"/>
         </scene>
         <!--Test_ViewController-->
         <scene sceneID="txw-d8-sib">
@@ -243,6 +309,12 @@
                                     <action selector="soundBtn:" destination="AOq-95-2to" eventType="touchUpInside" id="vDs-Dr-QUk"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tPJ-FS-KLB">
+                                <rect key="frame" x="30" y="51" width="329" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zHf-qe-Caz"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -271,6 +343,7 @@
                         <outlet property="grammar_task_Label" destination="sZq-n7-Gzg" id="gJT-k2-Id9"/>
                         <outlet property="listening_Button" destination="uHo-Ol-En2" id="V0Z-8M-gha"/>
                         <outlet property="listening_status_label" destination="8Tm-83-cfK" id="CBt-Wl-hR2"/>
+                        <outlet property="progress_bar" destination="tPJ-FS-KLB" id="OhM-8H-aox"/>
                         <outlet property="vocab_task_Label" destination="XbN-qx-aKI" id="YXg-sU-J7X"/>
                     </connections>
                 </viewController>
@@ -278,21 +351,46 @@
             </objects>
             <point key="canvasLocation" x="160.80000000000001" y="1987.5562218890557"/>
         </scene>
-        <!--Профиль-->
+        <!--Profile View Controller-->
         <scene sceneID="qIr-s1-9T4">
             <objects>
-                <viewController id="INk-UH-4MZ" sceneMemberID="viewController">
+                <viewController id="INk-UH-4MZ" userLabel="Profile View Controller" customClass="ProfileViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kUh-ie-8DH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27u-5y-Glw">
+                                <rect key="frame" x="138" y="156" width="99" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M1Q-CA-G2K">
+                                <rect key="frame" x="132" y="20" width="111" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJI-h4-PFE">
+                                <rect key="frame" x="65" y="181" width="244" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Uve-ua-bpu"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Профиль" largeContentSizeImage="profile_Item" id="RTx-62-pZy"/>
+                    <connections>
+                        <outlet property="userLevel_label" destination="qJI-h4-PFE" id="c8n-Sd-1IA"/>
+                        <outlet property="userPhoto" destination="M1Q-CA-G2K" id="7f4-sB-pVa"/>
+                        <outlet property="usernameLabel" destination="27u-5y-Glw" id="zPH-li-vJg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2A-Vg-aws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1726" y="1988"/>
+            <point key="canvasLocation" x="-1727.2" y="1987.5562218890557"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zSK-Or-FDk">
@@ -472,11 +570,11 @@
             </objects>
             <point key="canvasLocation" x="-743.20000000000005" y="31.934032983508249"/>
         </scene>
-        <!--Item-->
+        <!--Настройки-->
         <scene sceneID="V8x-5p-0DQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aU0-Nh-1BX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="KOD-LR-gkK"/>
+                    <tabBarItem key="tabBarItem" title="Настройки" id="KOD-LR-gkK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F3x-rr-Q7B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
