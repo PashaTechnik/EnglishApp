@@ -16,11 +16,11 @@ let ts_listening_answers = ["logical","attractive","complicated"]
 let ts_transl = ["сильный","добрый","окно"]
 let ts_transl_answers = ["strong","kind","window"]
 
-var score :Int = 0
-var count :Int = 0
-var segment:Int = 1
+var score: Int = 0
+var count: Int = 0
+var segment: Int = 1
 
-var isLast:Bool = false
+var isLast: Bool = false
 
 class TestingViewController: UIViewController, UITextFieldDelegate {
     var audioPlayer : AVAudioPlayer!
