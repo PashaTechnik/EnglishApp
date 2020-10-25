@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var users = [User]()
+    var user = User(name: "empty", email: "empty", password: "empty")
 
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
@@ -29,6 +30,14 @@ class ViewController: UIViewController {
             
             if user.password == password! && user.email == email! {
                 enter = true
+                self.user.email = user.email
+                self.user.password = user.password
+                self.user.name = user.name
+                self.user.points = user.points
+                self.user.isLoggedIn = true
+                self.user.id = user.id!
+                Networking.updateUser(self.user)
+                
             }
         }
         if enter {
@@ -73,9 +82,6 @@ class ViewController: UIViewController {
 
         Networking.fetchData { (users) in
             self.users = users
-            for user in users {
-                print(user)
-            }
         }
     }
     

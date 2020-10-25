@@ -128,6 +128,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="LoginView" id="bEg-84-vSG"/>
+                        <segue destination="HG3-3o-8tZ" kind="presentation" identifier="ShowTabBar" id="Yk2-Zf-Neq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEz-aQ-j9D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -139,11 +140,11 @@
             <objects>
                 <viewController id="7W2-Uf-yMp" userLabel="Training View Controller" customClass="TrainingViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xo0-at-HAq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="27h-28-XZ3" userLabel="WordTraining Scroll View">
-                                <rect key="frame" x="0.0" y="78.5" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="68.5" width="375" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AIA-BM-cZC">
                                         <rect key="frame" x="10" y="0.0" width="355" height="150"/>
@@ -176,7 +177,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJb-SW-s7q" userLabel="Grammar Training Scroll View">
-                                <rect key="frame" x="0.0" y="298.5" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="288.5" width="375" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nAl-6B-hb8" userLabel="Grammar Training Stack View">
                                         <rect key="frame" x="10" y="0.0" width="355" height="150"/>
@@ -358,14 +359,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQ7-q5-eA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941.60000000000002" y="424.13793103448279"/>
+            <point key="canvasLocation" x="942" y="391"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="qIr-s1-9T4">
             <objects>
                 <viewController id="INk-UH-4MZ" userLabel="Profile View Controller" customClass="ProfileViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kUh-ie-8DH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27u-5y-Glw">
@@ -426,7 +427,7 @@
             <objects>
                 <viewController id="a0b-Hi-BFa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5dF-Bq-KPR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAL-Zd-G8q">
@@ -455,7 +456,7 @@
             <objects>
                 <viewController id="5VL-EY-zeY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jTD-th-9xU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Cak-1b-nb5"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -602,7 +603,7 @@
                     <tabBarItem key="tabBarItem" title="Настройки" id="KOD-LR-gkK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F3x-rr-Q7B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -616,7 +617,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KVv-TN-Ba1"/>
+        <segue reference="dGT-2y-5qk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="listening_icon" width="48" height="48"/>
