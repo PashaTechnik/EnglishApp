@@ -37,6 +37,9 @@ func levelShow() -> String
 }
 
 class TestingViewController: UIViewController, UITextFieldDelegate {
+    var user = User(name: "empty", email: "empty", password: "empty")
+
+    
     var audioPlayer : AVAudioPlayer!
 
     @IBOutlet weak var vocab_task_Label: UILabel!
@@ -49,6 +52,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var listening_Button: UIButton!
     @IBOutlet weak var listening_status_label: UILabel!
     @IBOutlet weak var progress_bar: UIProgressView!
+    @IBOutlet weak var endTestButton: UIButton!
     
     let progress = Progress(totalUnitCount: 14)
     
@@ -273,6 +277,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         vocab_task_Label.isHidden = false;
         listening_Button.isHidden = true;
         listening_status_label.isHidden = true;
+        endTestButton.isHidden = true
     }
     
     func view2() { // тест граматика
@@ -285,6 +290,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         grammar_task_Label.isHidden = false;
         listening_Button.isHidden = true;
         listening_status_label.isHidden = true;
+        endTestButton.isHidden = true
     }
     func view3() { // аудирование
         answer_textField.isHidden = false;
@@ -296,6 +302,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         grammar_task_Label.isHidden = true;
         listening_Button.isHidden = false;
         listening_status_label.isHidden = false;
+        endTestButton.isHidden = true
     }
     func view4 () { //слово-перевод
         answer_textField.isHidden = false;
@@ -307,10 +314,10 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         grammar_task_Label.isHidden = true;
         listening_Button.isHidden = true;
         listening_status_label.isHidden = false;
-        
+        endTestButton.isHidden = true
         answer_textField.placeholder = "перевод"
     }
-    
+
     func view5() { // результат
         var string = "Результат " + String(score)
         
@@ -324,10 +331,22 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         grammar_task_Label.isHidden = true;
         listening_Button.isHidden = true;
         listening_status_label.isHidden = true;
+        endTestButton.isHidden = false
         
         vocab_task_Label.text = string;
         progress_bar.isHidden = true;
         
     }
     
+    @IBAction func EndTestBtn(_ sender: Any) {
+        user.points = score
+        Networking.addUser(user)
+    }
+    
+    
+    
 }
+
+
+
+

@@ -14,4 +14,5 @@ struct User: Codable {
     var email: String
     var password: String
     var points: Int = 0
+    var isLoggedIn: Bool = false
 }

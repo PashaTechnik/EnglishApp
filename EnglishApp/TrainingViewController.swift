@@ -1,6 +1,7 @@
 import UIKit
 
 class TrainingViewController: UIViewController {
+    
 
     @IBOutlet weak var wordTraining_stackView: UIStackView!
     @IBOutlet weak var grammarTraining_stackView: UIStackView!

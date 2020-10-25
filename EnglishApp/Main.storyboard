@@ -315,6 +315,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUb-7u-NKU">
+                                <rect key="frame" x="156" y="609" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="End test"/>
+                                <connections>
+                                    <action selector="EndTestBtn:" destination="AOq-95-2to" eventType="touchUpInside" id="Iiu-W6-70A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zHf-qe-Caz"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -340,6 +348,7 @@
                         <outlet property="choice2_test_button" destination="CAb-1H-u7f" id="yGr-xP-HGx"/>
                         <outlet property="choice3_test_button" destination="9gy-8n-T3r" id="l5o-av-QK4"/>
                         <outlet property="choice4_test_button" destination="qci-BV-HFh" id="4wb-qY-aD9"/>
+                        <outlet property="endTestButton" destination="IUb-7u-NKU" id="Yqk-Mn-jnC"/>
                         <outlet property="grammar_task_Label" destination="sZq-n7-Gzg" id="gJT-k2-Id9"/>
                         <outlet property="listening_Button" destination="uHo-Ol-En2" id="V0Z-8M-gha"/>
                         <outlet property="listening_status_label" destination="8Tm-83-cfK" id="CBt-Wl-hR2"/>
@@ -349,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQ7-q5-eA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="396"/>
+            <point key="canvasLocation" x="941.60000000000002" y="424.13793103448279"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="qIr-s1-9T4">
@@ -504,7 +513,7 @@
                                 </state>
                                 <connections>
                                     <action selector="RegisterBtn:" destination="Dve-V5-jcc" eventType="touchUpInside" id="tHA-KO-cqz"/>
-                                    <segue destination="AOq-95-2to" kind="presentation" id="KVv-TN-Ba1"/>
+                                    <segue destination="AOq-95-2to" kind="presentation" identifier="goToTest" id="KVv-TN-Ba1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an3-19-yqn">
@@ -560,6 +569,7 @@
                     <connections>
                         <outlet property="ConfPasswordTextFieldReg" destination="mPQ-W0-VKK" id="w7c-44-hHF"/>
                         <outlet property="EmailTextFieldReg" destination="AFg-pp-QIn" id="Ujx-0c-3I9"/>
+                        <outlet property="NameTextFieldReg" destination="nRw-yW-3qL" id="MHK-Wi-LQa"/>
                         <outlet property="PasswordTextFieldReg" destination="900-E0-VNf" id="Kr4-G3-QfX"/>
                     </connections>
                 </viewController>
