@@ -21,6 +21,7 @@
 		84AFF79A253E2E03009FB86B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFF799253E2E02009FB86B /* User.swift */; };
 		84E619652542223A0075AEBA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E619642542223A0075AEBA /* StartViewController.swift */; };
 		84E6196925422C920075AEBA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6196825422C920075AEBA /* RegistrationViewController.swift */; };
+		84E6197925455AF20075AEBA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6197825455AF10075AEBA /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		84AFF799253E2E02009FB86B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84E619642542223A0075AEBA /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		84E6196825422C920075AEBA /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		84E6197825455AF10075AEBA /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				84982F012530F10F009C6A4A /* LaunchScreen.storyboard */,
 				84982F042530F10F009C6A4A /* Info.plist */,
 				84AFF799253E2E02009FB86B /* User.swift */,
+				84E6197825455AF10075AEBA /* Networking.swift */,
 			);
 			path = EnglishApp;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E10F48254353F70022D009 /* TestingViewController.swift in Sources */,
+				84E6197925455AF20075AEBA /* Networking.swift in Sources */,
 				84E6196925422C920075AEBA /* RegistrationViewController.swift in Sources */,
 				181216FB254460FC006FCA0B /* TrainingViewController.swift in Sources */,
 				84AFF79A253E2E03009FB86B /* User.swift in Sources */,

@@ -28,8 +28,6 @@ class ViewController: UIViewController {
         
             
             if user.password == password! && user.email == email! {
-                UserDefaults.standard.setValue(true, forKey: "isUserLoggedIn")
-                UserDefaults.standard.synchronize()
                 enter = true
             }
         }
@@ -38,9 +36,10 @@ class ViewController: UIViewController {
             let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
                 self.dismiss(animated: true, completion: nil)
             }
-            
             alert.addAction(okAction)
             self.present(alert, animated: true)
+            UserDefaults.standard.setValue(true, forKey: "isUserLoggedIn")
+            UserDefaults.standard.synchronize()
         }
         else {
             let alert = UIAlertController(title: "Error", message: "Login is not successful!", preferredStyle: .alert)
@@ -49,6 +48,7 @@ class ViewController: UIViewController {
             }
             alert.addAction(okAction)
             self.present(alert, animated: true)
+            self.dismiss(animated: true, completion: nil)
             return
         }
     }
@@ -56,7 +56,12 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //self.performSegue(withIdentifier: "LoginView", sender: self)
-        fetchData()
+        Networking.fetchData { (users) in
+            self.users = users
+            for user in users {
+                print(user)
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -65,29 +70,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
 
-        fetchData()
-    }
-    func fetchData(){
-        guard let url = URL(string: "http://localhost:8080/users") else { return }
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            guard let data = data else {
-                print(error?.localizedDescription ?? "Unknown error")
-                return
+
+        Networking.fetchData { (users) in
+            self.users = users
+            for user in users {
+                print(user)
             }
-            
-            let decoder = JSONDecoder()
-            
-            if let users = try? decoder.decode([User].self, from: data) {
-                DispatchQueue.main.async {
-                    
-                    self.users = users
-                    print("Loaded \(users.count) users.")
-                }
-                } else {
-                    print("Unable to parse JSON response.")
-                }
-        }.resume()
+        }
     }
     
 
@@ -126,7 +115,5 @@ extension UITextField{
         self.resignFirstResponder()
     }
     
-    
 }
-
 

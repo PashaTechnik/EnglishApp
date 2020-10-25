@@ -17,13 +17,14 @@ class StartViewController: UIViewController {
         self.performSegue(withIdentifier: "LoginView", sender: self)
     }
     override func viewDidLoad() {
-        print(UserDefaults.standard.bool(forKey: "isUserLoggedIn"))
+    
         super.viewDidLoad()
         
 
     }
     override func viewDidAppear(_ animated: Bool) {
         let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+        print(UserDefaults.standard.bool(forKey: "isUserLoggedIn"))
         if !isUserLoggedIn {
             self.performSegue(withIdentifier: "LoginView", sender: self)
         }
