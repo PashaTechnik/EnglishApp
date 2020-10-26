@@ -7,11 +7,14 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userLevel_label.text = nil
+        
+        let tabBar = tabBarController as! MainTabBar
+        userLevel_label.text = String(tabBar.user.points)
+        usernameLabel.text = tabBar.user.name
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        userLevel_label.text = levelShow()
+
     }
 
 }

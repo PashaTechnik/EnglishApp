@@ -25,8 +25,11 @@ class ViewController: UIViewController {
         
         var enter = false
         
+
         for user in users {
-        
+
+
+            
             
             if user.password == password! && user.email == email! {
                 enter = true
@@ -35,7 +38,6 @@ class ViewController: UIViewController {
                 self.user.name = user.name
                 self.user.points = user.points
                 self.user.isLoggedIn = true
-                self.user.id = user.id!
                 Networking.updateUser(self.user)
                 
             }

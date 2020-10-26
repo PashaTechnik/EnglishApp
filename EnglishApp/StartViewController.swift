@@ -10,36 +10,55 @@ import UIKit
 
 class StartViewController: UIViewController {
     var users = [User]()
+    var currentUser = User(name: "empty", email: "empty", password: "empty")
 
-    @IBAction func LogOutBtn(_ sender: Any) {
-        
-        UserDefaults.standard.setValue(false, forKey: "isUserLoggedIn")
-        UserDefaults.standard.synchronize()
-        self.performSegue(withIdentifier: "LoginView", sender: self)
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        var currentUser: User
-        Networking.fetchData { (users) in
-            self.users = users
-        }
-        print(users.count)
+    @IBAction func goToAccountBtn(_ sender: Any) {
+        fetchData()
         for user in users {
             if user.isLoggedIn == true {
                 currentUser = user
                 self.performSegue(withIdentifier: "ShowTabBar", sender: self)
             }
         }
+    }
+    
+    @IBAction func LogOutBtn(_ sender: Any) {
+        
+//        UserDefaults.standard.setValue(false, forKey: "isUserLoggedIn")
+//        UserDefaults.standard.synchronize()
+        fetchData()
+        for user in users {
+            if user.isLoggedIn == true {
+                currentUser = user
+                currentUser.isLoggedIn = false
+                Networking.updateUser(currentUser)
+            }
+        }
+        
+        self.performSegue(withIdentifier: "LoginView", sender: self)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        var currentUser: User
+        fetchData()
+        for user in users {
+            if user.isLoggedIn == true {
+                currentUser = user
+
+                self.performSegue(withIdentifier: "ShowTabBar", sender: self)
+            }
+        }
+        
         
 
     }
+    
     override func viewDidAppear(_ animated: Bool) {
 //        var currentUser: User
-        Networking.fetchData { (users) in
-            self.users = users
-        }
+        fetchData()
 //
+
 //
 //        for user in users {
 //            if user.isLoggedIn == true {
@@ -56,14 +75,42 @@ class StartViewController: UIViewController {
 //        }
     
     }
+    func fetchData(){
+        guard let url = URL(string: "http://localhost:8080/users") else { return }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard let data = data else {
+                print(error?.localizedDescription ?? "Unknown error")
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            
+            if let users = try? decoder.decode([User].self, from: data) {
+                DispatchQueue.main.async {
+                     self.users = users
+                     print("Loaded \(users.count) users.")
+                 }
+                } else {
+                    print("Unable to parse JSON response.")
+                }
+        }.resume()
+    }
+
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard segue.identifier == "ShowTabBar" else { return }
-//        guard let destination = segue.destination as? TestingViewController else { return }
-//        destination.user = self.user
-//
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "ShowTabBar" else { return }
+        let tabCtrl: UITabBarController = segue.destination as! UITabBarController
+        let destinationVC = tabCtrl as! MainTabBar
+        
+        //guard let destination = segue.destination as? TestingViewController else { return }
+        
+        destinationVC.user = currentUser
+
+    }
 
     
 
 }
+
+
