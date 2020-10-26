@@ -7,40 +7,49 @@ class TrainingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view1()
 
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
-        //button.constraints.
-        button.backgroundColor = .blue
-        button.layer.cornerRadius = 5
         
-       // button.widthAnchor.constraint(equalToConstant: 150).isActive = true
-        
-        
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.widthAnchor.constraint(equalToConstant: wordTraining_stackView.frame.height).isActive = true
-        
-
-    
-        let button2 = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
-        //button.constraints.
-        button2.backgroundColor = .blue
-        button2.layer.cornerRadius = 5
-        
-       // button.widthAnchor.constraint(equalToConstant: 150).isActive = true
-        
-        
-        button2.translatesAutoresizingMaskIntoConstraints = false
-        button2.widthAnchor.constraint(equalToConstant: wordTraining_stackView.frame.height).isActive = true
-        
-        grammarTraining_stackView.addArrangedSubview(button)
-        wordTraining_stackView.addArrangedSubview(button2)
    
+    }
+    
+    func view1() {
+        let button_WordTranslate = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+        let button_TranslateWord = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+        let button_AudioBattle = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+        let button_grammarQuiz = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+        
+        button_WordTranslate.backgroundColor = .blue
+        button_WordTranslate.layer.cornerRadius = 5
+        button_WordTranslate.translatesAutoresizingMaskIntoConstraints = false
+        button_WordTranslate.widthAnchor.constraint(equalToConstant: wordTraining_stackView.frame.height).isActive = true
+        
+        button_TranslateWord.backgroundColor = .blue
+        button_TranslateWord.layer.cornerRadius = 5
+        button_TranslateWord.translatesAutoresizingMaskIntoConstraints = false
+        button_TranslateWord.widthAnchor.constraint(equalToConstant: wordTraining_stackView.frame.height).isActive = true
+        
+        button_AudioBattle.backgroundColor = .blue
+        button_AudioBattle.layer.cornerRadius = 5
+        button_AudioBattle.translatesAutoresizingMaskIntoConstraints = false
+        button_AudioBattle.widthAnchor.constraint(equalToConstant: wordTraining_stackView.frame.height).isActive = true
+        
+        button_grammarQuiz.backgroundColor = .blue
+        button_grammarQuiz.layer.cornerRadius = 5
+        button_grammarQuiz.translatesAutoresizingMaskIntoConstraints = false
+        button_grammarQuiz.widthAnchor.constraint(equalToConstant: wordTraining_stackView.frame.height).isActive = true
+        
+        let image = UIImage(named: "refreshButton") as UIImage?
+        button_grammarQuiz.setImage(image, for: .normal)
+
+        
+        wordTraining_stackView.addArrangedSubview(button_WordTranslate)
+        wordTraining_stackView.addArrangedSubview(button_TranslateWord)
+        wordTraining_stackView.addArrangedSubview(button_AudioBattle)
+        grammarTraining_stackView.addArrangedSubview(button_grammarQuiz)
     }
 }
