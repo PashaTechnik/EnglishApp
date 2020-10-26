@@ -1,0 +1,339 @@
+[
+    {
+        "question": "sand",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "entirely",
+        "answer1": "полностью",
+        "answer2": "мнгновенно",
+        "answer3": "озабоченно",
+        "answer4": "злобно",
+        "right": 0
+    },
+    {
+        "question": "precisely",
+        "answer1": "знаково",
+        "answer2": "удачно",
+        "answer3": "точно",
+        "answer4": "необязательно",
+        "right": 1
+    },
+    {
+        "question": "stage",
+        "answer1": "волнение",
+        "answer2": "песок",
+        "answer3": "этап",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "memory",
+        "answer1": "память",
+        "answer2": "песок",
+        "answer3": "менторство",
+        "answer4": "забота",
+        "right": 1
+    },
+    {
+        "question": "pressure",
+        "answer1": "уважение",
+        "answer2": "обида",
+        "answer3": "давление",
+        "answer4": "удушение",
+        "right": 1
+    },
+    {
+        "question": "niece",
+        "answer1": "жир",
+        "answer2": "ночь",
+        "answer3": "необходимость",
+        "answer4": "племянница",
+        "right": 1
+    },
+    {
+        "question": "sole",
+        "answer1": "слепой",
+        "answer2": "сильный",
+        "answer3": "многообразный",
+        "answer4": "единственный",
+        "right": 1
+    },
+    {
+        "question": "forecast",
+        "answer1": "запрет",
+        "answer2": "предупреждение",
+        "answer3": "прогноз",
+        "answer4": "допрос",
+        "right": 1
+    },
+    {
+        "question": "forbid",
+        "answer1": "просить прощения",
+        "answer2": "допускать",
+        "answer3": "разрешать",
+        "answer4": "запрещать",
+        "right": 1
+    },
+    {
+        "question": "final",
+        "answer1": "окончательный",
+        "answer2": "оригинальный",
+        "answer3": "жаренный",
+        "answer4": "летающий",
+        "right": 1
+    },
+    {
+        "question": "patience",
+        "answer1": "пациент",
+        "answer2": "терпение",
+        "answer3": "уважение",
+        "answer4": "панцирь",
+        "right": 1
+    },
+    {
+        "question": "pearl",
+        "answer1": "жемчужина",
+        "answer2": "янтарь",
+        "answer3": "угощение",
+        "answer4": "пытка",
+        "right": 1
+    },
+    {
+        "question": "suitable",
+        "answer1": "подходящий",
+        "answer2": "жестокий",
+        "answer3": "самостаятельный",
+        "answer4": "аварийный",
+        "right": 1
+    },
+    {
+        "question": "bridge",
+        "answer1": "аванпост",
+        "answer2": "редут",
+        "answer3": "мост",
+        "answer4": "заслонка",
+        "right": 1
+    },
+    {
+        "question": "avoid",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "proposal",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "neglect",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "crew",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "syllable",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "vision",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "selfish",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "snack",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "arrow",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "remote",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "tomb",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "proud",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "skip",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "share",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "tame",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "missing",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "emergency",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "difference",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "violence",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "slave",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "envelope",
+        "answer1": "мыло",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "солнце",
+        "right": 1
+    },
+    {
+        "question": "edge",
+        "answer1": "мыло",
+        "answer2": "граница",
+        "answer3": "край",
+        "answer4": "конец",
+        "right": 1
+    },
+    {
+        "question": "destroy",
+        "answer1": "дед",
+        "answer2": "песок",
+        "answer3": "жидкий",
+        "answer4": "разрушать",
+        "right": 1
+    },
+    {
+        "question": "bitter",
+        "answer1": "горький",
+        "answer2": "кислый",
+        "answer3": "перченный",
+        "answer4": "аа ",
+        "right": 1
+    },
+    {
+        "question": "thief",
+        "answer1": "добряк",
+        "answer2": "засов",
+        "answer3": "грабитель",
+        "answer4": "дворник",
+        "right": 1
+    },
+    {
+        "question": "border",
+        "answer1": "граница",
+        "answer2": "графит",
+        "answer3": "бордель",
+        "answer4": "бордюр",
+        "right": 1
+    },
+    {
+        "question": "solution",
+        "answer1": "мыло",
+        "answer2": "решение",
+        "answer3": "шампунь",
+        "answer4": "разрешение",
+        "right": 1
+    }
+    ]
+    

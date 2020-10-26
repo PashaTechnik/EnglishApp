@@ -1,40 +1,6 @@
 import UIKit
 import AVFoundation
 
-// only testing
-let ts_words = ["cat","dog","house","table"]
-let ts_answers = [["кот","собака","стол","стул"],["кот","стул","собака","енот"],["енот","дом","стол","конь"],["конь","собака","кот","стол"]]
-let ts_rightAnswers = [1,3,2,4]
-
-let ts_grammar = ["It's a great place to live apart from the increasing volume of __ that passes under my window every day.","We __a lovely three weeks in the south of Spain last year.","Alex __ judo after school every Friday.","You must come quickly now or we won't _ the bus.","How __ have you and your family lived in this flat?"]
-let ts_answers_grammar = [["traffic","vehicles","transport","circulation"],["took","did","passed","spent"],["makes","goes","plays","does"],["take","meet","catch","run"],["soon","much","often","long"]]
-let ts_rightAnswers_grammar = [2,4,2,3,4]
-
-let ts_listening_words = ["","",""]
-let ts_listening_answers = ["logical","attractive","complicated"]
-
-let ts_transl = ["сильный","добрый","окно"]
-let ts_transl_answers = ["strong","kind","window"]
-
-var score: Int = 0
-var count: Int = 0
-var segment: Int = 1
-
-var isLast: Bool = false
-
-func levelShow() -> String
-{
-    if score > 12 {
-        return "Advanced"
-    }
-    else if (score > 9 && score <= 12)
-    {
-        return "Intermediate"
-    }
-    else {
-        return "Kindergarden"
-    }
-}
 
 class TestingViewController: UIViewController, UITextFieldDelegate {
     var audioPlayer : AVAudioPlayer!
@@ -50,7 +16,14 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var listening_status_label: UILabel!
     @IBOutlet weak var progress_bar: UIProgressView!
     
+    var score: Int = 0
+    var count: Int = 0
+    var segment: Int = 1
+    var isLast: Bool = false
+
+    let jsData = JsonDataLoader()
     let progress = Progress(totalUnitCount: 14)
+    
     
     @IBAction func soundBtn(_ sender: UIButton) { // sound button tapped
         audioPlayer!.play()
@@ -60,21 +33,19 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         textFieldShouldReturn(answer_textField)
         
         if (segment == 3) {
-        if answer_textField.text == ts_listening_answers[count]
+            if answer_textField.text == jsData.listeningData[count].question
         {
             score += 1
-            print(score)
-            listening_status_label.text = ts_listening_answers[count]
+            listening_status_label.text = jsData.listeningData[count].question
             listening_status_label.textColor = .green
         }
         else
         {
-            listening_status_label.text = ts_listening_answers[count]
+            listening_status_label.text = jsData.listeningData[count].question
             listening_status_label.textColor = .red
         }
-        sleep(1);
+        sleep(1)
         answer_textField.text = nil;
-        
         
         if (count == 2)
         {
@@ -103,8 +74,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         } // реагирует на 4 сегмент
         else
         {
-            //newTransl(i: count)
-            if (answer_textField.text == ts_transl_answers[count])
+            if (answer_textField.text == jsData.translateData[count].answer)
             {
                 listening_status_label.text = "правильно"
                 listening_status_label.textColor = .green
@@ -138,7 +108,6 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
             {
                 isLast = false
                 view5()
-                //score = 0
                 count = 0
             }
         }
@@ -147,16 +116,15 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     @IBAction func answerButtonTapped(_ sender: UIButton) { // only testing
         if (segment == 1) {
         
-        if (sender.tag == ts_rightAnswers[count])
+        if (sender.tag == jsData.tesingQuizData[count].right)
         {
             score += 1
-            print(score)
         }
         count += 1
         
-            self.progress.completedUnitCount += 1
-            let progressFloat = Float(self.progress.fractionCompleted)
-            self.progress_bar.setProgress(progressFloat, animated: true)
+        self.progress.completedUnitCount += 1
+        let progressFloat = Float(self.progress.fractionCompleted)
+        self.progress_bar.setProgress(progressFloat, animated: true)
             
         if (count == 3)
         {
@@ -175,7 +143,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         }
         else
         {
-            if (sender.tag == ts_rightAnswers_grammar[count]) {
+            if (sender.tag == jsData.grammarData[count].right) {
                 score += 1
                 
                 print(score)
@@ -203,7 +171,6 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
                 isLast = false
                 audio(i: count)
                 audioPlayer!.play()
-                
             }
         }
         
@@ -211,7 +178,8 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.progress_bar.progress = 0
+            // self.progress_bar.progress = 0
+        
     }
     
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
@@ -234,7 +202,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     
     func audio(i: Int)
     {
-        var str = "Sounds/" + ts_listening_answers[i];
+        var str = "Sounds/" + jsData.listeningData[i].question
         let sound = Bundle.main.path (forResource: str, ofType: "mp3")!
         let url = URL(fileURLWithPath: sound)
         do {
@@ -245,22 +213,24 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     
     func newTransl(i:Int)
     {
-        vocab_task_Label.text = ts_transl[i];
+        vocab_task_Label.text = jsData.translateData[i].question
+        
     }
     func newQues(i: Int)  { // only testing
-        vocab_task_Label.text = ts_words[i]
-        choice1_test_button.setTitle(ts_answers[i][0], for: .normal)
-        choice2_test_button.setTitle(ts_answers[i][1], for: .normal)
-        choice3_test_button.setTitle(ts_answers[i][2], for: .normal)
-        choice4_test_button.setTitle(ts_answers[i][3], for: .normal)
+        
+        vocab_task_Label.text = jsData.tesingQuizData[i].question
+        choice1_test_button.setTitle(jsData.tesingQuizData[i].answer1, for: .normal)
+        choice2_test_button.setTitle(jsData.tesingQuizData[i].answer2, for: .normal)
+        choice3_test_button.setTitle(jsData.tesingQuizData[i].answer3, for: .normal)
+        choice4_test_button.setTitle(jsData.tesingQuizData[i].answer4, for: .normal)
     }
     
     func newGramQuestion(i:Int) {
-        grammar_task_Label.text = ts_grammar[i]
-        choice1_test_button.setTitle(ts_answers_grammar[i][0], for: .normal)
-        choice2_test_button.setTitle(ts_answers_grammar[i][1], for: .normal)
-        choice3_test_button.setTitle(ts_answers_grammar[i][2], for: .normal)
-        choice4_test_button.setTitle(ts_answers_grammar[i][3], for: .normal)
+        grammar_task_Label.text = jsData.grammarData[i].question
+        choice1_test_button.setTitle(jsData.grammarData[i].answer1, for: .normal)
+        choice2_test_button.setTitle(jsData.grammarData[i].answer2, for: .normal)
+        choice3_test_button.setTitle(jsData.grammarData[i].answer3, for: .normal)
+        choice4_test_button.setTitle(jsData.grammarData[i].answer4, for: .normal)
     }
 
     func view1 (){ //тест словарный
@@ -307,13 +277,11 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         grammar_task_Label.isHidden = true;
         listening_Button.isHidden = true;
         listening_status_label.isHidden = false;
-        
         answer_textField.placeholder = "перевод"
     }
     
     func view5() { // результат
-        var string = "Результат " + String(score)
-        
+        var string = "Результат " + String(score) //testing
         
         answer_textField.isHidden = true;
         vocab_task_Label.isHidden = false;
@@ -327,7 +295,5 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         
         vocab_task_Label.text = string;
         progress_bar.isHidden = true;
-        
     }
-    
 }
