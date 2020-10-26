@@ -13,6 +13,8 @@
 		18E10F48254353F70022D009 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E10F47254353F70022D009 /* TestingViewController.swift */; };
 		18E10F4D254367520022D009 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E10F4C254367520022D009 /* AVFoundation.framework */; };
 		18E10F5025436C5D0022D009 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 18E10F4F25436C5D0022D009 /* Sounds */; };
+		18FC642125460F0200A15A87 /* DataSets in Resources */ = {isa = PBXBuildFile; fileRef = 18FC642025460F0200A15A87 /* DataSets */; };
+		18FC642425460FC100A15A87 /* DataTransporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC642325460FC100A15A87 /* DataTransporter.swift */; };
 		84982EF72530F10C009C6A4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84982EF62530F10C009C6A4A /* AppDelegate.swift */; };
 		84982EF92530F10C009C6A4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84982EF82530F10C009C6A4A /* SceneDelegate.swift */; };
 		84982EFB2530F10C009C6A4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84982EFA2530F10C009C6A4A /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 		18E10F47254353F70022D009 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		18E10F4C254367520022D009 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		18E10F4F25436C5D0022D009 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		18FC642025460F0200A15A87 /* DataSets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DataSets; sourceTree = "<group>"; };
+		18FC642325460FC100A15A87 /* DataTransporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransporter.swift; sourceTree = "<group>"; };
 		84982EF32530F10C009C6A4A /* EnglishApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84982EF62530F10C009C6A4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84982EF82530F10C009C6A4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,10 +90,11 @@
 		84982EF52530F10C009C6A4A /* EnglishApp */ = {
 			isa = PBXGroup;
 			children = (
+				18FC642025460F0200A15A87 /* DataSets */,
 				18E10F4F25436C5D0022D009 /* Sounds */,
 				84982EF62530F10C009C6A4A /* AppDelegate.swift */,
-				84982EF82530F10C009C6A4A /* SceneDelegate.swift */,
 				84982EFA2530F10C009C6A4A /* ViewController.swift */,
+				84982EF82530F10C009C6A4A /* SceneDelegate.swift */,
 				84E619642542223A0075AEBA /* StartViewController.swift */,
 				84E6196825422C920075AEBA /* RegistrationViewController.swift */,
 				18E10F47254353F70022D009 /* TestingViewController.swift */,
@@ -102,6 +107,7 @@
 				84AFF799253E2E02009FB86B /* User.swift */,
 				84E6197825455AF10075AEBA /* Networking.swift */,
 				84A107112546F722008DB456 /* MainTabBar.swift */,
+				18FC642325460FC100A15A87 /* DataTransporter.swift */,
 			);
 			path = EnglishApp;
 			sourceTree = "<group>";
@@ -168,6 +174,7 @@
 				84982F002530F10F009C6A4A /* Assets.xcassets in Resources */,
 				18E10F5025436C5D0022D009 /* Sounds in Resources */,
 				181216F7254450C2006FCA0B /* Main.storyboard in Resources */,
+				18FC642125460F0200A15A87 /* DataSets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +193,7 @@
 				84AFF79A253E2E03009FB86B /* User.swift in Sources */,
 				84982EFB2530F10C009C6A4A /* ViewController.swift in Sources */,
 				84982EF72530F10C009C6A4A /* AppDelegate.swift in Sources */,
+				18FC642425460FC100A15A87 /* DataTransporter.swift in Sources */,
 				181216FE25446C65006FCA0B /* ProfileViewController.swift in Sources */,
 				84982EF92530F10C009C6A4A /* SceneDelegate.swift in Sources */,
 				84E619652542223A0075AEBA /* StartViewController.swift in Sources */,
