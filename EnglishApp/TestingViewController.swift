@@ -309,6 +309,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     @IBAction func EndTestBtn(_ sender: Any) {
         user.points = score
         Networking.addUser(user)
+        self.performSegue(withIdentifier: "testToLogin", sender: self)
     }
     
     

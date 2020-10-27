@@ -39,6 +39,9 @@ class StartViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let vc = UIViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
         
         var currentUser: User
         fetchData()
@@ -97,6 +100,8 @@ class StartViewController: UIViewController {
         }.resume()
     }
 
+    @IBAction func ResetPasswordBtn(_ sender: Any) {
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "ShowTabBar" else { return }
