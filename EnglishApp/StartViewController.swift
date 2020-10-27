@@ -101,18 +101,34 @@ class StartViewController: UIViewController {
     }
 
     @IBAction func ResetPasswordBtn(_ sender: Any) {
+        for user in users {
+            if user.isLoggedIn == true {
+
+                currentUser = user
+                self.performSegue(withIdentifier: "toResetPassword", sender: self)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "ShowTabBar" else { return }
-        let tabCtrl: UITabBarController = segue.destination as! UITabBarController
-        let destinationVC = tabCtrl as! MainTabBar
+        if segue.identifier == "ShowTabBar" {
+            guard segue.identifier == "ShowTabBar" else { return }
+            let tabCtrl: UITabBarController = segue.destination as! UITabBarController
+            let destinationVC = tabCtrl as! MainTabBar
+            destinationVC.user = currentUser
+        }
         
-        //guard let destination = segue.destination as? TestingViewController else { return }
+        if segue.identifier == "toResetPassword" {
+            guard let destination = segue.destination as? ResetPasswordViewController else { return }
+            destination.currentUser = currentUser
+        }
         
-        destinationVC.user = currentUser
 
     }
+    
+    
+
+
 
     
 
