@@ -38,6 +38,10 @@ class RegistrationViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        ConfPasswordTextFieldReg.addDoneButtonOnKeyboard()
+        PasswordTextFieldReg.addDoneButtonOnKeyboard()
+        EmailTextFieldReg.addDoneButtonOnKeyboard()
+        NameTextFieldReg.addDoneButtonOnKeyboard()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

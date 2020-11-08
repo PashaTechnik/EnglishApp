@@ -13,7 +13,11 @@ class StartViewController: UIViewController {
     var currentUser = User(name: "empty", email: "empty", password: "empty")
 
     @IBAction func goToAccountBtn(_ sender: Any) {
-        fetchData()
+        Networking.fetchData{(users) in
+                             self.users = users
+                             for user in users {
+                                 print(user)
+                             }}
         for user in users {
             if user.isLoggedIn == true {
                 currentUser = user
@@ -26,7 +30,11 @@ class StartViewController: UIViewController {
         
 //        UserDefaults.standard.setValue(false, forKey: "isUserLoggedIn")
 //        UserDefaults.standard.synchronize()
-        fetchData()
+        Networking.fetchData{(users) in
+                             self.users = users
+                             for user in users {
+                                 print(user)
+                             }}
         for user in users {
             if user.isLoggedIn == true {
                 currentUser = user
@@ -44,7 +52,11 @@ class StartViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
         
         var currentUser: User
-        fetchData()
+        Networking.fetchData{(users) in
+                             self.users = users
+                             for user in users {
+                                 print(user)
+                             }}
         for user in users {
             if user.isLoggedIn == true {
                 currentUser = user
@@ -59,7 +71,11 @@ class StartViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
 //        var currentUser: User
-        fetchData()
+        Networking.fetchData{(users) in
+                             self.users = users
+                             for user in users {
+                                 print(user)
+                             }}
 //
 
 //
@@ -78,27 +94,7 @@ class StartViewController: UIViewController {
 //        }
     
     }
-    func fetchData(){
-        guard let url = URL(string: "http://localhost:8080/users") else { return }
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            guard let data = data else {
-                print(error?.localizedDescription ?? "Unknown error")
-                return
-            }
-            
-            let decoder = JSONDecoder()
-            
-            if let users = try? decoder.decode([User].self, from: data) {
-                DispatchQueue.main.async {
-                     self.users = users
-                     print("Loaded \(users.count) users.")
-                 }
-                } else {
-                    print("Unable to parse JSON response.")
-                }
-        }.resume()
-    }
+
 
     @IBAction func ResetPasswordBtn(_ sender: Any) {
         for user in users {
