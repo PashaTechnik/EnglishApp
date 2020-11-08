@@ -11,7 +11,7 @@ import Foundation
 
 class Networking {
     static func fetchData(completion: @escaping ([User]) -> ()){
-        guard let url = URL(string: "http://localhost:8080/users") else { return }
+        guard let url = URL(string: "http://serene-mountain-41963.herokuapp.com/users") else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
             
             guard let data = data else {
@@ -33,7 +33,7 @@ class Networking {
     
     static func addUser(_ user: User){
         let nUser = User(name: user.name, email: user.email, password: user.password, points: user.points, isLoggedIn: user.isLoggedIn)
-        let url = URL(string: "http://localhost:8080/users")!
+        let url = URL(string: "http://serene-mountain-41963.herokuapp.com/users")!
 
         let encoder = JSONEncoder()
 
@@ -57,7 +57,7 @@ class Networking {
     
     static func updateUser(_ user: User){
         let nUser = User(name: user.name, email: user.email, password: user.password, points: user.points, isLoggedIn: user.isLoggedIn)
-        let url = URL(string: "http://localhost:8080/users/update")!
+        let url = URL(string: "http://serene-mountain-41963.herokuapp.com/users/update")!
 
         let encoder = JSONEncoder()
 
@@ -81,7 +81,7 @@ class Networking {
     
     static func resetPawword(_ user: User){
         let nUser = User(name: user.name, email: user.email, password: user.password, points: user.points, isLoggedIn: user.isLoggedIn)
-        let url = URL(string: "http://localhost:8080/users/reset-password")!
+        let url = URL(string: "http://serene-mountain-41963.herokuapp.com/users/reset-password")!
 
         let encoder = JSONEncoder()
 
