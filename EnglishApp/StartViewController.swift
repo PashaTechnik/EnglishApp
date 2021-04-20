@@ -122,12 +122,6 @@ class StartViewController: UIViewController {
 
     }
     
-    
-
-
-
-    
-
 }
 
 
