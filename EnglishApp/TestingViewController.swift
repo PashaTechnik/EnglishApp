@@ -3,7 +3,7 @@ import AVFoundation
 
 
 class TestingViewController: UIViewController, UITextFieldDelegate {
-    var user = User(name: "empty", email: "empty", password: "empty")
+    //var user = User(name: "empty", email: "empty", password: "empty")
 
     
     var audioPlayer : AVAudioPlayer!
@@ -307,8 +307,6 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func EndTestBtn(_ sender: Any) {
-        user.points = score
-        Networking.addUser(user)
         self.performSegue(withIdentifier: "testToLogin", sender: self)
     }
     

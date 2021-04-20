@@ -9,87 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var users = [User]()
-    var user = User(name: "empty", email: "empty", password: "empty")
-
-    @IBOutlet weak var EmailTextField: UITextField!
-    @IBOutlet weak var PasswordTextField: UITextField!
-
     
-    
-
-    @IBAction func LoginBtn(_ sender: Any) {
-
-        let password = PasswordTextField.text
-        let email = EmailTextField.text
-        
-        var enter = false
-        
-
-        for user in users {
-
-
-            
-            
-            if user.password == password! && user.email == email! {
-                enter = true
-                self.user.email = user.email
-                self.user.password = user.password
-                self.user.name = user.name
-                self.user.points = user.points
-                self.user.isLoggedIn = true
-                Networking.updateUser(self.user)
-                
-            }
-        }
-        if enter {
-            let alert = UIAlertController(title: "Success", message: "Login is successful!", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                self.dismiss(animated: true, completion: nil)
-            }
-            alert.addAction(okAction)
-            self.present(alert, animated: true)
-            UserDefaults.standard.setValue(true, forKey: "isUserLoggedIn")
-            UserDefaults.standard.synchronize()
-        }
-        else {
-            let alert = UIAlertController(title: "Error", message: "Login is not successful!", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                self.dismiss(animated: true, completion: nil)
-            }
-            alert.addAction(okAction)
-            self.present(alert, animated: true)
-            self.dismiss(animated: true, completion: nil)
-            return
-        }
-    }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        //self.performSegue(withIdentifier: "LoginView", sender: self)
-        Networking.fetchData { (users) in
-            self.users = users
-            for user in users {
-                print(user)
-            }
-        }
-    }
     
     override func viewDidLoad() {
-        EmailTextField.addDoneButtonOnKeyboard()
-        PasswordTextField.addDoneButtonOnKeyboard()
-        super.viewDidLoad()
-        
 
-
-        Networking.fetchData { (users) in
-            self.users = users
-        }
     }
     
 
 }
-
 
 
 extension UITextField{
