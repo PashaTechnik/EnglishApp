@@ -515,7 +515,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQ7-q5-eA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1687" y="1988"/>
+            <point key="canvasLocation" x="-1441" y="1988"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="qIr-s1-9T4">
@@ -644,7 +644,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2A-Vg-aws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-684" y="1988"/>
+            <point key="canvasLocation" x="-527" y="1988"/>
         </scene>
         <!--Main Tab Bar-->
         <scene sceneID="zSK-Or-FDk">
@@ -656,19 +656,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <outlet property="viewModel" destination="N07-lN-Nha" id="Wj9-EA-9yJ"/>
-                        <segue destination="INk-UH-4MZ" kind="relationship" relationship="viewControllers" id="ulD-3g-j8O"/>
+                        <outlet property="networkManager" destination="LHA-fb-tNF" id="i7u-Ms-hGJ"/>
                         <segue destination="7W2-Uf-yMp" kind="relationship" relationship="viewControllers" id="JS7-Rp-ooA"/>
-                        <segue destination="AOq-95-2to" kind="relationship" relationship="viewControllers" id="dGT-2y-5qk"/>
                         <segue destination="l12-L6-A3o" kind="relationship" relationship="viewControllers" id="ne8-yM-TmC"/>
+                        <segue destination="INk-UH-4MZ" kind="relationship" relationship="viewControllers" id="ulD-3g-j8O"/>
+                        <segue destination="AOq-95-2to" kind="relationship" relationship="viewControllers" id="dGT-2y-5qk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bda-ms-whe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="N07-lN-Nha" customClass="ViewModelTB" customModule="EnglishApp" customModuleProvider="target">
-                    <connections>
-                        <outlet property="networkManager" destination="LHA-fb-tNF" id="qjj-cG-YEM"/>
-                    </connections>
-                </customObject>
                 <customObject id="LHA-fb-tNF" customClass="NetworkManager" customModule="EnglishApp" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-130" y="1067"/>

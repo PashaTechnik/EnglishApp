@@ -26,30 +26,9 @@ class ViewModel: TableViewModelType {
         return TableViewCellViewModel(dictionary: word)
     }
     
-    
     var numberOfRows: Int {
         return Dictionary.count
     }
     
-    
-    var Dictionary: [String:String] {
-        return self.getUserDictionary()
-    }
-    
-    func getUserDictionary() -> Dictionary<String,String> {
-        let db = Firestore.firestore()
-        let currentUserId = Auth.auth().currentUser?.uid
-        var dictionary: Dictionary<String,String> = [:]
-        let user = db.collection("users").whereField("uid", isEqualTo: currentUserId)
-        user.getDocuments { (query, err) in
-            if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        for document in query!.documents {
-                            dictionary = document.data()["Dictionary"] as! Dictionary<String, String>
-                        }
-                    }
-        }
-        return dictionary
-    }
+    var Dictionary: [String:String] = [:]
 }

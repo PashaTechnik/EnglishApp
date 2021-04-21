@@ -11,52 +11,31 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var progressBarImage: UIImageView!
     @IBOutlet weak var pointsTextLabel: UILabel!
     
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tabbar = tabBarController as! MainTabBar
+        user = tabbar.user
         
-        let db = Firestore.firestore()
-        let currentUserId = Auth.auth().currentUser?.uid
-        //var currentUser = User(name: "", email: "", password: "", points: 0, isLoggedIn: true)
-        
+        initUser(user ?? User(firstName: "", lastName: "", email: "", points: 0, dictionary: [:]))
     }
 
     
     override func viewDidAppear(_ animated: Bool) {
-
-       // userLevel_label.text = levelShow()
+        initUser(user ?? User(firstName: "", lastName: "", email: "", points: 0, dictionary: [:]))
     }
     
     func initUser(_ user: User){
         userLevel_label.text = getLevel(user.points).0
         levelTextLabel.text = String(getLevel(user.points).1) + " Level"
-        //usernameLabel.text = user.name
+        usernameLabel.text = user.firstName
         var currentPoints = (user.points * 100) % 300
         let toGoalPoint = 300
         pointsTextLabel.text = String(currentPoints) + "/" + String(toGoalPoint)
         progressBarImage.image = getProgressBar(currentP: currentPoints, goalP: toGoalPoint)
     }
     
-//    func getCurrentUser() -> User {
-//        let db = Firestore.firestore()
-//        let currentUserId = Auth.auth().currentUser?.uid
-//        //var currentUser = User(name: "", email: "", password: "", points: 0, isLoggedIn: true)
-//        
-//        let user = db.collection("users").whereField("uid", isEqualTo: currentUserId)
-//        
-//        user.getDocuments { (query, err) in
-//            if let err = err {
-//                        print("Error getting documents: \(err)")
-//                    } else {
-//                        for document in query!.documents {
-//                            print("\(document.documentID) => \(document.data())")
-//                            currentUser.name = document.data()["firstname"] as! String
-//                            currentUser.points = document.data()["points"] as! Int
-//                        }
-//                    }
-//        }
-//        return currentUser
-//    }
     
     func getLevel(_ points: Int) -> (String,Int){
         var englishLevel: String

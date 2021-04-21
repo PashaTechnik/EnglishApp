@@ -11,25 +11,39 @@ import UIKit
 class DictionaryTableViewController: UITableViewController {
     
     var viewModel: TableViewModelType?
+    
+    var Dictionary: [String:String]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = ViewModel()
+        let tabbar = tabBarController as! MainTabBar
+        Dictionary = tabbar.user?.dictionary
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.numberOfRows ?? 0
+        //return viewModel?.numberOfRows ?? 0
+        return Dictionary.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
-        guard let tableViewCell = cell, let viewModel = viewModel else { return UITableViewCell() }
         
-        let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
+//        guard let tableViewCell = cell, let viewModel = viewModel else { return UITableViewCell() }
+//
+//        let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
+//
+//        tableViewCell.viewModel = cellViewModel
+//        return tableViewCell
+        guard let tableViewCell = cell else { return UITableViewCell() }
         
-        tableViewCell.viewModel = cellViewModel
+        let word = Array(Dictionary)[indexPath.row]
+        
+        tableViewCell.word.text = word.key
+        tableViewCell.translate.text = word.value
+    
         return tableViewCell
     }
 }
