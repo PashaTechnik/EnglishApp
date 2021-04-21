@@ -3,7 +3,6 @@
 
 Borisov Sergey: ios development  
 Pavel Zherdiy: ios development  
-Vladimir Zhnakin : moral support and memes supplier  
 
 ## Application idea 
 
