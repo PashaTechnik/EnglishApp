@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="-18"/>
+            <point key="canvasLocation" x="-1535" y="1156"/>
         </scene>
         <!--Словарь-->
         <scene sceneID="JoR-1G-OvY">
@@ -81,20 +81,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Rb3-TO-Xav" customClass="TableViewCell" customModule="EnglishApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rb3-TO-Xav" id="3hf-LW-qa3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlz-Rs-Oqb">
-                                            <rect key="frame" x="16" y="11.5" width="301" height="21.5"/>
+                                            <rect key="frame" x="16" y="11.5" width="301" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gD-uY-wPo">
-                                            <rect key="frame" x="317" y="11" width="42" height="22.5"/>
+                                            <rect key="frame" x="317" y="11" width="42" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="42" id="eZD-Ot-Pjv"/>
                                             </constraints>
@@ -289,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEz-aQ-j9D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="98" y="-340"/>
+            <point key="canvasLocation" x="-2463" y="786"/>
         </scene>
         <!--Training View Controller-->
         <scene sceneID="KsX-Ki-05D">
@@ -515,7 +515,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQ7-q5-eA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1441" y="1988"/>
+            <point key="canvasLocation" x="-876" y="1988"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="qIr-s1-9T4">
@@ -595,6 +595,7 @@
                                 <state key="normal" title="Выйти"/>
                                 <connections>
                                     <action selector="logout:" destination="INk-UH-4MZ" eventType="touchUpInside" id="uxL-AO-2dp"/>
+                                    <segue destination="lJl-Ka-5X1" kind="show" id="m16-vj-oaF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -644,12 +645,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2A-Vg-aws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-527" y="1988"/>
+            <point key="canvasLocation" x="-2290" y="1934"/>
         </scene>
         <!--Main Tab Bar-->
         <scene sceneID="zSK-Or-FDk">
             <objects>
                 <tabBarController storyboardIdentifier="MainTB" modalPresentationStyle="fullScreen" id="HG3-3o-8tZ" customClass="MainTabBar" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="HQ8-4U-vT4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cbe-sD-921">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -666,7 +668,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bda-ms-whe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="LHA-fb-tNF" customClass="NetworkManager" customModule="EnglishApp" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-130" y="1067"/>
+            <point key="canvasLocation" x="-140" y="1108"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="qCI-ia-APL">
@@ -744,7 +746,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgu-bI-kbd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="-707"/>
+            <point key="canvasLocation" x="-1535" y="419"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pTY-hb-l4h">
@@ -762,9 +764,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ag-oq-GQW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-826" y="-340"/>
+            <point key="canvasLocation" x="-3388" y="786"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="m16-vj-oaF"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="listening_icon" width="48" height="48"/>
         <image name="profileIco" width="1446" height="1444"/>
