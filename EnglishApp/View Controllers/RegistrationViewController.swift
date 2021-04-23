@@ -79,7 +79,7 @@ class RegistrationViewController: UIViewController {
                     // User was created successfully, now store the first name and last name
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "uid": result!.user.uid ]) { (error) in
+                    db.collection("users").addDocument(data: ["Dictionary":[:],"firstname":firstName, "lastname":lastName,"points":0, "uid": result!.user.uid ]) { (error) in
                         
                         if error != nil {
                             // Show error message
@@ -101,7 +101,7 @@ class RegistrationViewController: UIViewController {
         
     func transitionToHome() {
             
-        let profileViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.profileViewController) as? ProfileViewController
+        let profileViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.mainTabBar) as? MainTabBar
         
         self.view.window?.rootViewController = profileViewController
         self.view.window?.makeKeyAndVisible()

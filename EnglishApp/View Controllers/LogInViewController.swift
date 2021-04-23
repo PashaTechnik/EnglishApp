@@ -54,7 +54,7 @@ class LogInViewController: UIViewController {
             }
             else {
                 
-                let profileViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.profileViewController) as? ProfileViewController
+                let profileViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.mainTabBar) as? MainTabBar
                 
                 self.view.window?.rootViewController = profileViewController
                 self.view.window?.makeKeyAndVisible()

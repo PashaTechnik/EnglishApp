@@ -23,8 +23,8 @@ class NetworkManager: NSObject {
                     print("\(document.documentID) => \(document.data())")
                     let firstName = document.data()["firstname"] as! String
                     let lastName = document.data()["lastname"] as! String
-                    let points = document.data()["points"] as! Int
-                    let dictionary = document.data()["Dictionary"] as! Dictionary<String,String>
+                    let points = document.data()["points"] as? Int ?? 0
+                    let dictionary = document.data()["Dictionary"] as? Dictionary<String,String> ?? [:]
                     let currentUser = User(firstName: firstName, lastName: lastName, email: "", points: points, dictionary: dictionary)
                     completion(currentUser)
                 }
