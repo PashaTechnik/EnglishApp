@@ -45,3 +45,14 @@ The most active users of educational applications are young people who are used 
 ## Prototype
 
 https://miro.com/app/board/o9J_lTxMZnQ=/
+
+## Design
+
+<p align="left">
+  <img src="https://github.com/PashaTechnik/EnglishApp/blob/sergey/readme_img/grammar.png" width="250" title="hover text">
+  <img src="https://github.com/PashaTechnik/EnglishApp/blob/sergey/readme_img/start.png" width="250" alt="accessibility text">
+   <img src="https://github.com/PashaTechnik/EnglishApp/blob/sergey/readme_img/vocab.jpeg" width="250" title="hover text">
+  <img src="https://github.com/PashaTechnik/EnglishApp/blob/sergey/readme_img/personal.png" width="250" alt="accessibility text">
+  <img src="https://github.com/PashaTechnik/EnglishApp/blob/sergey/readme_img/login.png" width="250" alt="accessibility text">
+</p>
+
