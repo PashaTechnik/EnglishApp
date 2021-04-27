@@ -11,5 +11,8 @@ target 'EnglishApp' do
 	pod 'Firebase/Auth'
 	pod 'Firebase/Core'
 	pod 'Firebase/Firestore'
+	pod 'RxSwift'
+	pod 'pop', '1.0.10'
+
 
 end

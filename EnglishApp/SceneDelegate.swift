@@ -16,14 +16,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-        Auth.auth().addStateDidChangeListener { (Auth, User) in
-            if User == nil{
-                self.showAuth()
-            }
-            else {
-                self.showTapBar()
-            }
-        }
+//        Auth.auth().addStateDidChangeListener { (Auth, User) in
+//            if User == nil{
+//                self.showAuth()
+//            }
+//            else {
+//                self.showTapBar()
+//            }
+//        }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
     
