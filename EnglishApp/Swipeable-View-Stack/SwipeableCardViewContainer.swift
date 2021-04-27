@@ -108,7 +108,7 @@ extension SwipeableCardViewContainer {
         // React to Swipe Began?
     }
 
-    func didEndSwipe(onView view: SwipeableView, cardText: inout String) {
+    func didEndSwipe(onView view: SwipeableView, cardText: inout String, cardLabel: inout String) {
         guard let dataSource = dataSource else {
             return
         }
@@ -117,6 +117,7 @@ extension SwipeableCardViewContainer {
         view.removeFromSuperview()
         let currentCard = cardViews[SwipeableCardViewContainer.currentCardIndex] as! SampleSwipeableCard
         cardText = currentCard.viewModel!.title
+        cardLabel = currentCard.viewModel!.subtitle
         SwipeableCardViewContainer.currentCardIndex += 1
 
         // Only add a new card if there are cards remaining
@@ -137,7 +138,6 @@ extension SwipeableCardViewContainer {
                     self.layoutIfNeeded()
                 })
             }
-
         }
     }
 

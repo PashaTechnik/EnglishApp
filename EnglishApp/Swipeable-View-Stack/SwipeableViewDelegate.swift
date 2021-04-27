@@ -7,6 +7,5 @@ protocol SwipeableViewDelegate: class {
 
     func didBeginSwipe(onView view: SwipeableView)
 
-    func didEndSwipe(onView view: SwipeableView, cardText: inout String)
-
+    func didEndSwipe(onView view: SwipeableView, cardText: inout String, cardLabel: inout String)
 }

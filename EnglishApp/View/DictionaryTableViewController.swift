@@ -20,6 +20,11 @@ class DictionaryTableViewController: UITableViewController {
         let tabbar = tabBarController as! MainTabBar
         self.Dictionary = tabbar.user?.dictionary
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.Dictionary = NetworkManager.userDictionary
+        self.tableView.reloadData()
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return viewModel?.numberOfRows ?? 0
