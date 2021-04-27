@@ -136,24 +136,39 @@ class SwipeableView: UIView {
 
     private func endedPanAnimation() {
         var cardText: String = ""
+        var cardLabel: String = ""
+        var newWords: Dictionary<String,String> = [:]
         if let dragDirection = dragDirection, dragPercentage >= SwipeableView.swipePercentageMargin {
             let translationAnimation = POPBasicAnimation(propertyNamed: kPOPLayerTranslationXY)
             translationAnimation?.duration = SwipeableView.finalizeSwipeActionAnimationDuration
             translationAnimation?.fromValue = NSValue(cgPoint: POPLayerGetTranslationXY(layer))
             translationAnimation?.toValue = NSValue(cgPoint: animationPointForDirection(dragDirection))
             layer.pop_add(translationAnimation, forKey: "swipeTranslationAnimation")
-            self.delegate?.didEndSwipe(onView: self, cardText: &cardText)
+            self.delegate?.didEndSwipe(onView: self, cardText: &cardText, cardLabel: &cardLabel)
         } else {
             resetCardViewPosition()
         }
         
         SwipeableView.lastCardSwipeDirection = dragDirection
         
+        switch dragDirection {
+        case .left, .bottomLeft, .topLeft: break
+        case .right, .bottomRight, .topRight:
+            newWords[cardText] = cardLabel
+            break
+        case .none: break
+        case .some(.up): break
+        case .some(.down): break
+        }
         
+        NetworkManager.updateDictionary(newDict: newWords)
         print(dragDirection)
         print(cardText)
         
+        
+    
     }
+
 
     private func animationPointForDirection(_ direction: SwipeDirection) -> CGPoint {
         let point = direction.point
