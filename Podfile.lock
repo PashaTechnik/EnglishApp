@@ -331,13 +331,17 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - pop (1.0.10)
   - PromisesObjC (1.2.12)
+  - RxSwift (6.1.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - pop (= 1.0.10)
+  - RxSwift
 
 SPEC REPOS:
   trunk:
@@ -358,7 +362,9 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - pop
     - PromisesObjC
+    - RxSwift
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -378,8 +384,10 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
 
-PODFILE CHECKSUM: 1ad7d3ba9fe6852ab90f607e8f0d366058a51f8b
+PODFILE CHECKSUM: d7808c7ba39ebce0bea72a3e8e0a1af144e520a6
 
 COCOAPODS: 1.10.1

@@ -12,19 +12,18 @@ class DictionaryTableViewController: UITableViewController {
     
     var viewModel: TableViewModelType?
     
-    var Dictionary: [String:String]!
+    var Dictionary: [String:String]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let tabbar = tabBarController as! MainTabBar
-        Dictionary = tabbar.user?.dictionary
-        
+        self.Dictionary = tabbar.user?.dictionary
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return viewModel?.numberOfRows ?? 0
-        return Dictionary.count
+        return Dictionary?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -39,7 +38,7 @@ class DictionaryTableViewController: UITableViewController {
 //        return tableViewCell
         guard let tableViewCell = cell else { return UITableViewCell() }
         
-        let word = Array(Dictionary)[indexPath.row]
+        let word = Array(Dictionary ?? [:])[indexPath.row]
         
         tableViewCell.word.text = word.key
         tableViewCell.translate.text = word.value
