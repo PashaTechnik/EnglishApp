@@ -6,34 +6,40 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var userLevel_label: UILabel!
     @IBOutlet weak var userPhoto: UIImageView!
     
+    @IBOutlet weak var progressBar: UIProgressView!
     
     @IBOutlet weak var levelTextLabel: UILabel!
-    @IBOutlet weak var progressBarImage: UIImageView!
     @IBOutlet weak var pointsTextLabel: UILabel!
     
     var user: User?
+    var defaultUser = User(firstName: "", lastName: "", email: "", points: 0, dictionary: [:])
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let tabbar = tabBarController as! MainTabBar
         user = tabbar.user
         
-        initUser(user ?? User(firstName: "", lastName: "", email: "", points: 0, dictionary: [:]))
+        initUser(user ?? defaultUser)
+        progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 8)
+        progressBar.layer.cornerRadius = 10
+        progressBar.clipsToBounds = true
+        progressBar.layer.sublayers![1].cornerRadius = 10
+        progressBar.subviews[1].clipsToBounds = true
     }
 
     
     override func viewDidAppear(_ animated: Bool) {
-        initUser(user ?? User(firstName: "", lastName: "", email: "", points: 0, dictionary: [:]))
+        initUser(user ?? defaultUser)
     }
     
     func initUser(_ user: User){
         userLevel_label.text = getLevel(user.points).0
         levelTextLabel.text = String(getLevel(user.points).1) + " Level"
         usernameLabel.text = user.firstName
-        var currentPoints = (user.points * 100) % 300
+        let currentPoints = user.points
         let toGoalPoint = 300
         pointsTextLabel.text = String(currentPoints) + "/" + String(toGoalPoint)
-        progressBarImage.image = getProgressBar(currentP: currentPoints, goalP: toGoalPoint)
+        progressBar.progress = Float(user.points)
     }
     
     
@@ -62,23 +68,6 @@ class ProfileViewController: UIViewController {
         return (englishLevel,englishLevelNum)
     }
     
-    func getProgressBar(currentP:Int, goalP:Int) -> UIImage {
-        
-        let percents = (currentP/goalP) * 100
-        
-        switch percents {
-        case 0..<20:
-            return UIImage(named: "progress20")!
-        case 20..<40:
-            return UIImage(named: "progress40")!
-        case 40..<60:
-            return UIImage(named: "progress60")!
-        case 60..<80:
-            return UIImage(named: "progress80")!
-        default:
-            return UIImage(named: "progress100")!
-        }
-    }
     
     @IBAction func logout(_ sender: Any) {
         do{

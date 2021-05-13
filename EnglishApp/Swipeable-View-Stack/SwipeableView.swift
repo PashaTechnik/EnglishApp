@@ -161,12 +161,10 @@ class SwipeableView: UIView {
         case .some(.down): break
         }
         
-        NetworkManager.updateDictionary(newDict: newWords)
-        print(dragDirection)
-        print(cardText)
-        
-        
-    
+        if newWords != [:] {
+            NetworkManager.updateDictionary(newDict: newWords)
+        }
+
     }
 
 

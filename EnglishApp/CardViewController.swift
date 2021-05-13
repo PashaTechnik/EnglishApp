@@ -52,7 +52,7 @@ extension CardViewController {
                                                      image: #imageLiteral(resourceName: "hamburger"))
 
         let panda = SampleSwipeableCellViewModel(title: "Panda",
-                                                  subtitle: "Павнда",
+                                                  subtitle: "Панда",
                                                   color: UIColor(red:0.29, green:0.64, blue:0.96, alpha:1.0),
                                                   image: #imageLiteral(resourceName: "panda"))
 

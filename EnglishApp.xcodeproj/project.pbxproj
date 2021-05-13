@@ -52,6 +52,9 @@
 		84F33FFF2634AE5000F62F10 /* SampleSwipeableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F33FE82634AE5000F62F10 /* SampleSwipeableCellViewModel.swift */; };
 		84F340002634AE5000F62F10 /* SwipeableCardViewCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F33FE92634AE5000F62F10 /* SwipeableCardViewCard.xib */; };
 		84F340012634AE5000F62F10 /* SwipeableCardViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F33FEA2634AE5000F62F10 /* SwipeableCardViewDataSource.swift */; };
+		84F3400E2638D30900F62F10 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3400D2638D30900F62F10 /* TranslateViewController.swift */; };
+		84F340542647316000F62F10 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F340532647316000F62F10 /* Question.swift */; };
+		84F34058264738C300F62F10 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F34057264738C300F62F10 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +106,9 @@
 		84F33FE82634AE5000F62F10 /* SampleSwipeableCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleSwipeableCellViewModel.swift; sourceTree = "<group>"; };
 		84F33FE92634AE5000F62F10 /* SwipeableCardViewCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwipeableCardViewCard.xib; sourceTree = "<group>"; };
 		84F33FEA2634AE5000F62F10 /* SwipeableCardViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewDataSource.swift; sourceTree = "<group>"; };
+		84F3400D2638D30900F62F10 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		84F340532647316000F62F10 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		84F34057264738C300F62F10 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		99234E298E597D7CBCAAE39B /* Pods-EnglishApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp.debug.xcconfig"; path = "Target Support Files/Pods-EnglishApp/Pods-EnglishApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,7 +143,7 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		84000BF226278091000FD71B /* View Controllers */ = {
+		84000BF226278091000FD71B /* Authentication View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				181216FD25446C65006FCA0B /* ProfileViewController.swift */,
@@ -145,7 +151,7 @@
 				84000BFA2628CA08000FD71B /* RegistrationViewController.swift */,
 				84000BFD2628CF28000FD71B /* LogInViewController.swift */,
 			);
-			path = "View Controllers";
+			path = "Authentication View Controllers";
 			sourceTree = "<group>";
 		};
 		84000C012628D1E1000FD71B /* Helpers */ = {
@@ -206,7 +212,7 @@
 			children = (
 				84F33FD32634AE5000F62F10 /* Swipeable-View-Stack */,
 				84000C012628D1E1000FD71B /* Helpers */,
-				84000BF226278091000FD71B /* View Controllers */,
+				84000BF226278091000FD71B /* Authentication View Controllers */,
 				18FC642025460F0200A15A87 /* DataSets */,
 				18E10F4F25436C5D0022D009 /* Sounds */,
 				84982EF62530F10C009C6A4A /* AppDelegate.swift */,
@@ -226,6 +232,9 @@
 				84000C41262CDC7B000FD71B /* ViewModel */,
 				84DD8415262F4996005BD286 /* NetworkManager.swift */,
 				84F33FD02634AD2400F62F10 /* CardViewController.swift */,
+				84F3400D2638D30900F62F10 /* TranslateViewController.swift */,
+				84F340532647316000F62F10 /* Question.swift */,
+				84F34057264738C300F62F10 /* StorageManager.swift */,
 			);
 			path = EnglishApp;
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 				84982EF02530F10C009C6A4A /* Frameworks */,
 				84982EF12530F10C009C6A4A /* Resources */,
 				5A546EC2A8F68566403B2E22 /* [CP] Embed Pods Frameworks */,
+				A7948BBBEEEA280789580944 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,6 +356,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnglishApp/Pods-EnglishApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A7948BBBEEEA280789580944 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp/Pods-EnglishApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp/Pods-EnglishApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnglishApp/Pods-EnglishApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A80BE583614F732EC95E9E5B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -380,9 +407,11 @@
 				84F33FF02634AE5000F62F10 /* SwipeDirection.swift in Sources */,
 				84F33FFF2634AE5000F62F10 /* SampleSwipeableCellViewModel.swift in Sources */,
 				181216FB254460FC006FCA0B /* TrainingViewController.swift in Sources */,
+				84F3400E2638D30900F62F10 /* TranslateViewController.swift in Sources */,
 				84000C37262CC574000FD71B /* DictionaryTableViewController.swift in Sources */,
 				84A107122546F722008DB456 /* MainTabBar.swift in Sources */,
 				84000C032628D204000FD71B /* Utilities.swift in Sources */,
+				84F34058264738C300F62F10 /* StorageManager.swift in Sources */,
 				84F33FF52634AE5000F62F10 /* SwipeableCardViewContainer.swift in Sources */,
 				84AFF79A253E2E03009FB86B /* User.swift in Sources */,
 				84000C44262CE9CA000FD71B /* TableViewCellViewModel.swift in Sources */,
@@ -399,6 +428,7 @@
 				84000BFE2628CF28000FD71B /* LogInViewController.swift in Sources */,
 				84F33FF22634AE5000F62F10 /* SampleSwipeableCard.swift in Sources */,
 				84F33FF62634AE5000F62F10 /* NibView.swift in Sources */,
+				84F340542647316000F62F10 /* Question.swift in Sources */,
 				84000BFB2628CA08000FD71B /* RegistrationViewController.swift in Sources */,
 				84F33FFB2634AE5000F62F10 /* SwipeableCardViewCard.swift in Sources */,
 				84982EF72530F10C009C6A4A /* AppDelegate.swift in Sources */,

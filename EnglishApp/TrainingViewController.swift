@@ -1,14 +1,19 @@
 import UIKit
+import RealmSwift
 
 class TrainingViewController: UIViewController {
     
 
+    var questions: Results<Question>!
+    
     @IBOutlet weak var wordTraining_stackView: UIStackView!
     @IBOutlet weak var grammarTraining_stackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        questions = realm.objects(Question.self)
         view1()
+        
 
     }
     

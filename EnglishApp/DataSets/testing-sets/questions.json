@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "Description": "Rewrite the sentences using the short forms of be.",
+        "question": "She is fantastic ⇒ _______ fantastic.",
+        "answer": "She's",
+        "level": "A1"
+    },
+    {
+        "id": 2,
+        "Description": "Rewrite the sentences using the short forms of be.",
+        "question": "We are in Spain ⇒ ______ in Spain.",
+        "answer": "We're",
+        "level": "A1"
+    },
+    {
+        "id": 3,
+        "Description": "Rewrite the sentences using the short forms of be.",
+        "question": "You are great. ⇒  ______ Wrong great.",
+        "answer": "you're",
+        "level": "A1"
+    },
+    
+    {
+        "id": 4,
+        "Description": "Complete the dialogue with the most suitable future forms: present continuous, be going to, will, or shall.",
+        "question": "Rosa: Not this evening. I _______ (work) on a project until late.",
+        "answer": "am going to work",
+        "level": "B1"
+    },
+    {
+        "id": 5,
+        "Description": "Complete the dialogue with the most suitable future forms: present continuous, be going to, will, or shall.",
+        "question": "Maria: And when do you think you ______ (be) free for a drink?",
+        "answer": "will be",
+        "level": "B1"
+    },
+    {
+        "id": 6,
+        "Description": "Complete the dialogue with the most suitable future forms: present continuous, be going to, will, or shall.",
+        "question": "Maria: OK. What time _____ (we/meet)?",
+        "answer": "shall we meet",
+        "level": "B1"
+    },
+    {
+        "id": 7,
+        "Description": "Turn these direct questions into indirect questions.",
+        "question": "Where is he from? Do you know _____",
+        "answer": "where he is from",
+        "level": "B2"
+    },
+    {
+        "id": 8,
+        "Description": "Turn these direct questions into indirect questions.",
+        "question": "How many countries has he travelled to? I wonder _____ .",
+        "answer": "how many countries he has travelled to",
+        "level": "B2"
+    },
+    {
+        "id": 9,
+        "Description": "Turn these direct questions into indirect questions.",
+        "question": "Where did you go? Can you tell me _____ ?",
+        "answer": "where you went",
+        "level": "B2"
+    },
+    {
+        "id": 10,
+        "Description": "Turn these direct questions into indirect questions.",
+        "question": "Who was she talking to? I wonder who _____ .",
+        "answer": "she was talking to",
+        "level": "B2"
+    }
+]

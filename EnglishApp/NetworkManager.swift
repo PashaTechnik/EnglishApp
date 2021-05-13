@@ -42,7 +42,22 @@ class NetworkManager: NSObject {
         let user = db.collection("users").document(currentUserDocumentId!)
         NetworkManager.userDictionary!.merge(dict: newDict)
         user.updateData([
-            "Dictionary": userDictionary,
+            "Dictionary": userDictionary!,
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+    }
+    
+    static func deleteWordInDictionary(key: String){
+        NetworkManager.userDictionary!.removeValue(forKey: key)
+        let db = Firestore.firestore()
+        let user = db.collection("users").document(currentUserDocumentId!)
+        user.updateData([
+            "Dictionary": userDictionary!,
         ]) { err in
             if let err = err {
                 print("Error updating document: \(err)")

@@ -34,13 +34,6 @@ class DictionaryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
-        
-//        guard let tableViewCell = cell, let viewModel = viewModel else { return UITableViewCell() }
-//
-//        let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
-//
-//        tableViewCell.viewModel = cellViewModel
-//        return tableViewCell
         guard let tableViewCell = cell else { return UITableViewCell() }
         
         let word = Array(Dictionary ?? [:])[indexPath.row]
@@ -50,4 +43,28 @@ class DictionaryTableViewController: UITableViewController {
     
         return tableViewCell
     }
+    
+
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let word = Array(Dictionary ?? [:])[indexPath.row]
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, complete in
+            NetworkManager.deleteWordInDictionary(key: word.key)
+            self.Dictionary = NetworkManager.userDictionary
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            complete(true)
+        }
+        
+        deleteAction.backgroundColor = .red
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = true
+        return configuration
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+         return true
+     }
+    
+    @IBAction func exitAction(_ segue: UIStoryboardSegue) { }
 }

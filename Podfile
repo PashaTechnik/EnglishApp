@@ -13,6 +13,8 @@ target 'EnglishApp' do
 	pod 'Firebase/Firestore'
 	pod 'RxSwift'
 	pod 'pop', '1.0.10'
+	pod 'GoogleMLKit/Translate'
+	pod 'RealmSwift'
 
 
 end

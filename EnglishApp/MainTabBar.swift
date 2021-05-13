@@ -16,11 +16,13 @@ class MainTabBar: UITabBarController {
     
     public var user: User?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         DispatchQueue.main.async {
             self.fetchUser()
+            //StorageManager.saveQuestions()
         }
     }
     

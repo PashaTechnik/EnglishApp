@@ -34,6 +34,7 @@ public class JsonDataLoader {
     @Published var listeningData = [listening]()
     @Published var grammarData = [grammar]()
     @Published var translateData = [translate]()
+    @Published var questionData = [Question]()
 
     
     init() {
@@ -91,6 +92,16 @@ public class JsonDataLoader {
                 print(error)
             }
         }
-        
+        if let fileLocation = Bundle.main.url(forResource: "DataSets/testing-sets/questions", withExtension: "json")
+        {
+            do {
+                let data = try Data(contentsOf: fileLocation)
+                let jsonDecoder = JSONDecoder()
+                let dataFromJson = try jsonDecoder.decode([Question].self, from: data)
+                self.questionData = dataFromJson
+            } catch {
+                print(error)
+            }
+        }
     }
 }
