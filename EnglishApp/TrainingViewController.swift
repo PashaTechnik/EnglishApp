@@ -24,6 +24,7 @@ class TrainingViewController: UIViewController {
     }
     
     func view1() {
+        
         let button_WordTranslate = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
         let button_TranslateWord = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
         let button_AudioBattle = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
