@@ -30,6 +30,8 @@
 		181216F7254450C2006FCA0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181216F6254450C2006FCA0B /* Main.storyboard */; };
 		181216FB254460FC006FCA0B /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181216FA254460FC006FCA0B /* TrainingViewController.swift */; };
 		181216FE25446C65006FCA0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181216FD25446C65006FCA0B /* ProfileViewController.swift */; };
+		181B791A26598236007DD772 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B791926598236007DD772 /* ColorManager.swift */; };
+		181B791D26598C3B007DD772 /* CustomUITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B791C26598C3B007DD772 /* CustomUITabBar.swift */; };
 		18E10F48254353F70022D009 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E10F47254353F70022D009 /* TestingViewController.swift */; };
 		18E10F4D254367520022D009 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E10F4C254367520022D009 /* AVFoundation.framework */; };
 		18E10F5025436C5D0022D009 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 18E10F4F25436C5D0022D009 /* Sounds */; };
@@ -101,6 +103,8 @@
 		181216F6254450C2006FCA0B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		181216FA254460FC006FCA0B /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		181216FD25446C65006FCA0B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		181B791926598236007DD772 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		181B791C26598C3B007DD772 /* CustomUITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITabBar.swift; sourceTree = "<group>"; };
 		18E10F47254353F70022D009 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		18E10F4C254367520022D009 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		18E10F4F25436C5D0022D009 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
@@ -287,6 +291,7 @@
 				84982EF82530F10C009C6A4A /* SceneDelegate.swift */,
 				18E10F47254353F70022D009 /* TestingViewController.swift */,
 				181216F6254450C2006FCA0B /* Main.storyboard */,
+				181B791C26598C3B007DD772 /* CustomUITabBar.swift */,
 				181216FA254460FC006FCA0B /* TrainingViewController.swift */,
 				84982EFF2530F10F009C6A4A /* Assets.xcassets */,
 				84982F012530F10F009C6A4A /* LaunchScreen.storyboard */,
@@ -295,6 +300,7 @@
 				84000C3C262CDA99000FD71B /* Model */,
 				84E6197825455AF10075AEBA /* Networking.swift */,
 				84A107112546F722008DB456 /* MainTabBar.swift */,
+				181B791926598236007DD772 /* ColorManager.swift */,
 				18FC642325460FC100A15A87 /* DataTransporter.swift */,
 				84000C3D262CDAB5000FD71B /* View */,
 				84000C41262CDC7B000FD71B /* ViewModel */,
@@ -497,6 +503,7 @@
 				181216FB254460FC006FCA0B /* TrainingViewController.swift in Sources */,
 				84F3400E2638D30900F62F10 /* TranslateViewController.swift in Sources */,
 				84000C37262CC574000FD71B /* DictionaryTableViewController.swift in Sources */,
+				181B791A26598236007DD772 /* ColorManager.swift in Sources */,
 				84A107122546F722008DB456 /* MainTabBar.swift in Sources */,
 				84000C032628D204000FD71B /* Utilities.swift in Sources */,
 				84F34058264738C300F62F10 /* StorageManager.swift in Sources */,
@@ -525,6 +532,7 @@
 				181216FE25446C65006FCA0B /* ProfileViewController.swift in Sources */,
 				84F33FF82634AE5000F62F10 /* UIView+Constraints.swift in Sources */,
 				84F33FF72634AE5000F62F10 /* SwipeableView.swift in Sources */,
+				181B791D26598C3B007DD772 /* CustomUITabBar.swift in Sources */,
 				84F340012634AE5000F62F10 /* SwipeableCardViewDataSource.swift in Sources */,
 				84982EF92530F10C009C6A4A /* SceneDelegate.swift in Sources */,
 			);
