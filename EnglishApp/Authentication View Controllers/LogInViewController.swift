@@ -28,11 +28,13 @@ class LogInViewController: UIViewController {
         
         // Hide the error label
         errorLabel.alpha = 0
+        logInBtn.clipsToBounds = true
+        logInBtn.layer.cornerRadius = 10
         
 
-        Utilities.styleTextField(emailField)
-        Utilities.styleTextField(passwordField)
-        Utilities.styleFilledButton(logInBtn)
+//        Utilities.styleTextField(emailField)
+//        Utilities.styleTextField(passwordField)
+//        Utilities.styleFilledButton(logInBtn)
         
     }
     

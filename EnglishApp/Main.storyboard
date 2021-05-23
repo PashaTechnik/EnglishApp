@@ -9,6 +9,17 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -18,46 +29,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="X19-Un-nY3">
-                                <rect key="frame" x="40" y="104" width="334" height="188.5"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eic-7L-guL">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMh-XV-Cvx">
-                                        <rect key="frame" x="0.0" y="54" width="334" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzw-l7-PyR">
-                                        <rect key="frame" x="0.0" y="108" width="334" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="ueR-5F-8ga"/>
-                                        </constraints>
-                                        <state key="normal" title="Log In"/>
-                                        <connections>
-                                            <action selector="logInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bu7-Qr-H8A"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKO-CD-aeI">
-                                        <rect key="frame" x="0.0" y="168" width="334" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="systemRedColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="пароль" textAlignment="natural" minimumFontSize="17" id="eic-7L-guL">
+                                <rect key="frame" x="20" y="393" width="374" height="34.000000000000227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="IpJ-Jw-gEN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="248" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="747" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMh-XV-Cvx">
+                                <rect key="frame" x="20" y="340" width="374" height="36"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="FO9-s8-bJu"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="vbz-Hi-d8d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzw-l7-PyR">
+                                <rect key="frame" x="122" y="476" width="170" height="44"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Mrw-rz-q0r"/>
+                                    <constraint firstAttribute="width" constant="170" id="e4F-0e-142"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="12"/>
+                                <state key="normal" title="Далее">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bu7-Qr-H8A"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKO-CD-aeI">
+                                <rect key="frame" x="40" y="638" width="334" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="QrC-TL-YIg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dialekt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0c-7K-g8q" userLabel="AppNameLabel">
+                                <rect key="frame" x="141.5" y="176" width="131" height="44"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="36"/>
+                                <color key="textColor" red="0.86274509799999999" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваши данные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ga7-iO-8vj">
+                                <rect key="frame" x="20" y="288" width="221" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Cie-3S-qNw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcu-bg-T1z">
+                                <rect key="frame" x="40" y="92" width="30" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" backgroundImage="logIn_backButton"/>
+                                <connections>
+                                    <segue destination="lJl-Ka-5X1" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="iHq-BF-CxO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="X19-Un-nY3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="4ZU-U8-Fhf"/>
-                            <constraint firstItem="X19-Un-nY3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Bhs-gs-spo"/>
-                            <constraint firstItem="X19-Un-nY3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="X3U-Us-LKv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X19-Un-nY3" secondAttribute="trailing" constant="40" id="oQK-5z-9xC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X19-Un-nY3" secondAttribute="trailing" constant="40" id="ob2-yU-D1t"/>
+                            <constraint firstItem="Hzw-l7-PyR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3rd-6v-0KM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eic-7L-guL" secondAttribute="trailing" constant="20" id="9U7-sT-bUH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hzw-l7-PyR" secondAttribute="trailing" constant="122" id="BoZ-4s-r2z"/>
+                            <constraint firstItem="Ga7-iO-8vj" firstAttribute="top" secondItem="h0c-7K-g8q" secondAttribute="bottom" constant="68" id="CvK-zE-cY4"/>
+                            <constraint firstItem="eic-7L-guL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LTU-So-RK1"/>
+                            <constraint firstItem="IMh-XV-Cvx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Qjw-GE-G5K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IMh-XV-Cvx" secondAttribute="trailing" constant="20" id="WuR-Po-RGf"/>
+                            <constraint firstItem="Hzw-l7-PyR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="ZI8-72-EjW"/>
+                            <constraint firstItem="IMh-XV-Cvx" firstAttribute="top" secondItem="Ga7-iO-8vj" secondAttribute="bottom" constant="30" id="c3z-5p-YMl"/>
+                            <constraint firstItem="IMh-XV-Cvx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cCc-n6-jUW"/>
+                            <constraint firstItem="Hzw-l7-PyR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="dFO-JX-ziP"/>
+                            <constraint firstItem="Ga7-iO-8vj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dsP-23-aYO"/>
+                            <constraint firstItem="MKO-CD-aeI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="gde-3C-Nfl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IMh-XV-Cvx" secondAttribute="trailing" constant="20" id="lLO-ci-dAU"/>
+                            <constraint firstItem="h0c-7K-g8q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mV4-7b-otS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MKO-CD-aeI" secondAttribute="bottom" constant="203.5" id="phE-rt-lS7"/>
+                            <constraint firstItem="h0c-7K-g8q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-250" id="vPP-ch-vP5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MKO-CD-aeI" secondAttribute="trailing" constant="40" id="wkw-4r-tuG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ga7-iO-8vj" secondAttribute="trailing" constant="173" id="wsI-pH-ogh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lrf-Wl-7eT"/>
@@ -70,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1535" y="1156"/>
+            <point key="canvasLocation" x="-1536.2318840579712" y="1155.8035714285713"/>
         </scene>
         <!--Dictionary -->
         <scene sceneID="JoR-1G-OvY">
@@ -238,39 +300,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yyn-nw-vOD">
-                                <rect key="frame" x="40" y="722" width="334" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="yyn-nw-vOD">
+                                <rect key="frame" x="80" y="771" width="254" height="81"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fi-kd-pD2">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="40"/>
+                                        <color key="backgroundColor" red="0.86274509799999999" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="qJ6-2H-vHj"/>
                                         </constraints>
-                                        <state key="normal" title="Sign Up"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
+                                        <state key="normal" title="Продолжить">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="Dve-V5-jcc" kind="show" id="51W-no-5wG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbH-h2-l3e">
-                                        <rect key="frame" x="0.0" y="60" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="41" width="254" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="HRm-cT-Uos"/>
                                         </constraints>
-                                        <state key="normal" title="Log In"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
+                                        <state key="normal" title="У меня уже есть аккаунт">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" id="szE-Iq-cUO"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dialekt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd4-vO-6bp">
+                                <rect key="frame" x="119.5" y="318.5" width="175" height="59"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="48"/>
+                                <color key="textColor" red="0.86274509799999999" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4cF-9W-hBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4cF-9W-hBY" firstAttribute="trailing" secondItem="yyn-nw-vOD" secondAttribute="trailing" constant="40" id="Ydb-B3-Ys6"/>
-                            <constraint firstItem="yyn-nw-vOD" firstAttribute="leading" secondItem="4cF-9W-hBY" secondAttribute="leading" constant="40" id="n6K-aa-n3Y"/>
-                            <constraint firstItem="4cF-9W-hBY" firstAttribute="bottom" secondItem="yyn-nw-vOD" secondAttribute="bottom" constant="40" id="uDH-Om-a8K"/>
+                            <constraint firstItem="jd4-vO-6bp" firstAttribute="centerX" secondItem="sJO-EF-RAv" secondAttribute="centerX" id="8yI-og-4cK"/>
+                            <constraint firstItem="yyn-nw-vOD" firstAttribute="top" secondItem="4cF-9W-hBY" secondAttribute="bottom" constant="-79" id="Pz6-xh-7BD"/>
+                            <constraint firstItem="4cF-9W-hBY" firstAttribute="trailing" secondItem="yyn-nw-vOD" secondAttribute="trailing" constant="80" id="Ydb-B3-Ys6"/>
+                            <constraint firstItem="jd4-vO-6bp" firstAttribute="centerY" secondItem="sJO-EF-RAv" secondAttribute="centerY" constant="-100" id="h5f-iv-HAK"/>
+                            <constraint firstItem="yyn-nw-vOD" firstAttribute="leading" secondItem="4cF-9W-hBY" secondAttribute="leading" constant="80" id="n6K-aa-n3Y"/>
+                            <constraint firstItem="4cF-9W-hBY" firstAttribute="bottom" secondItem="yyn-nw-vOD" secondAttribute="bottom" constant="10" id="uDH-Om-a8K"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Pz6-xh-7BD"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="KvX-DD-6wa"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -281,7 +364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEz-aQ-j9D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2463" y="786"/>
+            <point key="canvasLocation" x="-2463.768115942029" y="785.49107142857144"/>
         </scene>
         <!--Training View Controller-->
         <scene sceneID="KsX-Ki-05D">
@@ -387,75 +470,46 @@
                 <viewController modalPresentationStyle="fullScreen" id="AOq-95-2to" userLabel="Test_ViewController" customClass="TestingViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VmS-ei-MF0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbN-qx-aKI" userLabel="vocab_task_Label">
-                                <rect key="frame" x="30" y="285.5" width="354" height="25"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAG-1H-PpI" userLabel="background">
+                                <rect key="frame" x="20" y="180.5" width="374" height="235"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="235" id="5RA-9C-wHG"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbN-qx-aKI" userLabel="vocab_task_Label">
+                                <rect key="frame" x="30" y="264" width="354" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="EnZ-wy-5P6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3m-ED-UWz" userLabel="choice1_test_button">
-                                <rect key="frame" x="57" y="391" width="260" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerButtonTapped:" destination="AOq-95-2to" eventType="touchUpInside" id="xiO-B7-0KB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAb-1H-u7f" userLabel="choice2_test_button">
-                                <rect key="frame" x="57" y="444" width="260" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerButtonTapped:" destination="AOq-95-2to" eventType="touchUpInside" id="X4o-1s-3ES"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gy-8n-T3r" userLabel="choice3_test_button">
-                                <rect key="frame" x="57" y="497" width="260" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerButtonTapped:" destination="AOq-95-2to" eventType="touchUpInside" id="zI3-Sk-G3U"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZq-n7-Gzg" userLabel="grammar_task_Label">
-                                <rect key="frame" x="16" y="86" width="343" height="164"/>
+                                <rect key="frame" x="30" y="205" width="343" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="что вы услышали?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jkR-5J-hio" userLabel="answer_textField">
-                                <rect key="frame" x="68" y="451" width="282" height="34"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="что вы услышали?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jkR-5J-hio" userLabel="answer_textField">
+                                <rect key="frame" x="20" y="475.5" width="374" height="45"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9dq-XG-gR0"/>
+                                </constraints>
+                                <color key="textColor" red="0.87235862019999999" green="0.17434650660000001" blue="0.1530733407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <connections>
                                     <action selector="ReturnKeyPressed:" destination="AOq-95-2to" eventType="primaryActionTriggered" id="Mqd-7H-Ps6"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qci-BV-HFh" userLabel="choice4_test_button">
-                                <rect key="frame" x="57" y="550" width="260" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerButtonTapped:" destination="AOq-95-2to" eventType="touchUpInside" id="Ftr-JI-MWp"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tm-83-cfK" userLabel="listening_status_label">
-                                <rect key="frame" x="40" y="399.5" width="334" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tm-83-cfK" userLabel="listening_status_label">
+                                <rect key="frame" x="40" y="357.66666666666669" width="334" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ILB-cX-F46"/>
                                 </constraints>
@@ -469,16 +523,16 @@
                                     <constraint firstAttribute="width" constant="70" id="Mlj-OD-O1K"/>
                                     <constraint firstAttribute="height" constant="70" id="hqu-7M-X5b"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="listening_icon"/>
+                                <state key="normal" backgroundImage="testing_listeningButton"/>
                                 <connections>
                                     <action selector="soundBtn:" destination="AOq-95-2to" eventType="touchUpInside" id="vDs-Dr-QUk"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tPJ-FS-KLB">
-                                <rect key="frame" x="30" y="51" width="329" height="4"/>
+                                <rect key="frame" x="21" y="52" width="281" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.86274509799999999" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUb-7u-NKU">
                                 <rect key="frame" x="137" y="358" width="100" height="42"/>
@@ -488,22 +542,91 @@
                                     <action selector="EndTestBtn:" destination="AOq-95-2to" eventType="touchUpInside" id="Iiu-W6-70A"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ked-px-eTL" userLabel="progress_label">
+                                <rect key="frame" x="332" y="44" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                <color key="textColor" red="0.69411764705882351" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.69411764705882351" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Fn8-Sp-Azi">
+                                <rect key="frame" x="20" y="551" width="374" height="192"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3m-ED-UWz" userLabel="choice1_test_button">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="AOq-95-2to" eventType="touchUpInside" id="xiO-B7-0KB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAb-1H-u7f" userLabel="choice2_test_button">
+                                        <rect key="frame" x="0.0" y="53" width="374" height="33"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="AOq-95-2to" eventType="touchUpInside" id="X4o-1s-3ES"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gy-8n-T3r" userLabel="choice3_test_button">
+                                        <rect key="frame" x="0.0" y="106" width="374" height="33"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="AOq-95-2to" eventType="touchUpInside" id="zI3-Sk-G3U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qci-BV-HFh" userLabel="choice4_test_button">
+                                        <rect key="frame" x="0.0" y="159" width="374" height="33"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="AOq-95-2to" eventType="touchUpInside" id="Ftr-JI-MWp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Лексика" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdZ-oT-GnL">
+                                <rect key="frame" x="20" y="142" width="93" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zHf-qe-Caz"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zHf-qe-Caz" firstAttribute="trailing" secondItem="jkR-5J-hio" secondAttribute="trailing" constant="64" id="07l-Ij-uzd"/>
+                            <constraint firstItem="jkR-5J-hio" firstAttribute="top" secondItem="DAG-1H-PpI" secondAttribute="bottom" constant="60" id="2RZ-gL-5V5"/>
                             <constraint firstItem="uHo-Ol-En2" firstAttribute="centerX" secondItem="VmS-ei-MF0" secondAttribute="centerX" id="5yV-kU-Eu7"/>
-                            <constraint firstItem="XbN-qx-aKI" firstAttribute="leading" secondItem="zHf-qe-Caz" secondAttribute="leading" constant="30" id="CDW-gi-L54"/>
-                            <constraint firstItem="zHf-qe-Caz" firstAttribute="trailing" secondItem="XbN-qx-aKI" secondAttribute="trailing" constant="30" id="G33-rr-Nec"/>
+                            <constraint firstItem="Fn8-Sp-Azi" firstAttribute="leading" secondItem="zHf-qe-Caz" secondAttribute="leading" constant="20" id="713-iw-5xf"/>
+                            <constraint firstItem="DAG-1H-PpI" firstAttribute="centerY" secondItem="VmS-ei-MF0" secondAttribute="centerY" constant="-150" id="7WB-EU-E9s"/>
+                            <constraint firstItem="XbN-qx-aKI" firstAttribute="leading" secondItem="zHf-qe-Caz" secondAttribute="leading" constant="30" id="Bcu-HD-tfF"/>
                             <constraint firstItem="jkR-5J-hio" firstAttribute="centerY" secondItem="VmS-ei-MF0" secondAttribute="centerY" constant="20" id="IFD-1T-MGa"/>
+                            <constraint firstItem="jkR-5J-hio" firstAttribute="leading" secondItem="zHf-qe-Caz" secondAttribute="leading" constant="20" id="Ph9-qO-yqZ"/>
+                            <constraint firstItem="zHf-qe-Caz" firstAttribute="trailing" secondItem="jkR-5J-hio" secondAttribute="trailing" constant="20" id="TCi-Oe-yNW"/>
+                            <constraint firstItem="zHf-qe-Caz" firstAttribute="trailing" secondItem="XbN-qx-aKI" secondAttribute="trailing" constant="30" id="d31-zf-6Cb"/>
                             <constraint firstItem="8Tm-83-cfK" firstAttribute="centerX" secondItem="VmS-ei-MF0" secondAttribute="centerX" id="eDO-kX-26k"/>
                             <constraint firstItem="zHf-qe-Caz" firstAttribute="trailing" secondItem="8Tm-83-cfK" secondAttribute="trailing" constant="40" id="ejx-uf-Iqs"/>
+                            <constraint firstItem="zHf-qe-Caz" firstAttribute="bottom" secondItem="Fn8-Sp-Azi" secondAttribute="bottom" constant="70" id="fW4-IY-tn0"/>
                             <constraint firstItem="8Tm-83-cfK" firstAttribute="leading" secondItem="zHf-qe-Caz" secondAttribute="leading" constant="40" id="gZW-OQ-afF"/>
                             <constraint firstItem="XbN-qx-aKI" firstAttribute="centerY" secondItem="VmS-ei-MF0" secondAttribute="centerY" constant="-150" id="jfa-gw-10q"/>
+                            <constraint firstItem="zHf-qe-Caz" firstAttribute="trailing" secondItem="Fn8-Sp-Azi" secondAttribute="trailing" constant="20" id="qYd-Lr-gVc"/>
                             <constraint firstItem="uHo-Ol-En2" firstAttribute="centerY" secondItem="VmS-ei-MF0" secondAttribute="centerY" constant="-100" id="tGG-xe-gte"/>
-                            <constraint firstItem="8Tm-83-cfK" firstAttribute="top" secondItem="uHo-Ol-En2" secondAttribute="bottom" constant="16.5" id="yjV-fc-FRp"/>
-                            <constraint firstItem="jkR-5J-hio" firstAttribute="leading" secondItem="zHf-qe-Caz" secondAttribute="leading" constant="68" id="yvF-bk-iwo"/>
+                            <constraint firstItem="DAG-1H-PpI" firstAttribute="leading" secondItem="zHf-qe-Caz" secondAttribute="leading" constant="20" id="uta-80-PZ5"/>
+                            <constraint firstItem="zHf-qe-Caz" firstAttribute="trailing" secondItem="DAG-1H-PpI" secondAttribute="trailing" constant="20" id="wEC-3y-lDI"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Тест" id="dbe-gQ-R76"/>
@@ -523,7 +646,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQ7-q5-eA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-876" y="1987.5562218890557"/>
+            <point key="canvasLocation" x="-1157.9710144927537" y="1990.8482142857142"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="qIr-s1-9T4">
@@ -583,15 +706,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dl1-yo-5y2">
-                                <rect key="frame" x="16" y="20" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Выйти"/>
-                                <connections>
-                                    <action selector="logout:" destination="INk-UH-4MZ" eventType="touchUpInside" id="uxL-AO-2dp"/>
-                                    <segue destination="lJl-Ka-5X1" kind="show" id="m16-vj-oaF"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileIco" translatesAutoresizingMaskIntoConstraints="NO" id="M1Q-CA-G2K">
                                 <rect key="frame" x="121" y="127" width="180" height="256"/>
                                 <constraints>
@@ -603,6 +717,15 @@
                                 <rect key="frame" x="67" y="490" width="219" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dl1-yo-5y2">
+                                <rect key="frame" x="20" y="68" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Выйти"/>
+                                <connections>
+                                    <action selector="logout:" destination="INk-UH-4MZ" eventType="touchUpInside" id="uxL-AO-2dp"/>
+                                    <segue destination="lJl-Ka-5X1" kind="show" id="m16-vj-oaF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uve-ua-bpu"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -666,6 +789,7 @@
                         <segue destination="ZwS-dW-lqr" kind="relationship" relationship="viewControllers" id="ne8-yM-TmC"/>
                         <segue destination="WPH-8r-aw6" kind="relationship" relationship="viewControllers" id="OdQ-uw-4gb"/>
                         <segue destination="INk-UH-4MZ" kind="relationship" relationship="viewControllers" id="ulD-3g-j8O"/>
+                        <segue destination="AOq-95-2to" kind="relationship" relationship="viewControllers" id="epP-Uf-B0t"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bda-ms-whe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -851,18 +975,19 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="m16-vj-oaF"/>
+        <segue reference="iHq-BF-CxO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.closed.fill" catalog="system" width="115" height="128"/>
         <image name="home-tab" width="22" height="21"/>
-        <image name="listening_icon" width="48" height="48"/>
+        <image name="logIn_backButton" width="30" height="24"/>
         <image name="profileIco" width="1446" height="1444"/>
         <image name="profile_Item" width="48" height="48"/>
         <image name="tabBar_icon_grammar" width="25" height="25"/>
         <image name="tabBar_icon_profile" width="25" height="25"/>
         <image name="tabBar_icon_training" width="25" height="25"/>
         <image name="tabBar_icon_vocabulary" width="25" height="25"/>
+        <image name="testing_listeningButton" width="512" height="512"/>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -248,6 +248,11 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         listening_Button.isHidden = true;
         listening_status_label.isHidden = true;
         endTestButton.isHidden = true
+        
+        choice1_test_button.backgroundColor = .none
+        choice2_test_button.backgroundColor = .none
+        choice3_test_button.backgroundColor = .none
+        choice4_test_button.backgroundColor = .none
     }
     
     func view2() { // тест граматика
@@ -286,6 +291,10 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         listening_status_label.isHidden = false;
         endTestButton.isHidden = true
         answer_textField.placeholder = "перевод"
+        choice1_test_button.backgroundColor = .none
+        choice2_test_button.backgroundColor = .none
+        choice3_test_button.backgroundColor = .none
+        choice4_test_button.backgroundColor = .none
     }
 
     func view5() { // результат
@@ -304,6 +313,12 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         
         vocab_task_Label.text = string;
         progress_bar.isHidden = true;
+    }
+    
+    func rightAnswerAnimation() {
+        choice1_test_button.backgroundColor = .none
+        choice1_test_button.backgroundColor = UIColor(red: 55.0/255.0, green: 55/255.0, blue: 55/255.0, alpha: 1)
+        
     }
     
     @IBAction func EndTestBtn(_ sender: Any) {

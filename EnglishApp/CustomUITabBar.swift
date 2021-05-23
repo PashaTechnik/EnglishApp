@@ -4,8 +4,6 @@ import DeviceCheck
 
 class CustomTabBar: UITabBar {
     
-    
-    
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         
         if UIDevice().userInterfaceIdiom == .phone {

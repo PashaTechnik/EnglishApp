@@ -21,8 +21,10 @@ class StartViewController: UIViewController {
     }
     
     func setUpElements() {
-        Utilities.styleFilledButton(signUpBtn)
-        Utilities.styleHollowButton(logInBtn)
+//        Utilities.styleFilledButton(signUpBtn)
+//        Utilities.styleHollowButton(logInBtn)
+        signUpBtn.layer.cornerRadius = 10
+        signUpBtn.clipsToBounds = true
     }
     
 }
