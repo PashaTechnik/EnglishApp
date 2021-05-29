@@ -11,7 +11,7 @@ class CustomGrammarListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        progressBar.layer.cornerRadius = 5
+        progressBar.layer.cornerRadius = 3
         cellView.layer.cornerRadius = 10
         progressBar.layer.masksToBounds = false
         cellView.layer.masksToBounds = false
@@ -22,6 +22,8 @@ class CustomGrammarListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+   
     
 
 }
