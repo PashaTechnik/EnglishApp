@@ -32,6 +32,8 @@
 		181216FE25446C65006FCA0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181216FD25446C65006FCA0B /* ProfileViewController.swift */; };
 		181B791A26598236007DD772 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B791926598236007DD772 /* ColorManager.swift */; };
 		181B791D26598C3B007DD772 /* CustomUITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B791C26598C3B007DD772 /* CustomUITabBar.swift */; };
+		185544D12662692F00ADCABA /* GrammarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185544D02662692F00ADCABA /* GrammarViewController.swift */; };
+		185544D426626D5500ADCABA /* CustomGrammarListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185544D326626D5500ADCABA /* CustomGrammarListTableViewCell.swift */; };
 		18E10F48254353F70022D009 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E10F47254353F70022D009 /* TestingViewController.swift */; };
 		18E10F4D254367520022D009 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E10F4C254367520022D009 /* AVFoundation.framework */; };
 		18E10F5025436C5D0022D009 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 18E10F4F25436C5D0022D009 /* Sounds */; };
@@ -105,6 +107,8 @@
 		181216FD25446C65006FCA0B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		181B791926598236007DD772 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		181B791C26598C3B007DD772 /* CustomUITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITabBar.swift; sourceTree = "<group>"; };
+		185544D02662692F00ADCABA /* GrammarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarViewController.swift; sourceTree = "<group>"; };
+		185544D326626D5500ADCABA /* CustomGrammarListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGrammarListTableViewCell.swift; sourceTree = "<group>"; };
 		18E10F47254353F70022D009 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		18E10F4C254367520022D009 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		18E10F4F25436C5D0022D009 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
@@ -291,6 +295,8 @@
 				84982EF82530F10C009C6A4A /* SceneDelegate.swift */,
 				18E10F47254353F70022D009 /* TestingViewController.swift */,
 				181216F6254450C2006FCA0B /* Main.storyboard */,
+				185544D02662692F00ADCABA /* GrammarViewController.swift */,
+				185544D326626D5500ADCABA /* CustomGrammarListTableViewCell.swift */,
 				181B791C26598C3B007DD772 /* CustomUITabBar.swift */,
 				181216FA254460FC006FCA0B /* TrainingViewController.swift */,
 				84982EFF2530F10F009C6A4A /* Assets.xcassets */,
@@ -524,6 +530,8 @@
 				84F33FF22634AE5000F62F10 /* SampleSwipeableCard.swift in Sources */,
 				84F33FF62634AE5000F62F10 /* NibView.swift in Sources */,
 				84F340542647316000F62F10 /* Question.swift in Sources */,
+				185544D426626D5500ADCABA /* CustomGrammarListTableViewCell.swift in Sources */,
+				185544D12662692F00ADCABA /* GrammarViewController.swift in Sources */,
 				84000BFB2628CA08000FD71B /* RegistrationViewController.swift in Sources */,
 				84F33FFB2634AE5000F62F10 /* SwipeableCardViewCard.swift in Sources */,
 				84982EF72530F10C009C6A4A /* AppDelegate.swift in Sources */,
