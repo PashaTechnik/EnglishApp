@@ -2,7 +2,7 @@ import UIKit
 
 class GrammarViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     
-    let tensesList = ["Present Simple", "Present Continious", "Past Simple", "Articles", "Present Perfect"]
+    let tensesList = [["Present Simple", "Present Continious", "Past Simple", "Articles", "Present Perfect"],["pr","prrr"],["op", "opp"]]
     let sectionHeasers = ["Начинающий уровень","Средний уровень","Продвинутый уровень"]
 
     
@@ -24,7 +24,7 @@ class GrammarViewController: UIViewController , UITableViewDelegate, UITableView
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tensesList.count
+        return tensesList[section].count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -32,7 +32,7 @@ class GrammarViewController: UIViewController , UITableViewDelegate, UITableView
         
         let cell = grammarTableView.dequeueReusableCell(withIdentifier: "grammarCell") as! CustomGrammarListTableViewCell
         
-        cell.TenseNameLabel.text = tensesList[indexPath.row]
+        cell.TenseNameLabel.text = tensesList[indexPath.section][indexPath.row]
         
         return cell
     }
