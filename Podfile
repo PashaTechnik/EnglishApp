@@ -11,6 +11,7 @@ target 'EnglishApp' do
 	pod 'Firebase/Auth'
 	pod 'Firebase/Core'
 	pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
 	pod 'RxSwift'
 	pod 'pop', '1.0.10'
 	pod 'GoogleMLKit/Translate'

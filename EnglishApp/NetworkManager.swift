@@ -8,11 +8,11 @@
 
 import Foundation
 import Firebase
+import FirebaseStorage
 
 class NetworkManager: NSObject {
     
     public static var currentUserDocumentId: String?
-    public static var userDictionary: Dictionary<String,String>?
     
      func fetchData(completion: @escaping (User) -> ()){
         let db = Firestore.firestore()
@@ -29,8 +29,24 @@ class NetworkManager: NSObject {
                     let lastName = document.data()["lastname"] as! String
                     let points = document.data()["points"] as? Int ?? 0
                     let dictionary = document.data()["Dictionary"] as? Dictionary<String,String> ?? [:]
-                    let currentUser = User(firstName: firstName, lastName: lastName, email: "", points: points, dictionary: dictionary)
-                    NetworkManager.userDictionary = dictionary
+                    let imageURL = document.data()["ProfileImage"] as? String ?? ""
+                    let grammarQuestions = document.data()["GrammarQuestions"] as? Array<Int> ?? []
+                    let translateQuiz = document.data()["TranslateQuiz"] as? Array<Int> ?? []
+                    let translateQuestions = document.data()["TranslateQuestions"] as? Array<Int> ?? []
+                    let url = URL(string: imageURL)
+                    let image: UIImage
+                    if url != nil{
+                        let imageData = try? Data(contentsOf: url!)
+                        image = UIImage(data: imageData!)!
+                    } else {
+                        image = UIImage(named: "profileIco")!
+                    }
+                        
+                    
+                    let currentUser = User(firstName: firstName, lastName: lastName, email: "", points: points, dictionary: dictionary, profileImage: image)
+                    CurrentUser.init(firstName: firstName, lastName: lastName, points: points, dictionary: dictionary, profileImage: image, grammarQuestions: grammarQuestions, translateQuiz: translateQuiz, translateQuestions: translateQuestions)
+                    
+                    
                     completion(currentUser)
                 }
             }
@@ -40,9 +56,9 @@ class NetworkManager: NSObject {
     static func updateDictionary(newDict: Dictionary<String,String>){
         let db = Firestore.firestore()
         let user = db.collection("users").document(currentUserDocumentId!)
-        NetworkManager.userDictionary!.merge(dict: newDict)
+        CurrentUser.Dictionary!.merge(dict: newDict)
         user.updateData([
-            "Dictionary": userDictionary!,
+            "Dictionary": CurrentUser.Dictionary!,
         ]) { err in
             if let err = err {
                 print("Error updating document: \(err)")
@@ -53,16 +69,48 @@ class NetworkManager: NSObject {
     }
     
     static func deleteWordInDictionary(key: String){
-        NetworkManager.userDictionary!.removeValue(forKey: key)
+        CurrentUser.Dictionary!.removeValue(forKey: key)
         let db = Firestore.firestore()
         let user = db.collection("users").document(currentUserDocumentId!)
         user.updateData([
-            "Dictionary": userDictionary!,
+            "Dictionary": CurrentUser.Dictionary!,
         ]) { err in
             if let err = err {
                 print("Error updating document: \(err)")
             } else {
                 print("Document successfully updated")
+            }
+        }
+    }
+    
+    static func saveImageToStorage(image: UIImage?){
+        let imageName = NSUUID().uuidString
+        CurrentUser.Image = image
+        let storage = Storage.storage().reference().child("profilePhotos/\(imageName).png")
+        
+        if let uploadData = image!.pngData() {
+            storage.putData(uploadData, metadata: nil) { (metadata, error) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                storage.downloadURL { url, error in
+                  if let error = error {
+                    print(error)
+                  } else {
+                    let db = Firestore.firestore()
+                    let user = db.collection("users").document(currentUserDocumentId!)
+                    user.updateData([
+                        "ProfileImage": url!.absoluteString,
+                    ]) { err in
+                        if let err = err {
+                            print("Error updating document: \(err)")
+                        } else {
+                            print("Document successfully updated")
+                        }
+                    }
+                  }
+                }
             }
         }
     }

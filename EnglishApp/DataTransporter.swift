@@ -1,14 +1,5 @@
 import Foundation
 
-struct testing_quiz: Codable {
-    var question: String
-    var answer1: String
-    var answer2: String
-    var answer3: String
-    var answer4: String
-    var right: Int
-}
-
 struct grammar: Codable {
     var question: String
     var answer1: String
@@ -23,23 +14,16 @@ struct listening: Codable {
     var answer: String
 }
 
-struct translate: Codable {
-    var question: String
-    var answer: String
-}
-
-
 public class JsonDataLoader {
-    @Published var tesingQuizData = [testing_quiz]()
+    @Published var translateQuizData = [TranslateQuiz]()
     @Published var listeningData = [listening]()
     @Published var grammarData = [grammar]()
-    @Published var translateData = [translate]()
+    @Published var translateData = [Translate]()
     @Published var questionData = [Question]()
 
     
     init() {
         load()
-       // print(listeningData[0].question)
     }
     
     public func random()
@@ -53,8 +37,8 @@ public class JsonDataLoader {
             do {
                 let data = try Data(contentsOf: fileLocation)
                 let jsonDecoder = JSONDecoder()
-                let dataFromJson = try jsonDecoder.decode([testing_quiz].self, from: data)
-                self.tesingQuizData = dataFromJson
+                let dataFromJson = try jsonDecoder.decode([TranslateQuiz].self, from: data)
+                self.translateQuizData = dataFromJson
             } catch {
                 print(error)
             }
@@ -86,7 +70,7 @@ public class JsonDataLoader {
             do {
                 let data = try Data(contentsOf: fileLocation)
                 let jsonDecoder = JSONDecoder()
-                let dataFromJson = try jsonDecoder.decode([translate].self, from: data)
+                let dataFromJson = try jsonDecoder.decode([Translate].self, from: data)
                 self.translateData = dataFromJson
             } catch {
                 print(error)

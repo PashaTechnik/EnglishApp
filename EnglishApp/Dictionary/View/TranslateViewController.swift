@@ -10,6 +10,13 @@ import UIKit
 import Firebase
 import MLKit
 
+let options = TranslatorOptions(sourceLanguage: .russian, targetLanguage: .english)
+let russianEnglishTranslator = Translator.translator(options: options)
+let conditions = ModelDownloadConditions(
+    allowsCellularAccess: false,
+    allowsBackgroundDownloading: true
+)
+
 class TranslateViewController: UIViewController {
 
     @IBOutlet weak var wordTextField: UITextField!
@@ -30,12 +37,6 @@ class TranslateViewController: UIViewController {
     }
     @IBAction func translateBtn(_ sender: Any) {
         
-        let options = TranslatorOptions(sourceLanguage: .russian, targetLanguage: .english)
-        let russianEnglishTranslator = Translator.translator(options: options)
-        let conditions = ModelDownloadConditions(
-            allowsCellularAccess: false,
-            allowsBackgroundDownloading: true
-        )
         russianEnglishTranslator.downloadModelIfNeeded(with: conditions) { error in
             guard error == nil else { return }
 
@@ -47,7 +48,6 @@ class TranslateViewController: UIViewController {
     
         }
     }
-
 }
 
 extension String {

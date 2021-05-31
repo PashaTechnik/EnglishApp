@@ -161,7 +161,7 @@ class SwipeableView: UIView {
         case .some(.down): break
         }
         
-        if newWords != [:] {
+        if newWords != ["":""] {
             NetworkManager.updateDictionary(newDict: newWords)
         }
 

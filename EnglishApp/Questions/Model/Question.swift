@@ -25,8 +25,6 @@ class Question: Object, Codable{
         self.level = level
     }
     
-    required init() {
-        
-    }
+    required init() { }
     
 }

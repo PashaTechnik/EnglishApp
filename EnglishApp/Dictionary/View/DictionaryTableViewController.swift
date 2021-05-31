@@ -22,7 +22,7 @@ class DictionaryTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.Dictionary = NetworkManager.userDictionary
+        self.Dictionary = CurrentUser.Dictionary
         self.tableView.reloadData()
     }
 
@@ -50,7 +50,7 @@ class DictionaryTableViewController: UITableViewController {
         let word = Array(Dictionary ?? [:])[indexPath.row]
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, complete in
             NetworkManager.deleteWordInDictionary(key: word.key)
-            self.Dictionary = NetworkManager.userDictionary
+            self.Dictionary = CurrentUser.Dictionary
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             complete(true)
         }

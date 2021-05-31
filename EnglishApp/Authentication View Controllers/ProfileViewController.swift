@@ -11,8 +11,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var levelTextLabel: UILabel!
     @IBOutlet weak var pointsTextLabel: UILabel!
     
+
+    
     var user: User?
-    var defaultUser = User(firstName: "", lastName: "", email: "", points: 0, dictionary: [:])
+    var defaultUser = User(firstName: "", lastName: "", email: "", points: 0, dictionary: [:], profileImage: UIImage(named: "profileIco"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,7 @@ class ProfileViewController: UIViewController {
     }
     
     func initUser(_ user: User){
+        userPhoto.image = CurrentUser.Image
         userLevel_label.text = getLevel(user.points).0
         levelTextLabel.text = String(getLevel(user.points).1) + " Level"
         usernameLabel.text = user.firstName
@@ -78,4 +81,47 @@ class ProfileViewController: UIViewController {
         
     }
     
+    @IBAction func editPhotoBtn(_ sender: Any) {
+        let cameraIcon = UIImage(named: "camera")
+        let photoIcon = UIImage(named: "photo")
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let camera = UIAlertAction(title: "Camera", style: .default) { _ in
+            self.chooseImagePicker(source: .camera)
+        }
+        camera.setValue(cameraIcon, forKey: "image")
+        camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
+        let photo = UIAlertAction(title: "Photo", style: .default) { _ in
+            self.chooseImagePicker(source: .photoLibrary)
+        }
+        photo.setValue(photoIcon, forKey: "image")
+        photo.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        actionSheet.addAction(photo)
+        actionSheet.addAction(camera)
+        actionSheet.addAction(cancel)
+        present(actionSheet, animated: true)
+        
+    }
+}
+
+
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func chooseImagePicker(source: UIImagePickerController.SourceType) {
+        if UIImagePickerController.isSourceTypeAvailable(source) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = true
+            imagePicker.sourceType = source
+            present(imagePicker, animated: true)
+        }
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any] ) {
+        userPhoto.image = info[.editedImage] as? UIImage
+        userPhoto.contentMode = .scaleAspectFill
+        userPhoto.clipsToBounds = true
+        NetworkManager.saveImageToStorage(image: info[.editedImage] as? UIImage)
+        dismiss(animated: true)
+    }
 }

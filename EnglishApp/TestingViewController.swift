@@ -78,18 +78,18 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
         } // реагирует на 4 сегмент
         else
         {
-            if (answer_textField.text == jsData.translateData[count].answer)
-            {
-                listening_status_label.text = "правильно"
-                listening_status_label.textColor = .green
-                score += 1
-                print(score)
-            }
-            else
-            {
-                listening_status_label.text = "не правильно"
-                listening_status_label.textColor = .red
-            }
+//            if (answer_textField.text == jsData.translateData[count].answer)
+//            {
+//                listening_status_label.text = "правильно"
+//                listening_status_label.textColor = .green
+//                score += 1
+//                print(score)
+//            }
+//            else
+//            {
+//                listening_status_label.text = "не правильно"
+//                listening_status_label.textColor = .red
+//            }
             sleep(1);
             answer_textField.text = nil;
             
@@ -120,10 +120,10 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     @IBAction func answerButtonTapped(_ sender: UIButton) { // only testing
         if (segment == 1) {
         
-        if (sender.tag == jsData.tesingQuizData[count].right)
-        {
-            score += 1
-        }
+//        if (sender.tag == jsData.tesingQuizData[count].right)
+//        {
+//            score += 1
+//        }
         count += 1
         
         self.progress.completedUnitCount += 1
@@ -217,16 +217,16 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     
     func newTransl(i:Int)
     {
-        vocab_task_Label.text = jsData.translateData[i].question
+        //vocab_task_Label.text = jsData.translateData[i].question
         
     }
     func newQues(i: Int)  { // only testing
         
-        vocab_task_Label.text = jsData.tesingQuizData[i].question
-        choice1_test_button.setTitle(jsData.tesingQuizData[i].answer1, for: .normal)
-        choice2_test_button.setTitle(jsData.tesingQuizData[i].answer2, for: .normal)
-        choice3_test_button.setTitle(jsData.tesingQuizData[i].answer3, for: .normal)
-        choice4_test_button.setTitle(jsData.tesingQuizData[i].answer4, for: .normal)
+//        vocab_task_Label.text = jsData.tesingQuizData[i].question
+//        choice1_test_button.setTitle(jsData.tesingQuizData[i].answer1, for: .normal)
+//        choice2_test_button.setTitle(jsData.tesingQuizData[i].answer2, for: .normal)
+//        choice3_test_button.setTitle(jsData.tesingQuizData[i].answer3, for: .normal)
+//        choice4_test_button.setTitle(jsData.tesingQuizData[i].answer4, for: .normal)
     }
     
     func newGramQuestion(i:Int) {

@@ -36,7 +36,7 @@ class SampleSwipeableCard: SwipeableCardViewCard {
             imageView.image = viewModel.image
 
             backgroundContainerView.layer.cornerRadius = 14.0
-            addButton.layer.cornerRadius = addButton.frame.size.height/4
+            //addButton.layer.cornerRadius = addButton.frame.size.height/4
             
             word = titleLabel.text
         }

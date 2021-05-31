@@ -9,22 +9,51 @@
 import Foundation
 import RealmSwift
 
-let realm = try! Realm()
+
+var realm: Realm = {
+    var config = Realm.Configuration(
+        schemaVersion: 1,
+        migrationBlock: { migration, oldSchemaVersion in
+            if (oldSchemaVersion < 1) {}
+    })
+    config.deleteRealmIfMigrationNeeded = true
+    Realm.Configuration.defaultConfiguration = config
+    return try! Realm()
+}()
+
 let jsData = JsonDataLoader()
 
 class StorageManager {
-    var queeiu = jsData.questionData
+    
+    
     static func saveQuestions(){
         
         for question in jsData.questionData {
-            print(jsData.questionData.count)
-            self.saveObject(question: question)
+            self.saveObject(object: question)
+        }
+    }
+    
+    static func clearDatabase(){
+        try! realm.write {
+          realm.deleteAll()
+        }
+    }
+    
+    static func saveTranslate(){
+        for translate in jsData.translateData {
+            self.saveObject(object: translate)
+        }
+    }
+    
+    static func saveTranslateQuiz(){
+        for translateQuiz in jsData.translateQuizData {
+            self.saveObject(object: translateQuiz)
         }
     }
        
-    static func saveObject(question: Question){
+    static func saveObject(object: Any){
         try! realm.write{
-            realm.add(question)
+            realm.add(object as! Object)
         }
     }
 }

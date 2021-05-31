@@ -6,12 +6,13 @@
 //  Copyright © 2020 Pasha. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct User: Codable {
+struct User {
     var firstName: String
     var lastName: String
     var email: String
     var points: Int
     var dictionary: Dictionary<String,String>
+    var profileImage: UIImage?
 }

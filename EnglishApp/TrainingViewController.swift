@@ -4,14 +4,20 @@ import RealmSwift
 class TrainingViewController: UIViewController {
     
 
-    var questions: Results<Question>!
+    var translate: Results<Translate>!
+    var translateQuiz: Results<TranslateQuiz>!
     
     @IBOutlet weak var wordTraining_stackView: UIStackView!
     @IBOutlet weak var grammarTraining_stackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        questions = realm.objects(Question.self)
+//        questions = realm.objects(Question.self)
+//        translate = realm.objects(Translate.self)
+//        translateQuiz = realm.objects(TranslateQuiz.self)
+//        print(questions.count)
+//        print(translate.count)
+//        print(translateQuiz.count)
         view1()
         
 
@@ -51,11 +57,18 @@ class TrainingViewController: UIViewController {
         
         let image = UIImage(named: "refreshButton") as UIImage?
         button_grammarQuiz.setImage(image, for: .normal)
-
         
+        button_grammarQuiz.addTarget(self, action: #selector(self.goToExercise(sender:)), for: .touchUpInside)
+        
+
         wordTraining_stackView.addArrangedSubview(button_WordTranslate)
         wordTraining_stackView.addArrangedSubview(button_TranslateWord)
         wordTraining_stackView.addArrangedSubview(button_AudioBattle)
         grammarTraining_stackView.addArrangedSubview(button_grammarQuiz)
     }
+    
+    @objc func goToExercise(sender: UIButton!){
+        self.performSegue(withIdentifier: "goToTrain", sender: self)
+    }
+    
 }

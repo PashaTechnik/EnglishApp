@@ -1,71 +1,105 @@
 [
     {
-        "question": "clever",
-        "answer": "умный"
+        "id": 1,
+        "word": "clever",
+        "translate": "умный",
+        "level": "A2"
     },
     {
-        "question": "local",
-        "answer": "местный"
+        "id": 2,
+        "word": "local",
+        "translate": "местный",
+        "level": "B2"
     },
     {
-        "question": "weather",
-        "answer": "погода"
+        "id": 3,
+        "word": "weather",
+        "translate": "погода",
+        "level": "A1"
     },
     {
-        "question": "using",
-        "answer": "использование"
+        "id": 4,
+        "word": "using",
+        "translate": "использование",
+        "level": "B2"
     },
     {
-        "question": "trap",
-        "answer": "ловушка"
+        "id": 5,
+        "word": "trap",
+        "translate": "ловушка",
+        "level": "A2"
     },
     {
-        "question": "road",
-        "answer": "дорога"
+        "id": 6,
+        "word": "road",
+        "translate": "дорога",
+        "level": "A2"
     },
     {
-        "question": "cellar",
-        "answer": "подвал"
+        "id": 7,
+        "word": "cellar",
+        "translate": "подвал",
+        "level": "A2"
     },
     {
-        "question": "wit",
-        "answer": "остроумие"
+        "id": 8,
+        "word": "wit",
+        "translate": "остроумие",
+        "level": "B2"
     },
     {
-        "question": "tiny",
-        "answer": "крохотный"
+        "id": 9,
+        "word": "tiny",
+        "translate": "крохотный",
+        "level": "A2"
     },
     {
-        "question": "react",
-        "answer": "реагировать"
+        "id": 10,
+        "word": "react",
+        "translate": "реагировать",
+        "level": "B1"
     },
     {
-        "question": "reaction",
-        "answer": "реакция"
+        "id": 11,
+        "word": "reaction",
+        "translate": "реакция",
+        "level": "B1"
     },
     {
-        "question": "laptop",
-        "answer": "ноутбук"
+        "id": 12,
+        "word": "laptop",
+        "translate": "ноутбук",
+        "level": "A2"
     },
     {
-        "question": "travel",
-        "answer": "путешествовать"
+        "id": 13,
+        "word": "travel",
+        "translate": "путешествовать",
+        "level": "A2"
     },
     {
-        "question": "elevator",
-        "answer": "лифт"
+        "id": 14,
+        "word": "elevator",
+        "translate": "лифт",
+        "level": "A1"
     },
     {
-        "question": "son",
-        "answer": "сын"
+        "id": 15,
+        "word": "son",
+        "translate": "сын",
+        "level": "A2"
     },
     {
-        "question": "wizard",
-        "answer": "маг"
+        "id": 16,
+        "word": "wizard",
+        "translate": "маг",
+        "level": "A2"
     },
     {
-        "question": "logical",
-        "answer": "логический"
+        "id": 17,
+        "word": "logical",
+        "translate": "логический",
+        "level": "A1"
     }
 ]
 

@@ -9,8 +9,6 @@
 import UIKit
 
 class MainTabBar: UITabBarController {
-    //var user = User(name: "empty", email: "empty", password: "empty")
-    //var user = User(name: "Pasha", email: "Pasha@mail.ua", password: "1234", points: 7, isLoggedIn: true)
 
     @IBOutlet var networkManager: NetworkManager!
     
@@ -22,7 +20,10 @@ class MainTabBar: UITabBarController {
 
         DispatchQueue.main.async {
             self.fetchUser()
-            //StorageManager.saveQuestions()
+//            StorageManager.clearDatabase()
+//            StorageManager.saveQuestions()
+//            StorageManager.saveTranslate()
+//            StorageManager.saveTranslateQuiz()
         }
     }
     
