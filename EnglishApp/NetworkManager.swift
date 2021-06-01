@@ -130,6 +130,36 @@ class NetworkManager: NSObject {
         }
     }
     
+    static func editTranslateQuestions(translateQuestionIndex: Int){
+        let db = Firestore.firestore()
+        let user = db.collection("users").document(currentUserDocumentId!)
+        CurrentUser.TranslateQuestions?.append(translateQuestionIndex)
+        user.updateData([
+            "TranslateQuestions": FieldValue.arrayUnion([translateQuestionIndex])
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+    }
+    
+    static func editTranslateQuiz(translateQuizIndex: Int){
+        let db = Firestore.firestore()
+        let user = db.collection("users").document(currentUserDocumentId!)
+        CurrentUser.TranslateQuiz?.append(translateQuizIndex)
+        user.updateData([
+            "TranslateQuiz": FieldValue.arrayUnion([translateQuizIndex])
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+    }
+    
     static func editPoints(points: Int){
         let db = Firestore.firestore()
         let user = db.collection("users").document(currentUserDocumentId!)

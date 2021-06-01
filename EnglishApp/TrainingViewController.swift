@@ -38,6 +38,7 @@ class TrainingViewController: UIViewController {
         let button_grammarQuiz1 = UIButton(frame: CGRect(x: 0, y: 0, width: 190, height: 150))
         let button_grammarQuiz2 = UIButton(frame: CGRect(x: 0, y: 0, width: 190, height: 150))
         let button_grammarQuiz3 = UIButton(frame: CGRect(x: 0, y: 0, width: 190, height: 150))
+        
         let readinBut = UIButton(frame: CGRect(x: 0, y: 0, width: 190, height: 150))
         let readinBut2 = UIButton(frame: CGRect(x: 0, y: 0, width: 190, height: 150))
         
@@ -76,7 +77,7 @@ class TrainingViewController: UIViewController {
         button_AudioBattle.translatesAutoresizingMaskIntoConstraints = false
         //button_AudioBattle.widthAnchor.constraint(equalToConstant: wordTraining_stackView.frame.height).isActive = true
         
-        button_AudioBattle.setTitle("Аудиобаттл ", for: .normal)
+        button_AudioBattle.setTitle("Карточки ", for: .normal)
         button_AudioBattle.setTitleColor(.white, for: .normal)
         button_AudioBattle.titleLabel?.font =  UIFont(name: "AmaticSC-Bold", size: 36)
         button_AudioBattle.widthAnchor.constraint(equalToConstant: 190).isActive = true
@@ -96,11 +97,13 @@ class TrainingViewController: UIViewController {
         button_grammarQuiz1.heightAnchor.constraint(equalToConstant: 150).isActive = true
         button_grammarQuiz1.contentHorizontalAlignment = .left
         
-        let image = UIImage(named: "refreshButton") as UIImage?
+        //let image = UIImage(named: "refreshButton") as UIImage?
 //        button_grammarQuiz.setImage(image, for: .normal)
 //        
-//        button_grammarQuiz.addTarget(self, action: #selector(self.goToExercise(sender:)), for: .touchUpInside)
-        
+        button_AudioBattle.addTarget(self, action: #selector(self.goToCards(sender:)), for: .touchUpInside)
+        button_grammarQuiz1.addTarget(self, action: #selector(self.goToExercise(sender:)), for: .touchUpInside)
+        button_TranslateWord.addTarget(self, action: #selector(self.goToTranslate(sender:)), for: .touchUpInside)
+        button_WordTranslate.addTarget(self, action: #selector(self.goToTranslateQuiz(sender:)), for: .touchUpInside)
 
         
         button_grammarQuiz2.backgroundColor = UIColor(red: 123/255.0, green: 155/255.0, blue:221/255.0, alpha: 1)
@@ -175,7 +178,19 @@ class TrainingViewController: UIViewController {
     }
     
     @objc func goToExercise(sender: UIButton!){
-        self.performSegue(withIdentifier: "goToTrain", sender: self)
+        self.performSegue(withIdentifier: "goToGrammar", sender: self)
     }
+    
+    @objc func goToCards(sender: UIButton!){
+        self.performSegue(withIdentifier: "goToCards", sender: self)
+    }
+    
+    @objc func goToTranslate(sender: UIButton!){
+        self.performSegue(withIdentifier: "goToTranslate", sender: self)
+    }
+    @objc func goToTranslateQuiz(sender: UIButton!){
+        self.performSegue(withIdentifier: "goToTranslateQuiz", sender: self)
+    }
+    
     
 }

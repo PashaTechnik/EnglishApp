@@ -24,9 +24,9 @@ class CurrentUser {
         case 101...200:
             return "A2"
         case 201...300:
-            return "A2"
+            return "B1"
         case 301...400:
-            return "A2"
+            return "B2"
         default:
             return "C1"
         }
