@@ -1,10 +1,14 @@
 import UIKit
 
+let tenseDescription1 = ["Text5","Text3","Text1","Text6","Text7","Text8","Text9","Text10"]
+
 class GrammarViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     
     let tensesList = [["Present Simple", "Present Continious", "Past Simple", "Articles", "Present Perfect"],["pr","prrr"],["op", "opp"]]
     let sectionHeasers = ["Начинающий уровень","Средний уровень","Продвинутый уровень"]
 
+    let tenseDescription = ["Text5","Text3","Text1","Text6","Text7","Text8","Text9","Text10"]
+    
     
     @IBOutlet weak var grammarTableView: UITableView!
     
@@ -13,11 +17,6 @@ class GrammarViewController: UIViewController , UITableViewDelegate, UITableView
         
         grammarTableView.delegate = self
         grammarTableView.dataSource = self
-
-        
-        
-
-
 }
     
     
@@ -41,6 +40,20 @@ class GrammarViewController: UIViewController , UITableViewDelegate, UITableView
         return self.sectionHeasers[section] as String
         
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toTenseVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? GrammarTenseViewController {
+//            destination.inf.text = tenseDescription1[(grammarTableView.indexPathForSelectedRow?.row)!]
+            destination.tenseDescriptionInformation.label = tenseDescription1[(grammarTableView.indexPathForSelectedRow?.row)!]
+            
+            
+            grammarTableView.deselectRow(at: grammarTableView.indexPathForSelectedRow!, animated: true)
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

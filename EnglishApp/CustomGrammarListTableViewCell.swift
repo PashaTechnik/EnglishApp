@@ -5,6 +5,7 @@ class CustomGrammarListTableViewCell: UITableViewCell {
     @IBOutlet weak var TenseNameLabel: UILabel!
  
     @IBOutlet weak var progressBar: UIView!
+    @IBOutlet weak var resultProgressBar: UIView!
     
 
     
@@ -15,6 +16,8 @@ class CustomGrammarListTableViewCell: UITableViewCell {
         cellView.layer.cornerRadius = 10
         progressBar.layer.masksToBounds = false
         cellView.layer.masksToBounds = false
+        resultProgressBar.layer.cornerRadius = 3
+        resultProgressBar.layer.masksToBounds = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

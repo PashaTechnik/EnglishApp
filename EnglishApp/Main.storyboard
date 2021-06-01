@@ -40,7 +40,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="248" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="747" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMh-XV-Cvx">
-                                <rect key="frame" x="20" y="339" width="374" height="36"/>
+                                <rect key="frame" x="20" y="340" width="374" height="36"/>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="FO9-s8-bJu"/>
@@ -74,13 +74,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dialekt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0c-7K-g8q" userLabel="AppNameLabel">
-                                <rect key="frame" x="154" y="177" width="106.5" height="42"/>
+                                <rect key="frame" x="141.5" y="176" width="131" height="44"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="36"/>
                                 <color key="textColor" red="0.86274509799999999" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваши данные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ga7-iO-8vj">
-                                <rect key="frame" x="20" y="287" width="221" height="22"/>
+                                <rect key="frame" x="20" y="288" width="221" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Cie-3S-qNw"/>
                                 </constraints>
@@ -88,7 +88,7 @@
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcu-bg-T1z">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcu-bg-T1z" userLabel="BackButton">
                                 <rect key="frame" x="40" y="92" width="30" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
@@ -333,7 +333,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dialekt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd4-vO-6bp">
-                                <rect key="frame" x="119.5" y="318.5" width="175" height="59"/>
+                                <rect key="frame" x="136.5" y="320" width="141.5" height="56"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="48"/>
                                 <color key="textColor" red="0.86274509799999999" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -462,7 +462,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vru-D5-RjS"/>
-                        <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mZB-QT-XWX" firstAttribute="leading" secondItem="Vru-D5-RjS" secondAttribute="leading" id="31o-2J-HtF"/>
                             <constraint firstItem="rJb-SW-s7q" firstAttribute="trailing" secondItem="Vru-D5-RjS" secondAttribute="trailing" id="3iL-KZ-4VP"/>
@@ -495,7 +495,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="83" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="QMw-w7-VW0" userLabel="Grammar Table View">
-                                <rect key="frame" x="0.0" y="123" width="414" height="690"/>
+                                <rect key="frame" x="0.0" y="123" width="414" height="739"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -563,6 +563,7 @@
                                             <outlet property="TenseNameLabel" destination="RKO-QO-lCk" id="QBL-7V-gmv"/>
                                             <outlet property="cellView" destination="fe8-UU-Cey" id="Mbz-Or-uMQ"/>
                                             <outlet property="progressBar" destination="Hci-qJ-UhC" id="Tpc-Qu-QQj"/>
+                                            <outlet property="resultProgressBar" destination="EOX-Tp-14e" id="5U8-Rq-v1q"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -578,13 +579,65 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Грамматика" image="tabBar_icon_grammar" id="pVj-J6-B5C"/>
+                    <navigationItem key="navigationItem" id="Vhl-fe-Tzt"/>
                     <connections>
                         <outlet property="grammarTableView" destination="QMw-w7-VW0" id="7ha-AU-O49"/>
+                        <segue destination="G8k-fw-fyE" kind="presentation" identifier="toTenseVC" animates="NO" modalPresentationStyle="fullScreen" id="wn6-dF-Trl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CtM-dj-3Ux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1069.5652173913045" y="1991.5178571428571"/>
+        </scene>
+        <!--Grammar Tense View Controller-->
+        <scene sceneID="vM5-Td-JX6">
+            <objects>
+                <viewController id="G8k-fw-fyE" customClass="GrammarTenseViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LZ5-sM-IP7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwU-Cp-uSP">
+                                <rect key="frame" x="147" y="806" width="120" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <state key="normal" title="Понятно">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapped:" destination="G8k-fw-fyE" eventType="touchUpInside" id="CiT-G1-yLm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvG-Fg-qr8" userLabel="BackButton">
+                                <rect key="frame" x="20" y="91" width="30" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" backgroundImage="logIn_backButton"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTh-w9-aPU">
+                                <rect key="frame" x="29" y="174" width="356" height="569"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7ZM-FG-mRH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jtL-hj-7CH"/>
+                    <connections>
+                        <outlet property="button" destination="LwU-Cp-uSP" id="eem-Ig-uNC"/>
+                        <outlet property="tenseDescriptionTextView" destination="yTh-w9-aPU" id="ZhV-Ul-tbr"/>
+                        <segue destination="WPH-8r-aw6" kind="presentation" identifier="toGrammarList" animates="NO" modalPresentationStyle="fullScreen" id="XlS-Fr-SR1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5V-aH-JPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108.6956521739132" y="2759.5982142857142"/>
         </scene>
         <!--Test_ViewController-->
         <scene sceneID="txw-d8-sib">
@@ -672,10 +725,10 @@
                                 <color key="highlightedColor" red="0.69411764705882351" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Fn8-Sp-Azi">
-                                <rect key="frame" x="20" y="547" width="374" height="196"/>
+                                <rect key="frame" x="20" y="551" width="374" height="192"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3m-ED-UWz" userLabel="choice1_test_button">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                         <state key="normal" title="Button">
@@ -686,7 +739,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAb-1H-u7f" userLabel="choice2_test_button">
-                                        <rect key="frame" x="0.0" y="54" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="53" width="374" height="33"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                         <state key="normal" title="Button">
@@ -697,7 +750,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gy-8n-T3r" userLabel="choice3_test_button">
-                                        <rect key="frame" x="0.0" y="108" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="106" width="374" height="33"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                         <state key="normal" title="Button">
@@ -708,7 +761,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qci-BV-HFh" userLabel="choice4_test_button">
-                                        <rect key="frame" x="0.0" y="162" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="159" width="374" height="33"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                         <state key="normal" title="Button">
@@ -917,7 +970,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bda-ms-whe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="LHA-fb-tNF" customClass="NetworkManager" customModule="EnglishApp" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-140" y="1108"/>
+            <point key="canvasLocation" x="-159" y="1156"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="qCI-ia-APL">
@@ -1097,6 +1150,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="XlS-Fr-SR1"/>
         <segue reference="iHq-BF-CxO"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1112,6 +1166,9 @@
         <image name="testing_listeningButton" width="512" height="512"/>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
