@@ -1,11 +1,3 @@
-//
-//  RegistrationViewController.swift
-//  EnglishApp
-//
-//  Created by Pasha on 15.04.2021.
-//  Copyright © 2021 Pasha. All rights reserved.
-//
-
 import UIKit
 import Firebase
 
@@ -37,11 +29,11 @@ class RegistrationViewController: UIViewController {
         errorLabel.alpha = 0
     
         // Style the elements
-        Utilities.styleTextField(firstNameField)
-        Utilities.styleTextField(lastNameField)
-        Utilities.styleTextField(emailField)
-        Utilities.styleTextField(passwordField)
-        Utilities.styleFilledButton(signUpBtn)
+//        Utilities.styleTextField(firstNameField)
+//        Utilities.styleTextField(lastNameField)
+//        Utilities.styleTextField(emailField)
+//        Utilities.styleTextField(passwordField)
+//        Utilities.styleFilledButton(signUpBtn)
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
