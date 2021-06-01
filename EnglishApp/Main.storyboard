@@ -233,7 +233,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="HuJ-ud-qbU">
-                                <rect key="frame" x="20" y="267" width="300" height="80"/>
+                                <rect key="frame" x="20" y="408" width="300" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Перевод" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sy5-ad-8Oc">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="19.5"/>
@@ -256,7 +256,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xn-Aw-efD">
-                                <rect key="frame" x="16" y="229.5" width="156" height="35"/>
+                                <rect key="frame" x="20" y="344" width="191" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Перевести"/>
                                 <connections>
@@ -482,7 +482,6 @@
                         <outlet property="grammarTraining_stackView" destination="nAl-6B-hb8" id="Xko-bF-OZg"/>
                         <outlet property="reading_stackVeiw" destination="6um-MH-p7I" id="GVZ-pM-vTF"/>
                         <outlet property="wordTraining_stackView" destination="AIA-BM-cZC" id="DLX-C7-6UY"/>
-                        <segue destination="FQp-uI-HMJ" kind="show" identifier="goToTrain" id="Tp0-Pq-zTR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZZ-w0-AkP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -862,7 +861,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Goi-Xp-kwn">
-                                <rect key="frame" x="67" y="597" width="168" height="40"/>
+                                <rect key="frame" x="67" y="597" width="168" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="mwZ-FS-UXH"/>
                                 </constraints>
@@ -881,7 +880,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileIco" translatesAutoresizingMaskIntoConstraints="NO" id="M1Q-CA-G2K">
-                                <rect key="frame" x="121" y="127" width="180" height="256"/>
+                                <rect key="frame" x="121" y="127" width="180" height="131"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="131" id="tHd-Ht-5Uh"/>
                                     <constraint firstAttribute="width" constant="141" id="wUm-Ry-0IV"/>
@@ -898,6 +897,14 @@
                                 <connections>
                                     <action selector="logout:" destination="INk-UH-4MZ" eventType="touchUpInside" id="uxL-AO-2dp"/>
                                     <segue destination="lJl-Ka-5X1" kind="show" id="m16-vj-oaF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcw-xl-e0e">
+                                <rect key="frame" x="317" y="177" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editPhotoBtn:" destination="INk-UH-4MZ" eventType="touchUpInside" id="tih-lP-KTa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1086,11 +1093,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWW-lw-Mrl" customClass="StaticShadowHeaderView" customModule="EnglishApp" customModuleProvider="target">
-                                <rect key="frame" x="5" y="64" width="404" height="110"/>
+                                <rect key="frame" x="5" y="64" width="404" height="66"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Gg-ED-UOM" customClass="SwipeableCardViewContainer" customModule="EnglishApp" customModuleProvider="target">
-                                <rect key="frame" x="5" y="253" width="404" height="400"/>
+                                <rect key="frame" x="5" y="186.5" width="404" height="644"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -1151,7 +1158,7 @@
             <objects>
                 <viewController id="bzS-gg-mva" customClass="TranslateQuizViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Wd-v3-8Kz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="VIP-Qk-aNe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1164,7 +1171,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="XlS-Fr-SR1"/>
-        <segue reference="iHq-BF-CxO"/>
+        <segue reference="m16-vj-oaF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.closed.fill" catalog="system" width="115" height="128"/>

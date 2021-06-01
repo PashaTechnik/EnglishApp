@@ -97,9 +97,9 @@ class TrainingViewController: UIViewController {
         button_grammarQuiz1.contentHorizontalAlignment = .left
         
         let image = UIImage(named: "refreshButton") as UIImage?
-        button_grammarQuiz.setImage(image, for: .normal)
-        
-        button_grammarQuiz.addTarget(self, action: #selector(self.goToExercise(sender:)), for: .touchUpInside)
+//        button_grammarQuiz.setImage(image, for: .normal)
+//        
+//        button_grammarQuiz.addTarget(self, action: #selector(self.goToExercise(sender:)), for: .touchUpInside)
         
 
         

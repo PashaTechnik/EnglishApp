@@ -7,27 +7,50 @@
 //
 
 import XCTest
-
+@testable import EnglishApp
 class EnglishAppTests: XCTestCase {
 
+    var user: User?
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+        let promise = expectation(description: "Expectation")
+        let network = NetworkManager()
+        network.fetchData { (user) in
+            self.user = user
+            promise.fulfill()
         }
+        wait(for: [promise], timeout: 5)
     }
 
+
+    func testPointsEditing() throws {
+
+        let points = CurrentUser.Points
+        NetworkManager.editPoints(points: 10)
+        let newPoints = points! + 10
+        let expectedPoints = CurrentUser.Points
+        XCTAssertEqual(newPoints, expectedPoints)
+    }
+
+    func testDictionaryEditing() throws {
+
+        var expectedDictionary = CurrentUser.Dictionary
+        NetworkManager.updateDictionary(newDict: ["test":"test"])
+        let newDictionary = CurrentUser.Dictionary
+        expectedDictionary?.merge(dict: ["test":"test"])
+        XCTAssertEqual(newDictionary, expectedDictionary)
+    }
+
+    func testGrammarQuestionsEditing() throws {
+
+        var expectedGrammarQuestions = CurrentUser.GrammarQuestions
+        NetworkManager.editGrammarQuestions(grammarQuestionIndex: 100)
+        let newGrammarQuestions = CurrentUser.GrammarQuestions
+        expectedGrammarQuestions?.append(100)
+        XCTAssertEqual(newGrammarQuestions, expectedGrammarQuestions)
+    }
+
+    func testUserInit() throws {
+        let expectedUser = User(firstName: CurrentUser.FirstName!, lastName: CurrentUser.LastName!, email: "", points: CurrentUser.Points!, dictionary: CurrentUser.Dictionary!, profileImage: CurrentUser.Image)
+        XCTAssertEqual(user, expectedUser)
+    }
 }

@@ -18,7 +18,18 @@ class CurrentUser {
     public static var TranslateQuestions: Array<Int>?
     public static var TranslateQuiz: Array<Int>?
     public static var Level: String {
-        return "A1"
+        switch Points! {
+        case 0...100:
+            return "A1"
+        case 101...200:
+            return "A2"
+        case 201...300:
+            return "A2"
+        case 301...400:
+            return "A2"
+        default:
+            return "C1"
+        }
     }
     
     
@@ -33,3 +44,4 @@ class CurrentUser {
         CurrentUser.TranslateQuestions = translateQuestions
     }
 }
+

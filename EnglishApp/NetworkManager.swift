@@ -114,6 +114,36 @@ class NetworkManager: NSObject {
             }
         }
     }
+    
+    static func editGrammarQuestions(grammarQuestionIndex: Int){
+        let db = Firestore.firestore()
+        let user = db.collection("users").document(currentUserDocumentId!)
+        CurrentUser.GrammarQuestions?.append(grammarQuestionIndex)
+        user.updateData([
+            "GrammarQuestions": FieldValue.arrayUnion([grammarQuestionIndex])
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+    }
+    
+    static func editPoints(points: Int){
+        let db = Firestore.firestore()
+        let user = db.collection("users").document(currentUserDocumentId!)
+        CurrentUser.Points! += points
+        user.updateData([
+            "points": CurrentUser.Points!
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+    }
 }
 
 
@@ -124,3 +154,4 @@ extension Dictionary {
         }
     }
 }
+

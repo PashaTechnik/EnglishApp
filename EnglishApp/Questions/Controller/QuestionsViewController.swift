@@ -27,10 +27,15 @@ class QuestionsViewController: UIViewController {
         print(allQuestions.count)
         requestTextLabel.isHidden = true
         pointsLabel.isHidden = true
-        questionTextLabel.text = actualQuestions![0].question
+        
+        if actualQuestions?.count != 0 {
+            questionTextLabel.text = actualQuestions?[0].question
+        }
+        else {
+            questionTextLabel.text = ""
+        }
 
         super.viewDidLoad()
-
         
     }
     
@@ -48,16 +53,20 @@ class QuestionsViewController: UIViewController {
 
     @IBAction func checkAnswer(_ sender: Any) {
         
-        if QuestionsViewController.answerIndex > actualQuestions!.count {
+        if QuestionsViewController.answerIndex >= actualQuestions!.count {
+            QuestionsViewController.answerIndex = 0
             return
         }
-        let answer = answerTextField.text
+        var answer = answerTextField.text
+
         if answer == actualQuestions![QuestionsViewController.answerIndex].answer {
             requestTextLabel.isHidden = false
             requestTextLabel.text = actualQuestions![QuestionsViewController.answerIndex].answer
             pointsLabel.isHidden = false
             pointsLabel.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
             pointsLabel.text = "+5 Points"
+            NetworkManager.editPoints(points: 5)
+            NetworkManager.editGrammarQuestions(grammarQuestionIndex: actualQuestions![QuestionsViewController.answerIndex].id)
             QuestionsViewController.answerIndex += 1
         }
         else {
@@ -76,3 +85,4 @@ class QuestionsViewController: UIViewController {
         }
     }
 }
+

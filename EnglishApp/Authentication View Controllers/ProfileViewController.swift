@@ -51,16 +51,16 @@ class ProfileViewController: UIViewController {
         var englishLevelNum: Int
         
         switch points {
-        case 0..<3:
+        case 0...100:
             englishLevel = "Beginner"
             englishLevelNum = 1
-        case 3..<6:
+        case 101...200:
             englishLevel = "Elementary"
             englishLevelNum = 2
-        case 6..<9:
+        case 201...300:
             englishLevel = "Intermediate"
             englishLevelNum = 3
-        case 9..<12:
+        case 301...400:
             englishLevel = "Upper Intermediate"
             englishLevelNum = 4
         default:
@@ -125,3 +125,4 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         dismiss(animated: true)
     }
 }
+
