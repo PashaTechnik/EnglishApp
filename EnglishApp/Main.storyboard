@@ -140,34 +140,34 @@
             </objects>
             <point key="canvasLocation" x="-1536.2318840579712" y="1155.8035714285713"/>
         </scene>
-        <!--Dictionary -->
+        <!--Словарь-->
         <scene sceneID="JoR-1G-OvY">
             <objects>
                 <tableViewController id="l12-L6-A3o" customClass="DictionaryTableViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ETV-xI-mYK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Rb3-TO-Xav" customClass="TableViewCell" customModule="EnglishApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rb3-TO-Xav" id="3hf-LW-qa3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlz-Rs-Oqb">
-                                            <rect key="frame" x="16" y="11.5" width="340" height="21.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="16" y="11.5" width="300" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gD-uY-wPo">
-                                            <rect key="frame" x="308" y="11" width="90" height="22.5"/>
+                                            <rect key="frame" x="268" y="11" width="130" height="21.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="eZD-Ot-Pjv"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="130" id="eZD-Ot-Pjv"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -195,7 +195,7 @@
                             <outlet property="delegate" destination="l12-L6-A3o" id="as2-C4-7pk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Dictionary " id="ecJ-H9-AHF">
+                    <navigationItem key="navigationItem" title="Словарь" id="ecJ-H9-AHF">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="E62-jm-o7Y">
                             <connections>
                                 <segue destination="mXJ-9u-qCZ" kind="show" id="nlo-An-Mtv"/>
@@ -212,84 +212,109 @@
             <objects>
                 <viewController id="mXJ-9u-qCZ" customClass="TranslateViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TMD-Us-r3f">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="vgc-rL-uOm">
-                                <rect key="frame" x="20" y="145" width="300" height="80"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLT-Zs-Ovz" userLabel="WhiteView">
+                                <rect key="frame" x="0.0" y="158" width="414" height="381"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGH-IJ-0rz">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="19.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KGu-7T-sAJ">
+                                        <rect key="frame" x="21" y="155" width="370" height="60"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="1xN-uu-qQ7"/>
+                                            <constraint firstAttribute="width" constant="370" id="iFj-Xj-DAY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUk-4J-s2C" userLabel="black line">
+                                        <rect key="frame" x="21" y="110" width="352" height="1"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.28229345034246578" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="c60-rS-pKG"/>
+                                            <constraint firstAttribute="width" constant="352" id="sPn-gj-tZx"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGH-IJ-0rz">
+                                        <rect key="frame" x="21" y="8" width="300" height="19.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="5UC-lB-amp"/>
+                                            <constraint firstAttribute="width" constant="300" id="SPL-q7-srh"/>
                                             <constraint firstAttribute="height" constant="19.5" id="qQx-4w-Pyg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                        <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="0.28229345034246578" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Elr-Oj-Fnf">
-                                        <rect key="frame" x="0.0" y="52.5" width="300" height="27.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="5Ta-iF-k2t"/>
-                                    <constraint firstAttribute="width" constant="300" id="K2x-bW-YKO"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="HuJ-ud-qbU">
-                                <rect key="frame" x="20" y="408" width="300" height="80"/>
-                                <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Перевод" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sy5-ad-8Oc">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="19.5"/>
+                                        <rect key="frame" x="21" y="128" width="270" height="22"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="19.5" id="Qjb-VG-PaN"/>
+                                            <constraint firstAttribute="width" constant="270" id="ph8-gf-Lho"/>
+                                            <constraint firstAttribute="height" constant="22" id="udT-KG-8oo"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                        <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KGu-7T-sAJ">
-                                        <rect key="frame" x="0.0" y="52.5" width="300" height="27.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Elr-Oj-Fnf">
+                                        <rect key="frame" x="21" y="32.5" width="370" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="F9v-rv-qqN"/>
+                                            <constraint firstAttribute="width" constant="370" id="qVw-2e-eIg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="7Ml-FL-8Eg"/>
-                                    <constraint firstAttribute="height" constant="80" id="xGt-ui-oM6"/>
+                                    <constraint firstItem="EUk-4J-s2C" firstAttribute="leading" secondItem="rLT-Zs-Ovz" secondAttribute="leading" constant="21" id="DOw-dc-YTw"/>
+                                    <constraint firstItem="KGu-7T-sAJ" firstAttribute="top" secondItem="Sy5-ad-8Oc" secondAttribute="bottom" constant="5" id="ReV-Ku-QFb"/>
+                                    <constraint firstItem="Elr-Oj-Fnf" firstAttribute="leading" secondItem="rLT-Zs-Ovz" secondAttribute="leading" constant="21" id="Uos-sg-RLC"/>
+                                    <constraint firstItem="KGu-7T-sAJ" firstAttribute="leading" secondItem="rLT-Zs-Ovz" secondAttribute="leading" constant="21" id="WDb-CI-C5i"/>
+                                    <constraint firstItem="hGH-IJ-0rz" firstAttribute="top" secondItem="rLT-Zs-Ovz" secondAttribute="top" constant="8" id="b05-uX-vcb"/>
+                                    <constraint firstItem="Elr-Oj-Fnf" firstAttribute="top" secondItem="hGH-IJ-0rz" secondAttribute="bottom" constant="5" id="bJW-Xe-YeA"/>
+                                    <constraint firstItem="hGH-IJ-0rz" firstAttribute="leading" secondItem="rLT-Zs-Ovz" secondAttribute="leading" constant="21" id="fDR-6T-Eqr"/>
+                                    <constraint firstItem="Sy5-ad-8Oc" firstAttribute="top" secondItem="EUk-4J-s2C" secondAttribute="bottom" constant="17" id="k0P-ri-VU8"/>
+                                    <constraint firstAttribute="height" constant="381" id="uGA-hb-dhy"/>
+                                    <constraint firstItem="Sy5-ad-8Oc" firstAttribute="leading" secondItem="rLT-Zs-Ovz" secondAttribute="leading" constant="21" id="xyK-w7-IF1"/>
+                                    <constraint firstItem="EUk-4J-s2C" firstAttribute="top" secondItem="Elr-Oj-Fnf" secondAttribute="bottom" constant="17.5" id="zZ6-WG-3r7"/>
                                 </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="HuJ-ud-qbU">
+                                <rect key="frame" x="20" y="408" width="32" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xn-Aw-efD">
-                                <rect key="frame" x="20" y="344" width="191" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Перевести"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xn-Aw-efD">
+                                <rect key="frame" x="154" y="559" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                                <state key="normal" image="translate">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
                                 <connections>
                                     <action selector="translateBtn:" destination="mXJ-9u-qCZ" eventType="touchUpInside" id="eKV-Gw-fmY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DQC-fa-NFz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="HuJ-ud-qbU" firstAttribute="top" secondItem="0Xn-Aw-efD" secondAttribute="bottom" constant="29" id="6rX-YV-9oU"/>
-                            <constraint firstItem="vgc-rL-uOm" firstAttribute="leading" secondItem="TMD-Us-r3f" secondAttribute="leadingMargin" id="F96-DI-mic"/>
-                            <constraint firstItem="HuJ-ud-qbU" firstAttribute="leading" secondItem="vgc-rL-uOm" secondAttribute="leading" id="LC5-aa-LLo"/>
-                            <constraint firstItem="HuJ-ud-qbU" firstAttribute="centerY" secondItem="TMD-Us-r3f" secondAttribute="centerY" id="QcJ-3p-Ro4"/>
-                            <constraint firstItem="DQC-fa-NFz" firstAttribute="trailing" secondItem="0Xn-Aw-efD" secondAttribute="trailing" constant="203" id="mnw-pd-6ug"/>
-                            <constraint firstItem="vgc-rL-uOm" firstAttribute="top" secondItem="DQC-fa-NFz" secondAttribute="top" constant="57" id="sCE-8l-GUh"/>
-                            <constraint firstItem="0Xn-Aw-efD" firstAttribute="leading" secondItem="Sy5-ad-8Oc" secondAttribute="leading" id="xfe-Wz-VHR"/>
+                            <constraint firstItem="rLT-Zs-Ovz" firstAttribute="top" secondItem="DQC-fa-NFz" secondAttribute="top" constant="158" id="Rz9-3I-cfl"/>
+                            <constraint firstItem="rLT-Zs-Ovz" firstAttribute="leading" secondItem="DQC-fa-NFz" secondAttribute="leading" id="k0Q-8O-tIB"/>
+                            <constraint firstItem="rLT-Zs-Ovz" firstAttribute="trailing" secondItem="DQC-fa-NFz" secondAttribute="trailing" id="vs5-pL-WPm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q62-LX-gEy">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="b6h-Fr-OjP">
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить в словарь" id="b6h-Fr-OjP">
                             <connections>
                                 <action selector="saveWord:" destination="mXJ-9u-qCZ" id="MFM-hZ-pQr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonTranslate" destination="0Xn-Aw-efD" id="i3C-vJ-aR7"/>
                         <outlet property="traslateTextField" destination="KGu-7T-sAJ" id="K2R-eG-9OB"/>
                         <outlet property="wordTextField" destination="Elr-Oj-Fnf" id="zMa-8L-fkL"/>
                         <segue destination="EYn-ze-yPg" kind="unwind" identifier="exitAction" unwindAction="exitAction:" id="Sur-IL-0qj"/>
@@ -298,7 +323,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8P-t9-AhU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="EYn-ze-yPg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3719" y="1988"/>
+            <point key="canvasLocation" x="3718.840579710145" y="1987.5"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="aUV-7K-XxU">
@@ -1224,11 +1249,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZwS-dW-lqr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Словарь" image="tabBar_icon_vocabulary" id="fXZ-1m-OOR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fr3-Wg-99f">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="fr3-Wg-99f">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="23"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Thin" family="Montserrat" pointSize="23"/>
                         </textAttributes>
                         <imageReference key="backIndicatorImage" image="book.closed.fill" catalog="system" symbolScale="large"/>
                     </navigationBar>
@@ -1497,6 +1522,7 @@
         <image name="tabBar_icon_training" width="25" height="25"/>
         <image name="tabBar_icon_vocabulary" width="25" height="25"/>
         <image name="testing_listeningButton" width="512" height="512"/>
+        <image name="translate" width="50" height="50"/>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -1505,6 +1531,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

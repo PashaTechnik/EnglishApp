@@ -1,11 +1,3 @@
-//
-//  QuestionsViewController.swift
-//  EnglishApp
-//
-//  Created by Pasha on 13.05.2021.
-//  Copyright © 2021 Pasha. All rights reserved.
-//
-
 import UIKit
 import RealmSwift
 
