@@ -11,7 +11,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var levelTextLabel: UILabel!
     @IBOutlet weak var pointsTextLabel: UILabel!
     
-
+    @IBOutlet weak var profileWhiteView: UIView!
+    @IBOutlet weak var statisticsWhiteView: UIView!
+    
     
     var user: User?
     var defaultUser = User(firstName: "", lastName: "", email: "", points: 0, dictionary: [:], profileImage: UIImage(named: "profileIco"))
@@ -27,6 +29,18 @@ class ProfileViewController: UIViewController {
         progressBar.clipsToBounds = true
         progressBar.layer.sublayers![1].cornerRadius = 10
         progressBar.subviews[1].clipsToBounds = true
+        
+        statisticsWhiteView.layer.cornerRadius = 10
+        profileWhiteView.layer.cornerRadius = 10
+        statisticsWhiteView.clipsToBounds = true
+        profileWhiteView.clipsToBounds = true
+        
+        userPhoto.layer.borderWidth = 0
+        userPhoto.layer.masksToBounds = false
+        userPhoto.layer.borderColor = .none
+        userPhoto.layer.cornerRadius = userPhoto.frame.height/2
+        userPhoto.clipsToBounds = true
+        
     }
 
     
