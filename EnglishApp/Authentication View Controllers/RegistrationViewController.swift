@@ -27,13 +27,6 @@ class RegistrationViewController: UIViewController {
     
         // Hide the error label
         errorLabel.alpha = 0
-    
-        // Style the elements
-//        Utilities.styleTextField(firstNameField)
-//        Utilities.styleTextField(lastNameField)
-//        Utilities.styleTextField(emailField)
-//        Utilities.styleTextField(passwordField)
-//        Utilities.styleFilledButton(signUpBtn)
     }
     
     @IBAction func signUpTapped(_ sender: Any) {

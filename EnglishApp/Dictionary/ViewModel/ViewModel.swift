@@ -1,11 +1,3 @@
-//
-//  ViewModel.swift
-//  EnglishApp
-//
-//  Created by Pasha on 19.04.2021.
-//  Copyright © 2021 Pasha. All rights reserved.
-//
-
 import Foundation
 import Firebase
 

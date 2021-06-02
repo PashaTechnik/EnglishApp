@@ -24,8 +24,6 @@ class TranslateQuestionsViewController: UIViewController {
         }
         
         super.viewDidLoad()
-
-        
     }
     
     func defineActualQuestions(){

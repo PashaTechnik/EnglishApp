@@ -16,16 +16,8 @@ class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setUpElements()
-    }
-    
-    func setUpElements() {
-//        Utilities.styleFilledButton(signUpBtn)
-//        Utilities.styleHollowButton(logInBtn)
         signUpBtn.layer.cornerRadius = 10
         signUpBtn.clipsToBounds = true
     }
-    
 }
 

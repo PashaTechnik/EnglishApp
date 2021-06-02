@@ -75,7 +75,7 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
             answer_textField.text = nil;
             newTransl(i: count)
         }
-        } // реагирует на 4 сегмент
+        } // 4 segment reacts
         else
         {
 //            if (answer_textField.text == jsData.translateData[count].answer)
@@ -324,8 +324,6 @@ class TestingViewController: UIViewController, UITextFieldDelegate {
     @IBAction func EndTestBtn(_ sender: Any) {
         self.performSegue(withIdentifier: "testToLogin", sender: self)
     }
-    
-    
     
 }
 

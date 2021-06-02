@@ -4,10 +4,10 @@ let tenseDescription1 = ["Text5","Text3","Text1","Text6","Text7","Text8","Text9"
 
 class GrammarViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     
-    let tensesList = [["Present Simple", "Present Continious", "Past Simple", "Articles", "Present Perfect"],["pr","prrr"],["op", "opp"]]
+    let tensesList = [["Present Simple", "Present Continious", "Past Simple", "Articles", "Present Perfect", "Pronouns"],["Conditional clauses","Prepositions", "Adverbs"],["Modal Verbs", "Participles", "Reported Speech"]]
     let sectionHeasers = ["Начинающий уровень","Средний уровень","Продвинутый уровень"]
 
-    let tenseDescription = ["Text5","Text3","Text1","Text6","Text7","Text8","Text9","Text10"]
+    let tenseDescription = ["Время Present Simple обозначает действие в настоящем в широком смысле слова. Оно употребляется для обозначения обычных, регулярно повторяющихся или постоянных действий, например, когда мы говорим о чьих-либо привычках, режиме дня, расписании и т. д., т. е. Present Simple обозначает действия, которые происходят в настоящее время, но не привязаны именно к моменту речи.","Present Continuous Tense (или Present Progressive Tense) переводится с английского языка как «настоящее длительное время». В английской речи оно употребляется наравне с Present Simple, с той же частотой, и занимает важное место в грамматике. Когда используется Present Continuous — когда требуется подчеркнуть длительность действия в настоящем. Пределы «длительности» могут быть разными: действие может продолжаться неопределенный срок или занимать определенный промежуток времени ¬— все это случаи употребления Present Continuous.","Text1","Text6","Text7","Text8","Text9","Text10"]
     
     
     @IBOutlet weak var grammarTableView: UITableView!
@@ -49,7 +49,7 @@ class GrammarViewController: UIViewController , UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? GrammarTenseViewController {
 //            destination.inf.text = tenseDescription1[(grammarTableView.indexPathForSelectedRow?.row)!]
-            destination.tenseDescriptionInformation.label = tenseDescription1[(grammarTableView.indexPathForSelectedRow?.row)!]
+            destination.tenseDescriptionInformation.label = tenseDescription[(grammarTableView.indexPathForSelectedRow?.row)!]
             
             
             grammarTableView.deselectRow(at: grammarTableView.indexPathForSelectedRow!, animated: true)
@@ -72,10 +72,6 @@ class GrammarViewController: UIViewController , UITableViewDelegate, UITableView
 
             return headerView
     }
-   
-   
-    
-    
 }
 
 

@@ -120,7 +120,6 @@ class ProfileViewController: UIViewController {
     }
 }
 
-
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func chooseImagePicker(source: UIImagePickerController.SourceType) {
         if UIImagePickerController.isSourceTypeAvailable(source) {

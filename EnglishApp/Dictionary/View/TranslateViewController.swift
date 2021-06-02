@@ -19,11 +19,15 @@ let conditions = ModelDownloadConditions(
 
 class TranslateViewController: UIViewController {
 
+    @IBOutlet weak var buttonTranslate: UIButton!
     @IBOutlet weak var wordTextField: UITextField!
     
     @IBOutlet weak var traslateTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        buttonTranslate.layer.cornerRadius = 0.5 * buttonTranslate.bounds.size.width;
+        
 
     }
     

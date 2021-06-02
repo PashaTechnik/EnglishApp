@@ -1,11 +1,3 @@
-//
-//  Translate.swift
-//  EnglishApp
-//
-//  Created by Pasha on 29.05.2021.
-//  Copyright © 2021 Pasha. All rights reserved.
-//
-
 import Foundation
 import RealmSwift
 

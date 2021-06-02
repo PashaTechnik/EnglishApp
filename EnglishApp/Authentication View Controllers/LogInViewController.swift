@@ -31,10 +31,6 @@ class LogInViewController: UIViewController {
         logInBtn.clipsToBounds = true
         logInBtn.layer.cornerRadius = 10
         
-
-//        Utilities.styleTextField(emailField)
-//        Utilities.styleTextField(passwordField)
-//        Utilities.styleFilledButton(logInBtn)
         
     }
     

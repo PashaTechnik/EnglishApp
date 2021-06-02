@@ -1,11 +1,3 @@
-//
-//  TranslateQuizViewController.swift
-//  EnglishApp
-//
-//  Created by Pasha on 30.05.2021.
-//  Copyright © 2021 Pasha. All rights reserved.
-//
-
 import UIKit
 import RealmSwift
 
@@ -155,6 +147,5 @@ class TranslateQuizViewController: UIViewController {
             wordTexLabel.text = actualQuestions![TranslateQuizViewController.answerIndex].word
             translateBtn4.setTitle(actualQuestions?[TranslateQuizViewController.answerIndex].translate4, for: .normal)
         }
-        
     }
 }

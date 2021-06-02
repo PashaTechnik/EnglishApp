@@ -14,8 +14,8 @@ class MainTabBar: UITabBarController {
         
         self.selectedIndex = 0
 
-            if nextVC == 4 {
-                self.selectedIndex = 4 // Selects the 5th tabbar
+            if nextVC == 2 {
+                self.selectedIndex = 2 // Selects the 5th tabbar
                 nextVC = 0 // Resets
             }
         
