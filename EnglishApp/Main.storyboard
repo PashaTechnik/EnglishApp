@@ -540,6 +540,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Тренировки" image="tabBar_icon_training" selectedImage="tabBar_icon_training" id="XGy-cK-SL0"/>
                     <connections>
+                        <outlet property="firstLabelForAutoLayout" destination="rHj-Se-IgS" id="i6x-Bf-6jo"/>
                         <outlet property="grammarTraining_stackView" destination="nAl-6B-hb8" id="Xko-bF-OZg"/>
                         <outlet property="reading_stackVeiw" destination="6um-MH-p7I" id="GVZ-pM-vTF"/>
                         <outlet property="wordTraining_stackView" destination="AIA-BM-cZC" id="DLX-C7-6UY"/>

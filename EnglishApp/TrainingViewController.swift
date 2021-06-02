@@ -6,6 +6,7 @@ class TrainingViewController: UIViewController {
 
     var translate: Results<Translate>!
     var translateQuiz: Results<TranslateQuiz>!
+    @IBOutlet weak var firstLabelForAutoLayout: UILabel!
     
     @IBOutlet weak var wordTraining_stackView: UIStackView!
     @IBOutlet weak var grammarTraining_stackView: UIStackView!
@@ -20,6 +21,7 @@ class TrainingViewController: UIViewController {
 //        print(translate.count)
 //        print(translateQuiz.count)
         view1()
+        autolayout()
         
 
     }
@@ -208,5 +210,16 @@ class TrainingViewController: UIViewController {
         self.performSegue(withIdentifier: "goToReading", sender: self)
     }
     
+    func autolayout() {
+        if UIScreen.main.nativeBounds.height == 1792 { // 11
+            NSLayoutConstraint.init(item: firstLabelForAutoLayout, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 90).isActive = true
+
+        
+        } else { // SE
+           NSLayoutConstraint.init(item: firstLabelForAutoLayout, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 20).isActive = true
+//
+          
+        }
+    }
     
 }
