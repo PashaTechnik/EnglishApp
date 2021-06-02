@@ -145,6 +145,8 @@ class TrainingViewController: UIViewController {
         readinBut.setTitleColor(.white, for: .normal)
         readinBut.titleLabel?.font =  UIFont(name: "AmaticSC-Bold", size: 36)
         
+        readinBut.addTarget(self, action: #selector(self.goToReading(sender:)), for: .touchUpInside)
+        
         
         readinBut2.setTitle(" Истории 2", for: .normal)
         readinBut2.setTitleColor(.white, for: .normal)
@@ -199,6 +201,11 @@ class TrainingViewController: UIViewController {
     }
     @objc func goToTranslateQuiz(sender: UIButton!){
         self.performSegue(withIdentifier: "goToTranslateQuiz", sender: self)
+    }
+    
+    
+    @objc func goToReading(sender: UIButton!){
+        self.performSegue(withIdentifier: "goToReading", sender: self)
     }
     
     

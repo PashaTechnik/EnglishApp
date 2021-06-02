@@ -30,6 +30,7 @@
 		181216F7254450C2006FCA0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181216F6254450C2006FCA0B /* Main.storyboard */; };
 		181216FB254460FC006FCA0B /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181216FA254460FC006FCA0B /* TrainingViewController.swift */; };
 		181216FE25446C65006FCA0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181216FD25446C65006FCA0B /* ProfileViewController.swift */; };
+		18164CF2266771F9000BBD99 /* ReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18164CF1266771F9000BBD99 /* ReadingViewController.swift */; };
 		181B791A26598236007DD772 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B791926598236007DD772 /* ColorManager.swift */; };
 		181B791D26598C3B007DD772 /* CustomUITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B791C26598C3B007DD772 /* CustomUITabBar.swift */; };
 		1853EC41266670A60032D43E /* GrammarTenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853EC40266670A60032D43E /* GrammarTenseViewController.swift */; };
@@ -133,6 +134,7 @@
 		181216F6254450C2006FCA0B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		181216FA254460FC006FCA0B /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		181216FD25446C65006FCA0B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		18164CF1266771F9000BBD99 /* ReadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingViewController.swift; sourceTree = "<group>"; };
 		181B791926598236007DD772 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		181B791C26598C3B007DD772 /* CustomUITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITabBar.swift; sourceTree = "<group>"; };
 		1853EC40266670A60032D43E /* GrammarTenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarTenseViewController.swift; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 				18E10F4F25436C5D0022D009 /* Sounds */,
 				18E10F47254353F70022D009 /* TestingViewController.swift */,
 				181216F6254450C2006FCA0B /* Main.storyboard */,
+				18164CF1266771F9000BBD99 /* ReadingViewController.swift */,
 				1853EC40266670A60032D43E /* GrammarTenseViewController.swift */,
 				185544D02662692F00ADCABA /* GrammarViewController.swift */,
 				185544D326626D5500ADCABA /* CustomGrammarListTableViewCell.swift */,
@@ -888,6 +891,7 @@
 				181B791D26598C3B007DD772 /* CustomUITabBar.swift in Sources */,
 				84F340012634AE5000F62F10 /* SwipeableCardViewDataSource.swift in Sources */,
 				84982EF92530F10C009C6A4A /* SceneDelegate.swift in Sources */,
+				18164CF2266771F9000BBD99 /* ReadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
