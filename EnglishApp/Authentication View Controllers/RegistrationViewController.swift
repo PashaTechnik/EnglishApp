@@ -11,6 +11,9 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    @IBAction func goBack(_ sender: Any) {
+        performSegue(withIdentifier: "toStartFromRegistration", sender: self)
+    }
     override func viewDidLoad() {
         
         super.viewDidLoad()
