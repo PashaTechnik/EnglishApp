@@ -383,14 +383,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="27h-28-XZ3" userLabel="WordTraining Scroll View">
-                                <rect key="frame" x="0.0" y="193" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="152" width="414" height="150"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mid-Jx-txu">
-                                        <rect key="frame" x="0.0" y="-378" width="414" height="905"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <viewLayoutGuide key="contentLayoutGuide" id="jCU-H6-h0f"/>
-                                        <viewLayoutGuide key="frameLayoutGuide" id="6b0-cg-ddu"/>
-                                    </scrollView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AIA-BM-cZC">
                                         <rect key="frame" x="10" y="0.0" width="394" height="150"/>
                                     </stackView>
@@ -407,23 +401,29 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="qjE-E4-9Qd"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="v3r-rP-UWo"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Словарная" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHj-Se-IgS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Словарная" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHj-Se-IgS">
                                 <rect key="frame" x="11" y="112" width="118" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="Jbs-dj-D5k"/>
+                                    <constraint firstAttribute="height" constant="25" id="qDA-bS-6oV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Грамматическая" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFt-d6-Qns">
-                                <rect key="frame" x="0.0" y="338" width="181" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Грамматическая" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFt-d6-Qns">
+                                <rect key="frame" x="11" y="322" width="181" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="8cW-mb-DCy"/>
+                                    <constraint firstAttribute="height" constant="25" id="Ths-EG-hW2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJb-SW-s7q" userLabel="Grammar Training Scroll View">
-                                <rect key="frame" x="0.0" y="413" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="362" width="414" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nAl-6B-hb8" userLabel="Grammar Training Stack View">
                                         <rect key="frame" x="10" y="0.0" width="394" height="150"/>
@@ -434,6 +434,7 @@
                                     <constraint firstItem="nAl-6B-hb8" firstAttribute="leading" secondItem="rJb-SW-s7q" secondAttribute="leading" constant="10" id="DgY-uy-G39"/>
                                     <constraint firstItem="nAl-6B-hb8" firstAttribute="top" secondItem="rJb-SW-s7q" secondAttribute="top" id="M4T-qy-uOV"/>
                                     <constraint firstAttribute="height" constant="150" id="NeQ-bX-DpK"/>
+                                    <constraint firstItem="nAl-6B-hb8" firstAttribute="top" secondItem="BzS-DW-Fas" secondAttribute="top" constant="15" id="VmF-o3-rcS"/>
                                     <constraint firstItem="nAl-6B-hb8" firstAttribute="height" secondItem="rJb-SW-s7q" secondAttribute="height" id="d8s-rs-UHu"/>
                                     <constraint firstItem="nAl-6B-hb8" firstAttribute="centerX" secondItem="rJb-SW-s7q" secondAttribute="centerX" placeholder="YES" id="jfg-NN-0zQ"/>
                                     <constraint firstAttribute="trailing" secondItem="nAl-6B-hb8" secondAttribute="trailing" constant="10" id="oKa-in-gAm"/>
@@ -442,10 +443,10 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="BzS-DW-Fas"/>
                             </scrollView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="mZB-QT-XWX">
-                                <rect key="frame" x="0.0" y="623" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="577" width="414" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6um-MH-p7I">
-                                        <rect key="frame" x="10" y="0.0" width="394" height="150"/>
+                                        <rect key="frame" x="10" y="20" width="394" height="150"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -455,15 +456,19 @@
                                     <constraint firstAttribute="bottom" secondItem="6um-MH-p7I" secondAttribute="bottom" id="I7W-6F-fSd"/>
                                     <constraint firstItem="6um-MH-p7I" firstAttribute="top" secondItem="tzH-4h-rTC" secondAttribute="top" id="Pdl-EF-Tue"/>
                                     <constraint firstAttribute="trailing" secondItem="6um-MH-p7I" secondAttribute="trailing" constant="10" id="UCM-wE-1eW"/>
+                                    <constraint firstItem="6um-MH-p7I" firstAttribute="top" secondItem="tzH-4h-rTC" secondAttribute="top" constant="20" id="sDx-41-SwI"/>
                                     <constraint firstAttribute="bottom" secondItem="6um-MH-p7I" secondAttribute="bottom" id="wT1-rJ-AU3"/>
                                     <constraint firstItem="6um-MH-p7I" firstAttribute="height" secondItem="mZB-QT-XWX" secondAttribute="height" id="xao-Pz-ir2"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ULP-TH-JU2"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="tzH-4h-rTC"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чтение" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M69-88-0fe">
-                                <rect key="frame" x="20" y="571" width="80" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чтение" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M69-88-0fe">
+                                <rect key="frame" x="11" y="532" width="80" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="7We-2R-Eez"/>
+                                    <constraint firstAttribute="width" constant="80" id="dsF-57-neG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -474,14 +479,31 @@
                         <constraints>
                             <constraint firstItem="mZB-QT-XWX" firstAttribute="leading" secondItem="Vru-D5-RjS" secondAttribute="leading" id="31o-2J-HtF"/>
                             <constraint firstItem="rJb-SW-s7q" firstAttribute="trailing" secondItem="Vru-D5-RjS" secondAttribute="trailing" id="3iL-KZ-4VP"/>
-                            <constraint firstItem="27h-28-XZ3" firstAttribute="centerY" secondItem="Xo0-at-HAq" secondAttribute="centerY" constant="-180" id="6Zc-Pn-XFo"/>
-                            <constraint firstItem="mZB-QT-XWX" firstAttribute="centerY" secondItem="Xo0-at-HAq" secondAttribute="centerY" constant="250" id="EN2-Ty-tyT"/>
+                            <constraint firstItem="mZB-QT-XWX" firstAttribute="top" secondItem="M69-88-0fe" secondAttribute="bottom" constant="20" id="EfX-i5-OUa"/>
+                            <constraint firstItem="rJb-SW-s7q" firstAttribute="top" secondItem="rFt-d6-Qns" secondAttribute="bottom" constant="15" id="Fsq-li-rUo"/>
+                            <constraint firstItem="rHj-Se-IgS" firstAttribute="leading" secondItem="Vru-D5-RjS" secondAttribute="leading" constant="11" id="It2-jf-EZD"/>
                             <constraint firstItem="mZB-QT-XWX" firstAttribute="trailing" secondItem="Vru-D5-RjS" secondAttribute="trailing" id="Kxv-C9-kPX"/>
-                            <constraint firstItem="rJb-SW-s7q" firstAttribute="centerY" secondItem="Xo0-at-HAq" secondAttribute="centerY" constant="40" id="XTp-vb-jpI"/>
+                            <constraint firstItem="M69-88-0fe" firstAttribute="leading" secondItem="Vru-D5-RjS" secondAttribute="leading" constant="11" id="SqB-1S-CFW"/>
                             <constraint firstItem="27h-28-XZ3" firstAttribute="leading" secondItem="Vru-D5-RjS" secondAttribute="leading" id="XY7-JE-jxM"/>
                             <constraint firstItem="rJb-SW-s7q" firstAttribute="leading" secondItem="Vru-D5-RjS" secondAttribute="leading" id="b0S-gi-SYK"/>
+                            <constraint firstItem="rFt-d6-Qns" firstAttribute="top" secondItem="27h-28-XZ3" secondAttribute="bottom" constant="20" id="hUi-8p-VNb"/>
+                            <constraint firstItem="27h-28-XZ3" firstAttribute="top" secondItem="rHj-Se-IgS" secondAttribute="bottom" constant="15" id="om3-wJ-pth"/>
                             <constraint firstAttribute="trailing" secondItem="27h-28-XZ3" secondAttribute="trailing" id="pUi-PR-bLe"/>
+                            <constraint firstItem="M69-88-0fe" firstAttribute="top" secondItem="rJb-SW-s7q" secondAttribute="bottom" constant="20" id="pjt-oU-WGo"/>
+                            <constraint firstItem="rHj-Se-IgS" firstAttribute="top" secondItem="Vru-D5-RjS" secondAttribute="top" constant="20" id="sRh-SV-56F"/>
+                            <constraint firstItem="rFt-d6-Qns" firstAttribute="leading" secondItem="Vru-D5-RjS" secondAttribute="leading" constant="11" id="wwh-k0-uDO"/>
+                            <constraint firstItem="rHj-Se-IgS" firstAttribute="top" secondItem="Vru-D5-RjS" secondAttribute="top" priority="750" constant="68" id="z8l-65-jU0"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sRh-SV-56F"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="sRh-SV-56F"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Тренировки" image="tabBar_icon_training" selectedImage="tabBar_icon_training" id="XGy-cK-SL0"/>
                     <connections>
