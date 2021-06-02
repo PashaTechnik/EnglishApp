@@ -24,9 +24,14 @@ class GrammarTenseViewController: UIViewController {
     
     
     @IBAction func tapped(_ sender: Any) {
-        performSegue(withIdentifier: "toGrammarList", sender: self)
+       // performSegue(withIdentifier: "toGrammarList", sender: self)
+        navigationController?.popViewController(animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       let vc = segue.destination as! MainTabBar
+       vc.nextVC = 4 // 4 is the tabbar number, tabbars start from 0.
+   }
 
 }
 
@@ -36,3 +41,4 @@ class Information {
         label = "basic"
     }
 }
+

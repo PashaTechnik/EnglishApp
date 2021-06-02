@@ -25,6 +25,6 @@ class Question: Object, Codable{
         self.level = level
     }
     
-    required init() { }
+    required override init() { }
     
 }

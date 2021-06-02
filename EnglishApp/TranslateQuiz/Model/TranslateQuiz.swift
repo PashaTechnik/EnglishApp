@@ -30,5 +30,5 @@ class TranslateQuiz: Object, Codable{
         self.level = level
     }
     
-    required init() { }
+    required override init() { }
 }

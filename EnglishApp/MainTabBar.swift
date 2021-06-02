@@ -5,10 +5,19 @@ class MainTabBar: UITabBarController {
     @IBOutlet var networkManager: NetworkManager!
     
     public var user: User?
+    var nextVC = Int()
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.selectedIndex = 0
+
+            if nextVC == 4 {
+                self.selectedIndex = 4 // Selects the 5th tabbar
+                nextVC = 0 // Resets
+            }
         
         UITabBar.appearance().barTintColor = UIColor.white
         UITabBar.appearance().isTranslucent = false
