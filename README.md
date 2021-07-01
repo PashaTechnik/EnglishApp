@@ -11,6 +11,16 @@ The solution may be an app for learning English with broad functionality.
 The app helps the user to learn English by just spending twenty minutes a day. Exercises are tailored to help users learn and master new words, phrases, grammar and vocabulary effectively with game-like lessons. The app helps user to stay motivated with rewards for completing the lessons. It tracks users daily progress and he get a progress report at the end of each lesson. One of the main features is vocabulary training for  expanding users vocabulary.  
 The app lexical items are categorized into themes. They include obvious themes like Sport and Food but the sub-topics are as specific so the vocabulary user will learn is quite advanced.
 
+## Screenshots
+<p align="left">
+  <img src="screenshots/img1.png" width="200" title="">
+  <img src="screenshots/img2.png" width="200" alt="">
+  <img src="screenshots/img3.png" width="200" title="">
+  <img src="screenshots/img4.png" width="200" alt="">
+  <img src="screenshots/img5.png" width="200" title="">
+  <img src="screenshots/img6.png" width="200" alt="">
+</p>
+
 ## Features list:
 
 •**user authorization and personal account**  
